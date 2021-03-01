@@ -43,12 +43,12 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Lable="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="destinationType" Lable="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Lable="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
-                <Param Name="newName" Lable="newName" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="newSheetName" />
-                <Param Name="ParamsInclude" Lable="ParamsInclude" Desc="(optional) comma-separated list of elements to copy: attachments,cellLinks,data,discussions,filters,forms,ruleRecipients,rules,shares,all" Value=""/>
-                <Param Name="ParamsExclude"  Lable="ParamsExclude" Desc="(optional) when specified with a value of &quot;sheetHyperlinks&quot;, excludes this category from the response" Value=""/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
+                <Param Name="newName" Label="New Name" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="New Sheet Name" />
+                <Param Name="ParamsInclude" Label="Params Include" Desc="(optional) comma-separated list of elements to copy: attachments,cellLinks,data,discussions,filters,forms,ruleRecipients,rules,shares,all" Value=""/>
+                <Param Name="ParamsExclude"  Label="Params Exclude" Desc="(optional) when specified with a value of &quot;sheetHyperlinks&quot;, excludes this category from the response" Value=""/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -59,8 +59,8 @@
                 <Column Name="result.permalink"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
-        <!-- Create Sheet -->
-        <EndPoint Name="new_sheet" Label="Creates a sheet from scratch in the user's Sheets folder (Home)." Desc="Creates a sheet from scratch" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet" Group="Sheets" Url="/sheets/" Method="POST" Filter="" ContentType="application/json">
+        <!-- Create Sheet in "Sheets" Folder -->
+        <EndPoint Name="new_sheet" Label="Creates a sheet from scratch in the user's Sheets folder (Home)." Desc="Creates a sheet from scratch" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-quot-sheets-quot-folder" Group="Sheets" Url="/sheets/" Method="POST" Filter="" ContentType="application/json">
             <Body>
                     <![CDATA[{
             "name": "[$SheetName$]",
@@ -68,8 +68,8 @@
             }]]>
             </Body>
             <Params>
-                <Param Name="SheetName" Required="True" Desc="Does not have to be unique" Value="newSheetName"/>
-                <Param Name="ArrayColumnObjects"  Required="True" Editor="MultiLine" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)"
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name"/>
+                <Param Name="ArrayColumnObjects" Label="Array Column Objects"  Required="True" Editor="MultiLine" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)"
           Value="[{
                   &quot;title&quot;: &quot;Favorite&quot;,
                   &quot;type&quot;: &quot;CHECKBOX&quot;,
@@ -99,9 +99,9 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="FolderId" Desc="ID from the folder" Required="True" />
-                <Param Name="SheetName" Required="True" Desc="Does not have to be unique" Value="newSheetName"/>
-                <Param Name="ArrayColumnObjects" Required="True" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)" Editor="MultiLine" 
+                <Param Name="FolderId" Label="Folder Id" Desc="ID from the folder" Required="True" />
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name"/>
+                <Param Name="ArrayColumnObjects" Label="Array Column Objects" Required="True" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)" Editor="MultiLine" 
           Value="[{
                   &quot;title&quot;: &quot;Favorite&quot;,
                   &quot;type&quot;: &quot;CHECKBOX&quot;,
@@ -122,8 +122,8 @@
                 <Column Name="result.columns"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
-        <!-- New sheet on a workspace-->
-        <EndPoint Name="new_sheet_workspace" Label="Creates a sheet from scratch at the top-level of the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-workspace-from-template" Group="Sheets" Url="/workspaces/[$workspaceId$]/sheets/" Method="POST" Filter="" ContentType="application/json">
+        <!-- Create Sheet in Workspace-->
+        <EndPoint Name="new_sheet_workspace" Label="Creates a sheet from scratch at the top-level of the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-workspace" Group="Sheets" Url="/workspaces/[$workspaceId$]/sheets/" Method="POST" Filter="" ContentType="application/json">
             <Body>
                 <![CDATA[{
                 "name": "[$SheetName$]",
@@ -131,9 +131,9 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="workspaceId" Desc="ID from the workspace" Required="True" />
-                <Param Name="SheetName" Required="True" Desc="Does not have to be unique" Value="newSheetName" />
-                <Param Name="ArrayColumnObjects" Required="True" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)" Editor="MultiLine" 
+                <Param Name="workspaceId" Label="Workspace Id" Desc="ID from the workspace" Required="True" />
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name" />
+                <Param Name="ArrayColumnObjects" Label="Array Column Objects" Required="True" Desc="Array of Column objects from Sheet object, see more on the API documentation (Learn more)" Editor="MultiLine" 
           Value="[{
                   &quot;title&quot;: &quot;Favorite&quot;,
                   &quot;type&quot;: &quot;CHECKBOX&quot;,
@@ -143,6 +143,59 @@
                   &quot;primary&quot;: true,
                   &quot;type&quot;: &quot;TEXT_NUMBER&quot;
                 }]"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I8"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.columns"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Create Sheet in "Sheets" Folder from Template -->
+        <EndPoint Name="new_sheet_template" Label="Creates a sheet from scratch in the user's Sheets folder (Home), from the specified template" Desc="Creates a sheet from scratch" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-quot-sheets-quot-folder-from-template" Group="Sheets" Url="/sheets?include=[$ParamsInclude$]" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;:&quot;[$SheetName$]&quot;, &quot;fromId&quot;: [$fromId$]}">
+            <Params>
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name"/>
+                <Param Name="fromId" Label="From Id" Required="True" Desc="the Id of the template from which to create the" Value=""/>
+                <Param Name="ParamsInclude" Label="Params Include" Desc="(optional) comma-separated list of elements to copy: attachments,cellLinks,data,discussions,forms,rules,ruleRecipients" Value="data,attachments,discussions"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I8"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.columns"	DataType="DT_WSTR"/>
+            </OutputColumns>    
+        </EndPoint>
+        <!-- Create Sheet in Folder-->
+        <EndPoint Name="new_sheet_folder_template" Label="Creates a sheet in the specified folder, from the specified template" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-folder-from-template" Group="Sheets" Url="/folders/[$FolderId$]/sheets?include=[$ParamsInclude$]" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;:&quot;[$SheetName$]&quot;, &quot;fromId&quot;: [$fromId$]}">
+            <Params>
+                <Param Name="FolderId" Label="Folder Id" Desc="ID from the folder" Required="True" />
+                <Param Name="fromId" Label="From Id" Required="True" Desc="the Id of the template from which to create the" Value=""/>
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name"/>
+                <Param Name="ParamsInclude" Label="Params Include" Desc="(optional) comma-separated list of elements to copy: attachments,cellLinks,data,discussions,forms,rules,ruleRecipients" Value="data,attachments,discussions"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I8"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.columns"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Create Sheet in Workspace-->
+        <EndPoint Name="new_sheet_workspace_template" Label="Creates a sheet from scratch at the top-level of the specified workspace, from the specified template" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-workspace-from-template" Group="Sheets" Url="/workspaces/[$workspaceId$]/sheets?include=[$ParamsInclude$]" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;:&quot;[$SheetName$]&quot;, &quot;fromId&quot;: [$fromId$]}">
+            <Params>
+                <Param Name="workspaceId" Label="Workspace Id" Desc="ID from the workspace" Required="True" />
+                <Param Name="fromId" Label="From Id" Required="True" Desc="the Id of the template from which to create the" Value=""/>
+                <Param Name="SheetName" Label="Sheet Name" Required="True" Desc="Does not have to be unique" Value="New Sheet Name"/>
+                <Param Name="ParamsInclude" Label="Params Include" Desc="(optional) comma-separated list of elements to copy: attachments,cellLinks,data,discussions,forms,rules,ruleRecipients" Value="data,attachments,discussions"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -155,9 +208,9 @@
             </OutputColumns>
         </EndPoint>
         <!-- Delete Sheet -->
-        <EndPoint Name="delete_sheet" Desc="Deletes the sheet specified" Label="Delete Sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-sheet" Group="Sheets" Url="/sheets/[$SheetId$]" Method="DELETE" Filter="">
+        <EndPoint Name="delete_sheet" Label="Deletes the sheet specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-sheet" Group="Sheets" Url="/sheets/[$SheetId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -167,20 +220,20 @@
         <!-- Get Sheet Version -->
         <EndPoint Name="get_sheet_version" Label="Gets the sheet version without loading the entire sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-sheet-version" Group="Sheets" Url="/sheets/[$SheetId$]/version" Method="GET" Filter="">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="version"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
         <!-- Get Sheet -->
-        <EndPoint Name="get_sheet" Label="Returns the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#sheets" Group="Sheets" Url="/sheets/[$SheetId$][$Parameters$]" Method="GET" Filter="$.rows[*]">
+        <EndPoint Name="get_sheet" Label="Gets the sheet specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#sheets" Group="Sheets" Url="/sheets/[$SheetId$]" Method="GET" Filter="$.rows[*]">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Parameters"  Desc="(optional) include, exclude and more. Se more details on Learn more. Example ?level=2&amp;include=objectValue"/>
-                <Param Name="ArrayTransformType" Type="Property" Value="2" />
-                <Param Name="ArrayTransColumnNameFilter" Type="Property" Value="$.columns[*].title" />
-                <Param Name="ArrayTransRowValueFilter" Type="Property" Value="$.cells[*].value" />
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <!-- <Param Name="Parameters"  Desc="(optional) include, exclude and more. Se more details on Learn more. Example ?level=2&amp;include=objectValue"/> -->
+                <Param Name="ArrayTransformType" Label="Array Transform Type" Type="Property" Value="2" />
+                <Param Name="ArrayTransColumnNameFilter" Label="Array Transform Column Name Filter" Type="Property" Value="$.columns[*].title" />
+                <Param Name="ArrayTransRowValueFilter" Label="Array Transform Row Value Filter" Type="Property" Value="$.cells[*].value" />
             </Params>
         </EndPoint>
         <!-- Sheet list -->
