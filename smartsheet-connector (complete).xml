@@ -171,7 +171,7 @@
                 <Column Name="result.columns"	DataType="DT_WSTR"/>
             </OutputColumns>    
         </EndPoint>
-        <!-- Create Sheet in Folder-->
+        <!-- Create Sheet in Folder from Template-->
         <EndPoint Name="new_sheet_folder_template" Label="Creates a sheet in the specified folder, from the specified template" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-folder-from-template" Group="Sheets" Url="/folders/[$FolderId$]/sheets?include=[$ParamsInclude$]" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;:&quot;[$SheetName$]&quot;, &quot;fromId&quot;: [$fromId$]}">
             <Params>
                 <Param Name="FolderId" Label="Folder Id" Desc="ID from the folder" Required="True" />
@@ -189,7 +189,7 @@
                 <Column Name="result.columns"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
-        <!-- Create Sheet in Workspace-->
+        <!-- Create Sheet in Workspace from Template-->
         <EndPoint Name="new_sheet_workspace_template" Label="Creates a sheet from scratch at the top-level of the specified workspace, from the specified template" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-sheet-in-workspace-from-template" Group="Sheets" Url="/workspaces/[$workspaceId$]/sheets?include=[$ParamsInclude$]" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;:&quot;[$SheetName$]&quot;, &quot;fromId&quot;: [$fromId$]}">
             <Params>
                 <Param Name="workspaceId" Label="Workspace Id" Desc="ID from the workspace" Required="True" />
