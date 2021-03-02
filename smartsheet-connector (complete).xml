@@ -236,12 +236,26 @@
                 <Param Name="ArrayTransRowValueFilter" Label="Array Transform Row Value Filter" Type="Property" Value="$.cells[*].value" />
             </Params>
         </EndPoint>
-        <!-- Sheet list -->
-        <EndPoint Name="get_sheet_list" Group="Sheets" Label="Read sheets list" HelpLink="https://smartsheet-platform.github.io/api-docs/#access-levels" Url="/sheets[$Parameters$]" Filter="$.data[*]">
-            <Params>
-                <Param Name="Parameters" Desc="(optional) Se more details on Learn more. Example ?include=sheetVersion" Value=""/>
-            </Params>
-        </EndPoint>
+        <!-- List Org Sheets -->
+        <EndPoint Name="get_sheet_list_org" Group="Sheets" Label="Gets a summarized list of all sheets owned by the members of the organization account" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-sheets" Url="/users/sheets" Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="owner"	DataType="DT_WSTR"/>
+                <Column Name="ownerId"	DataType="DT_I8"/>
+            </OutputColumns>
+        </EndPoint> 
+        <!-- List Sheets -->
+        <EndPoint Name="get_sheet_list" Group="Sheets" Label="Gets a list of all sheets that the user has access to in alphabetical order by name" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-sheets" Url="/sheets" Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+            </OutputColumns>
+        </EndPoint> 
         <!-- Move sheet -->
         <EndPoint Name="move_sheet" Label="Move sheet" Desc="Moves the specified sheet to a new location" HelpLink="https://smartsheet-platform.github.io/api-docs/#move-sheet" Group="Sheets" Url="/sheets/[$SheetId$]/move" Method="POST" Filter="" ContentType="application/json">
             <Body>
@@ -251,19 +265,43 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Get Sheet Publish Status -->
-        <EndPoint Name="get_sheet_publish" Desc="Gets the Settings of Publish Sheet" Label="Get Publish Sheet settings"  HelpLink="https://smartsheet-platform.github.io/api-docs/#publish-sheet" Group="Sheet's publish" Url="/sheets/[$SheetId$]/publish" Method="GET" BatchSize="1" Filter="">
+        <EndPoint Name="get_sheet_publish" Desc="Gets the sheet's 'Publish' settings." Label="Get Publish Sheet settings"  HelpLink="https://smartsheet-platform.github.io/api-docs/#get-sheet-publish-status" Group="Sheets" Url="/sheets/[$SheetId$]/publish" Method="GET" Filter="">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
             </Params>
+            <OutputColumns>
+                <Column Name="readOnlyLiteEnabled"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullEnabled"	DataType="DT_WSTR"/>
+                <Column Name="readWriteEnabled"	DataType="DT_WSTR"/>
+                <Column Name="icalEnabled"	DataType="DT_WSTR"/>
+                <Column Name="readWriteAccessibleBy"	DataType="DT_STR"/>
+                <Column Name="readOnlyFullAccessibleBy"	DataType="DT_WSTR"/>
+                <Column Name="readWriteDefaultView"	DataType="DT_WSTR"/>
+                <Column Name="readWriteShowToolbar"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullDefaultView"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullShowToolbar"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyLiteUrl"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullUrl"	DataType="DT_WSTR"/>
+                <Column Name="readWriteUrl"	DataType="DT_WSTR"/>
+                <Column Name="icalUrl"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Set Sheet Publish Status -->
-        <EndPoint Name="set_sheet_publish" Label="Sets the publish status of the sheet and returns the new status, including the URLs of any enabled publishings." HelpLink="https://smartsheet-platform.github.io/api-docs/#set-sheet-publish-status" Group="Sheet's publish" Url="/sheets/[$SheetId$]/publish" Method="PUT" Filter="">
+        <EndPoint Name="set_sheet_publish" Label="Sets the publish status of the sheet and returns the new status, including the URLs of any enabled publishings" HelpLink="https://smartsheet-platform.github.io/api-docs/#set-sheet-publish-status" Group="Sheets" Url="/sheets/[$SheetId$]/publish" Method="PUT" Filter="">
             <Body>
                 <![CDATA[{
           "readOnlyLiteEnabled": [$readOnlyLiteEnabled$],
@@ -273,12 +311,30 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="readOnlyLiteEnabled" Options="true;false" Value="false"/>
-                <Param Name="readOnlyFullEnabled" Options="true;false" Value="false"/>
-                <Param Name="readWriteEnabled" Options="true;false" Value="false"/>
-                <Param Name="icalEnabled" Options="true;false" Value="false"/>
+                <Param Name="SheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="readOnlyLiteEnabled" Label="Read Only Lite Enabled" Required="true" Desc="If true, a lightweight version of the sheet is published without row attachments and discussions." Options="true;false" Value="false"/>
+                <Param Name="readOnlyFullEnabled" Label="Read Only Full Enabled" Required="true" Desc="If true, a rich version of the sheet is published with the ability to download row attachments and discussions" Options="true;false" Value="false"/>
+                <Param Name="readWriteEnabled" Label="Read Write Enabled" Required="true" Desc="If true, a rich version of the sheet is published with the ability to edit cells and manage attachments and discussions." Options="true;false" Value="false"/>
+                <Param Name="icalEnabled" Label="Ical Enabled" Required="true" Desc="If true, a webcal is available for the calendar in the sheet" Options="true;false" Value="false"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.readOnlyLiteEnabled"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyFullEnabled"	DataType="DT_WSTR"/>
+                <Column Name="result.readWriteEnabled"	DataType="DT_WSTR"/>
+                <Column Name="result.icalEnabled"	DataType="DT_WSTR"/>
+                <Column Name="result.readWriteAccessibleBy"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyFullAccessibleBy"	DataType="DT_WSTR"/>
+                <Column Name="result.readWriteDefaultView"	DataType="DT_WSTR"/>
+                <Column Name="result.readWriteShowToolbar"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyFullDefaultView"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyFullShowToolbar"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyLiteUrl"	DataType="DT_WSTR"/>
+                <Column Name="result.readOnlyFullUrl"	DataType="DT_WSTR"/>
+                <Column Name="result.readWriteUrl"	DataType="DT_WSTR"/>
+                <Column Name="result.icalUrl"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!--Send Sheet via Email -->
         <EndPoint Name="send_sheet_email" Label="Sends the sheet as an attachment via email to the designated recipients." HelpLink="https://smartsheet-platform.github.io/api-docs/#send-sheet-via-email" Group="Sheets" Url="/sheets/[$SheetId$]/emails"  Method="POST" Filter="" ContentType="application/json">
@@ -286,7 +342,7 @@
                 <![CDATA[
                   { 
                     "sendTo": [  
-                          [$emaiGroupslsList$]
+                          [$emailList$]
                     ], 
                     "subject": "[$subject$]", 
                     "message": "[$message$]", 
@@ -299,17 +355,17 @@
                 ]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="emaiGroupslsList" Editor="MultiLine" Required="True" Desc="List of emails and groups ID" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;groupId&quot;: 3902655153104772}"/>
-                <Param Name="subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
-                <Param Name="message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
-                <Param Name="ccMe" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
-                <Param Name="format" Required="True" Desc="Extends the Email object" Options="EXCEL;PDF;PDF_GANTT" Value="EXCEL"/>
-                <Param Name="paperSize" Required="True" Desc="Size of the peaper" Options="LETTER;LEGAL;WIDE;ARCHD;A4;A3;A2;A1;A0" Value="LETTER"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="emailList" Label="Email List" Editor="MultiLine" Required="True" Desc="List of emails and groups ID" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;groupId&quot;: 3902655153104772}"/>
+                <Param Name="subject" Label="Subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
+                <Param Name="message" Label="Message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
+                <Param Name="ccMe" Label="CC Me" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
+                <Param Name="format" Label="Format" Required="True" Desc="Extends the Email object" Options="EXCEL;PDF;PDF_GANTT" Value="EXCEL"/>
+                <Param Name="paperSize" Label="Paper Size" Required="True" Desc="Size of the peaper" Options="LETTER;LEGAL;WIDE;ARCHD;A4;A3;A2;A1;A0" Value="LETTER"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_WSTR" Length="4000"/>
             </OutputColumns>
         </EndPoint>
         <!-- Add Summary Fields -->
