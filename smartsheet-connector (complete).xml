@@ -336,6 +336,35 @@
                 <Column Name="result.icalUrl"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
+        <!-- Search Sheet -->
+        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet" Group="Sheets" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
+            <Params>
+                <Param Name="sheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="search"  Label="Search"  Required="true" Desc="ID located in sheet properties"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="version"	DataType="DT_WSTR"/>
+                <Column Name="totalRowCount"	DataType="DT_WSTR"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR"/>
+                <Column Name="ganttEnabled"	DataType="DT_WSTR"/>
+                <Column Name="dependenciesEnabled"	DataType="DT_WSTR"/>
+                <Column Name="resourceManagementEnabled"	DataType="DT_WSTR"/>
+                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR"/>
+                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_WSTR"/>
+                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_WSTR"/>
+                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR"/>
+                <Column Name="hasSummaryFields"	DataType="DT_WSTR"/>
+                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="createdAt"	DataType="DT_WSTR"/>
+                <Column Name="modifiedAt"	DataType="DT_WSTR"/>
+                <Column Name="isMultiPicklistEnabled"	DataType="DT_WSTR"/>
+                <Column Name="columns"	DataType="DT_WSTR"/>
+                <Column Name="rows"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
         <!--Send Sheet via Email -->
         <EndPoint Name="send_sheet_email" Label="Sends the sheet as an attachment via email to the designated recipients." HelpLink="https://smartsheet-platform.github.io/api-docs/#send-sheet-via-email" Group="Sheets" Url="/sheets/[$SheetId$]/emails"  Method="POST" Filter="" ContentType="application/json">
             <Body>
@@ -371,8 +400,8 @@
         <!-- Add Summary Fields -->
         <EndPoint Name="add_summary_fields" Label="Creates one or more summary fields for the specified sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields" Body="[$Query$]" Method="POST" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Query" Editor="MultiLine" Required="True" Desc="Array of SummaryField objects" 
+                <Param Name="SheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="Query" Label="Summary Field" Editor="MultiLine" Required="True" Desc="Array of SummaryField objects" 
                 Value="[{ 
                     &quot;type&quot;: &quot;TEXT_NUMBER&quot;, 
                     &quot;objectValue&quot;: &quot;Sally Smart&quot;, 
@@ -390,9 +419,9 @@
         <!-- Delete Summary Fields -->
         <EndPoint Name="delete _summary_fields" Label="Deletes summary fields from the specified sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields?ids=[$SumaryList$]&amp;ignoreSummaryFieldsNotFound=[$ignoreSummaryFieldsNotFound$]" Method="DELETE" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="SumaryList" Required="True" Desc="List of sumary's Id to delete"/>
-                <Param Name="ignoreSummaryFieldsNotFound" Desc="If true, the operation will succeed even if some fieldIds are not found." Options="true;false" Value="true"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="SumaryList" Label="Sumary List" Required="True" Desc="List of sumary's Id to delete"/>
+                <Param Name="ignoreSummaryFieldsNotFound" Label="Ignore Summary Fields Not Found" Desc="If true, the operation will succeed even if some fieldIds are not found." Options="true;false" Value="true"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -402,52 +431,48 @@
             </OutputColumns>    
         </EndPoint>    
         <!-- Get Sheet Summary -->
-        <EndPoint Name="get_sheet_summary" Label="Returns object containing array of summary fields." HelpLink="https://smartsheet-platform.github.io/api-docs/#add-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/?include=[$Include$]&amp;exclude=[$Exclude$]" Method="GET" Filter="$.fields[*]">
+        <EndPoint Name="get_sheet_summary" Label="Returns object containing array of summary fields." HelpLink="https://smartsheet-platform.github.io/api-docs/#add-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary" Method="GET" Filter="$.fields[*]">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Include" Desc="(optional) -- a comma-separated list of elements to include in the response: format,writerInfo" Value="format,writerInfo"/>
-                <Param Name="Exclude" Desc="(optional) -- a comma-separated list of elements to not include in the response: displayValue,image,imageAltText" Value="displayValue,image,imageAltText"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <!-- <Param Name="Include" Desc="(optional)  a comma-separated list of elements to include in the response: format,writerInfo" Value="format,writerInfo"/>
+                <Param Name="Exclude" Desc="(optional)  a comma-separated list of elements to not include in the response: displayValue,image,imageAltText" Value="displayValue,image,imageAltText"/> -->
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="index"	DataType="DT_I8"/>
+                <Column Name="index"	DataType="DT_I4"/>
                 <Column Name="title"	DataType="DT_WSTR"/>
                 <Column Name="type"	DataType="DT_WSTR"/>
-                <Column Name="locked"	DataType="DT_BOOL"/>
-                <Column Name="lockedForUser"	DataType="DT_BOOL"/>
+                <Column Name="locked"	DataType="DT_WSTR"/>
+                <Column Name="lockedForUser"	DataType="DT_WSTR"/>
                 <Column Name="objectValue"	DataType="DT_WSTR"/>
                 <Column Name="displayValue"	DataType="DT_WSTR"/>
-                <Column Name="createdBy.name"	DataType="DT_WSTR"/>
-                <Column Name="createdBy.email"	DataType="DT_WSTR"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="modifiedBy.name"	DataType="DT_WSTR"/>
-                <Column Name="modifiedBy.email"	DataType="DT_WSTR"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="objectValue.objectType"	DataType="DT_WSTR"/>
-                <Column Name="objectValue.value"	DataType="DT_WSTR"/>
-                <Column Name="options"	DataType="DT_WSTR"/>
-                <Column Name="symbol"	DataType="DT_WSTR"/>
-            </OutputColumns>
+            </OutputColumns> 
         </EndPoint>
         <!-- Get Summary Fields -->
-        <EndPoint Name="get_summary_fields" Label="Returns object containing array of summary fields. Allows for pagination of results." HelpLink="https://smartsheet-platform.github.io/api-docs/#add-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields" Method="GET" Filter="">
+        <EndPoint Name="get_summary_fields" Label="Returns object containing array of summary fields. Allows for pagination of results." HelpLink="https://smartsheet-platform.github.io/api-docs/#add-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="pageNumber"	DataType="DT_I8"/>
-                <Column Name="pageSize"	DataType="DT_I8"/>
-                <Column Name="totalPages"	DataType="DT_I8"/>
-                <Column Name="totalCount"	DataType="DT_I8"/>
-                <Column Name="data"	DataType="DT_NTEXT"/>
-            </OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="index"	DataType="DT_I4"/>
+                <Column Name="title"	DataType="DT_WSTR"/>
+                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="locked"	DataType="DT_WSTR"/>
+                <Column Name="lockedForUser"	DataType="DT_WSTR"/>
+                <Column Name="objectValue"	DataType="DT_WSTR"/>
+                <Column Name="displayValue"	DataType="DT_WSTR"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+            </OutputColumns> 
         </EndPoint>
         <!-- Update  Summary Fields -->
-        <EndPoint Name="update _summary_fields" Label="Updates the summary fields for the given sheet." HelpLink="https://smartsheet-platform.github.io/api-docs/#update-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields[$Parameters$]" Body="[$Query$]" Method="PUT" Filter="" ContentType="application/json">
+        <EndPoint Name="update _summary_fields" Label="Updates the summary fields for the given sheet." HelpLink="https://smartsheet-platform.github.io/api-docs/#update-summary-fields" Group="Sheets" Url="/sheets/[$SheetId$]/summary/fields" Body="[$Query$]" Method="PUT" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Parameters"  Desc="(Optional - ?renameIfConflict=true) renameIfConflict: Set to true if you want to override the requirement for unique summary field names. Repeated names will be adjusted by appending &quot;(1)&quot; or similar after the field name."/>
-                <Param Name="Query" Editor="MultiLine" Required="True" Desc="Array of SummaryField objects" 
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="Query" Label="Summary Field" Editor="MultiLine" Required="True" Desc="Array of SummaryField objects" 
                 Value="[{ 
                     &quot;id&quot;: 6575355881383812, 
                     &quot;type&quot;: &quot;CONTACT_LIST&quot;, 
@@ -478,16 +503,16 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="ColumnId" Required="True" />
-                <Param Name="Direction" Required="True" Options="DESCENDING;ASCENDING" Value="DESCENDING"/>
-                <Param Name="ArrayTransformType" Type="Property" Value="2" />
-                <Param Name="ArrayTransColumnNameFilter" Type="Property" Value="$.columns[*].title" />
-                <Param Name="ArrayTransRowValueFilter" Type="Property" Value="$.cells[*].value" />
+                <Param Name="SheetId"  Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="ColumnId"  Label="Column Id" Required="True" />
+                <Param Name="Direction"  Label="Direction" Required="True" Options="DESCENDING;ASCENDING" Value="DESCENDING"/>
+                <Param Name="ArrayTransformType" Label="Array Transform Type" Type="Property" Value="2" />
+                <Param Name="ArrayTransColumnNameFilter" Label="Array Transform Column Name Filter" Type="Property" Value="$.columns[*].title" />
+                <Param Name="ArrayTransRowValueFilter" Label="Array Transform Row Value Filter" Type="Property" Value="$.cells[*].value" />
             </Params>
         </EndPoint>
         <!-- Update sheet -->
-        <EndPoint Name="update_sheet" Label="Updates the sheet specified in the URL." HelpLink="https://smartsheet-platform.github.io/api-docs/#update-sheet" Group="Sheets" Url="/sheets/[$SheetId$]" Method="PUT" Filter="" ContentType="application/json">
+        <EndPoint Name="update_sheet" Label="Updates the sheet specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-sheet" Group="Sheets" Url="/sheets/[$SheetId$]" Method="PUT" Filter="" ContentType="application/json">
             <Body>
                 <![CDATA[{
           "name": "[$newSheetName$]",
@@ -496,10 +521,10 @@
         }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="newSheetName" Required="True"  Value="New Sheet Nane"/>
-                <Param Name="userSettings" Required="True" Editor="MultiLine" Value="{}"/>
-                <Param Name="projectSettings" Required="True"  Editor="MultiLine" Value="null" />
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="newSheetName" Label="New Sheet Name" Required="True"  Value="New Sheet Nane"/>
+                <Param Name="userSettings" Label="User Settings" Required="True" Editor="MultiLine" Value="{&quot;criticalPathEnabled&quot;: true}"/>
+                <Param Name="projectSettings" Label="Project Settings" Required="True"  Editor="MultiLine" Value="{ &quot;workingDays&quot;: [&quot;MONDAY&quot;, &quot;TUESDAY&quot;, &quot;WEDNESDAY&quot;], &quot;nonWorkingDays&quot;: [&quot;2018-01-01&quot;], &quot;lengthOfDay&quot;: 6  } " />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -691,7 +716,6 @@
         <EndPoint Name="get_sheet_column_info" Label="Gets a list of all columns belonging to the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-column" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$] " Method="GET" BatchSize="1" Filter="">
             <Params>
                 <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="ColumnId" Required="True" Desc="ID from the column"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8" />
@@ -1696,13 +1720,34 @@
             </Params>
         </EndPoint>
         <!-- Search Sheet -->
-        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet" Group="Search" Url="/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
+        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet-2" Group="Sheets" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
             <Params>
-                <Param Name="sheetId" Desc="ID located in sheet properties"/>
-                <Param Name="search" />
+                <Param Name="sheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="search"  Label="Search"  Required="true" Desc="ID located in sheet properties"/>
             </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="version"	DataType="DT_WSTR"/>
+                <Column Name="totalRowCount"	DataType="DT_WSTR"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR"/>
+                <Column Name="ganttEnabled"	DataType="DT_WSTR"/>
+                <Column Name="dependenciesEnabled"	DataType="DT_WSTR"/>
+                <Column Name="resourceManagementEnabled"	DataType="DT_WSTR"/>
+                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR"/>
+                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_WSTR"/>
+                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_WSTR"/>
+                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR"/>
+                <Column Name="hasSummaryFields"	DataType="DT_WSTR"/>
+                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="createdAt"	DataType="DT_WSTR"/>
+                <Column Name="modifiedAt"	DataType="DT_WSTR"/>
+                <Column Name="isMultiPicklistEnabled"	DataType="DT_WSTR"/>
+                <Column Name="columns"	DataType="DT_WSTR"/>
+                <Column Name="rows"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
-
         <!-- ______________________________________________________ Server Info ______________________________________________________ -->
         <!-- Get Server Info -->
         <EndPoint Name="get_server_info" Group="Server" Label="Gets application constants." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-server-info" Url="/serverinfo">
