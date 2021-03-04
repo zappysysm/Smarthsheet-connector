@@ -538,15 +538,81 @@
         </EndPoint>        
         <!-- ______________________________________________________ Attachment ______________________________________________________ -->
 
-        <!-- Attach File to Sheet  -->
-        <EndPoint Name="Attach_File_Sheet" Label="Attaches a file to the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-file-to-sheet" Group="Attachment" Url="/sheets/[$SheetId$]/attachments" Body="@[$Path$]" Method="POST" IsMultiPart="True">
+        <!-- Attach File to Comment  -->
+        <EndPoint Name="Attach_File_commet" Label="Attaches a file to the row" HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-file-to-comment" Group="Attachment" Url="/sheets/[$SheetId$]/rows/[$rowId$]/attachments" Body="@C:\Users\USUARIO\Downloads\googledrive.csv" Method="POST" IsMultiPart="True">
             <Params>
-                <Param Name="Path" Required="True" Label="File Path (Local)" />
+                <Param Name="Path" Label="Path" Required="True" Label="File Path (Local)" Value=""/>
+                <Param Name="Content-Type" Type="Header" Value="application/msword"/>
+                <Param Name="Content-Disposition" Type="Header"  Value="attachment; filename=&quot;googledrive.csv&quot;"/>
+                <Param Name="Content-Length" Required="true" Type="Header" Value="118"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="rowId" Label="Row Id" Required="true" Desc="ID from the row"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="result.id"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.attachmentType"	DataType="DT_WSTR"/>
+                <Column Name="result.mimeType"	DataType="DT_WSTR"/>
+                <Column Name="result.sizeInKb"	DataType="DT_WSTR"/>
+                <Column Name="result.parentType"	DataType="DT_WSTR"/>
+                <Column Name="result.parentId"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="version"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Attach File to Row  -->
+        <EndPoint Name="Attach_File_row" Label="Attaches a file to the row" HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-file-to-row" Group="Attachment" Url="/sheets/[$SheetId$]/attachments" Body="@C:\Users\USUARIO\Downloads\googledrive.csv" Method="POST" IsMultiPart="True">
+            <Params>
+                <Param Name="Path" Required="True" Label="File Path (Local)" Value=""/>
                 <Param Name="Content-Type" Type="Header" Value="application/msword"/>
                 <Param Name="Content-Disposition" Type="Header"  Value="attachment; filename=&quot;googledrive.csv&quot;"/>
                 <Param Name="Content-Length" Required="true" Type="Header" Value="118"/>
                 <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="result.id"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.attachmentType"	DataType="DT_WSTR"/>
+                <Column Name="result.mimeType"	DataType="DT_WSTR"/>
+                <Column Name="result.sizeInKb"	DataType="DT_WSTR"/>
+                <Column Name="result.parentType"	DataType="DT_WSTR"/>
+                <Column Name="result.parentId"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="version"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Attach File to Sheet  -->
+        <EndPoint Name="Attach_File_Sheet" Label="Attaches a file to the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-file-to-sheet" Group="Attachment" Url="/sheets/[$SheetId$]/attachments" Body="@C:\Users\USUARIO\Downloads\googledrive.csv" Method="POST" IsMultiPart="True">
+            <Params>
+                <Param Name="Path" Required="True" Label="File Path (Local)" Value=""/>
+                <Param Name="Content-Type" Type="Header" Value="application/msword"/>
+                <Param Name="Content-Disposition" Type="Header"  Value="attachment; filename=&quot;googledrive.csv&quot;"/>
+                <Param Name="Content-Length" Required="true" Type="Header" Value="118"/>
+                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="result.id"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.attachmentType"	DataType="DT_WSTR"/>
+                <Column Name="result.mimeType"	DataType="DT_WSTR"/>
+                <Column Name="result.sizeInKb"	DataType="DT_WSTR"/>
+                <Column Name="result.parentType"	DataType="DT_WSTR"/>
+                <Column Name="result.parentId"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="version"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Attach URL to Comment -->
         <EndPoint Name="post_Attach_URL_to_Comment" Label="Attaches a URL to the comment." HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-url-to-comment" Group="Attachment" Url="/sheets/[$SheetId$]/comments/[$SheetId$]/attachments" Method="POST" Filter="">
