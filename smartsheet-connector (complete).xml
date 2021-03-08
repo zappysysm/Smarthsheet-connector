@@ -760,11 +760,11 @@
                 <Column Name="createdBy.email"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
-        <!-- List Discussion Attachments -->
-        <EndPoint Name="get_list_discussion_attachments" Label="Gets a list of all attachments that are in the discussion" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-discussion-attachments" Group="Attachment" Url="/sheets/[$SheetId$]/discussions/[$discussionId$]/attachments " Method="GET" Filter="$.data[*]">
+        <!-- List Row Attachments -->
+        <EndPoint Name="get_list_row_attachments" Label="Gets a list of all attachments that are on the row, including row and row-level attachments" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-row-attachments" Group="Attachment" Url="/sheets/[$SheetId$]/rows/[$rowId$]/attachments " Method="GET" Filter="$.data[*]">
             <Params>
                 <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="discussionId" Label="Discussion Id" Required="true" Desc="ID from the discussion"/>
+                <Param Name="rowId" Label="Row Id" Required="true" Desc="ID from the row"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
@@ -777,15 +777,72 @@
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="createdBy.name"	DataType="DT_WSTR"/>
                 <Column Name="createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="url"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+
+        <!--Attach New Version -->
+        <EndPoint Name="post_attach_new_version" Label="Uploads a new version of a file to a sheet or row" HelpLink="https://smartsheet-platform.github.io/api-docs/#attach-new-version" Group="Attachment" Url="/sheets/[$SheetId$]/attachments/[$attachmentId$]/versions" Filter="" Body="@C:\Users\USUARIO\Downloads\Excel.csv" Method="POST" IsMultiPart="True">
+            <Params>
+                <Param Name="Path" Required="True" Label="File Path (Local)" Value="Not working the path here"/>
+                <Param Name="Content-Type" Type="Header" Value="application/msword"/>
+                <Param Name="Content-Disposition" Type="Header"  Value="attachment; filename=&quot;Excel.csv&quot;"/>
+                <Param Name="Content-Length" Required="true" Type="Header" Value="6193"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="attachmentId" Label="Attachment Id" Required="true" Desc="ID from the attachment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="result.id"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.attachmentType"	DataType="DT_WSTR"/>
+                <Column Name="result.mimeType"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+
+        <!--Delete All Versions -->
+        <EndPoint Name="delete_all_attachment_versions" Label="Deletes all versions of the attachment corresponding to the specified attachmentId" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-all-versions" Group="Attachment" Url="/sheets/[$SheetId$]/attachments/[$attachmentId$]/versions" Filter="$.data[*]" Body="@C:\Users\USUARIO\Downloads\doc.docx" Method="DELETE" >
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="attachmentId" Label="Attachment Id" Required="true" Desc="ID from the attachment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="version"	DataType="DT_I4"/>
+            </OutputColumns>
+        </EndPoint>
+
+        <!--List Versions -->
+        <EndPoint Name="get_sheet_attachments_list_versions" Label="Gets a list of all versions of the given attachmentId in order from newest to oldest" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-versions" Group="Attachment" Url="/sheets/[$SheetId$]/attachments/[$attachmentId$]/versions" Method="GET" Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="attachmentId" Label="Attachment Id" Required="true" Desc="ID from the attachment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="description"	DataType="DT_WSTR"/>
+                <Column Name="url"	DataType="DT_WSTR"/>
+                <Column Name="attachmentType"	DataType="DT_WSTR"/>
+                <Column Name="parentType"	DataType="DT_WSTR"/>
+                <Column Name="parentId"	DataType="DT_I8"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="mimeType"	DataType="DT_WSTR"/>
+                <Column Name="sizeInKb"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
 
         <!-- ______________________________________________________ Automation Rules ______________________________________________________ -->
 
         <!--List All Automation Rules -->
-        <EndPoint Name="get_sheet_automation_rules" Label="Get Sheet automation rules" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-all-automation-rules" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules" Method="GET" BatchSize="1" Filter="$.data[*]">
+        <EndPoint Name="get_sheet_automation_rules" Label="Gets a list of all attachments that are on the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-all-automation-rules" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules" Method="GET" BatchSize="1" Filter="$.data[*]">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
             <Column Name="id"	DataType="DT_I8" />
@@ -813,8 +870,8 @@
         <!-- Get an Automation Rule -->
         <EndPoint Name="get_an_automation_rule" Label="Returns the specified automation rule, including any action values" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="GET" BatchSize="1" Filter="">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-                <Param Name="AutomationrulesId" />
+                <Param Name="SheetId"  Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="AutomationruleId"  Label="Automation rule Id" Required="true" Desc="ID from the automation rule" />
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
@@ -839,9 +896,9 @@
         <!--Update an Automation Rule -->
         <EndPoint Name="update_an_automation_rule" Label="Updates an existing automation rule" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$]" Body="[$Query$]" Method="PUT" BatchSize="1" Filter="" >
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties" Required="True"/>
-                <Param Name="AutomationrulesId" Required="True" Desc="ID from the Automation Rule" />
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Query to update rule" 
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="AutomationrulesId" Label="Automation rule Id" Required="True" Desc="ID from the Automation Rule" />
+                <Param Name="Query" Label="Automation rule Object"  Editor="MultiLine" Required="True" Desc="Query to update rule" 
                 Value="
                 {
                     &quot;action&quot;: {
@@ -876,8 +933,8 @@
         <!-- Delete an Automation Rule -->
         <EndPoint Name="delete_an_automation_rule" Label="Deletes an automation rule" Desc="Read Sheet automation rule information" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="DELETE" Filter="">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="AutomationrulesId" Required="True" Desc="ID from the Automation Rule"/>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="AutomationrulesId" Label="Automation rule Id" Required="True" Desc="ID from the Automation Rule" />
             </Params>
 
         </EndPoint>
