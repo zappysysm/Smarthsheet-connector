@@ -838,7 +838,39 @@
         </EndPoint>
 
         <!-- ______________________________________________________ Automation Rules ______________________________________________________ -->
-
+        <!-- Delete an Automation Rule -->
+        <EndPoint Name="delete_an_automation_rule" Label="Deletes an automation rule" Desc="Read Sheet automation rule information" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="DELETE" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="AutomationrulesId" Label="Automation rule Id" Required="True" Desc="ID from the Automation Rule" />
+            </Params>
+        </EndPoint>
+        <!-- Get an Automation Rule -->
+        <EndPoint Name="get_an_automation_rule" Label="Returns the specified automation rule, including any action values" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="GET" BatchSize="1" Filter="">
+            <Params>
+                <Param Name="SheetId"  Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="AutomationruleId"  Label="Automation rule Id" Required="true" Desc="ID from the automation rule" />
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="enabled"	DataType="DT_BOOL"/>
+                <Column Name="createdBy.name"	DataType="DT_WSTR" Length="36"/>
+                <Column Name="createdBy.email"	DataType="DT_WSTR" Length="76"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedBy.name"	DataType="DT_WSTR" Length="36"/>
+                <Column Name="modifiedBy.email"	DataType="DT_WSTR" Length="76"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="userCanModify"	DataType="DT_BOOL"/>
+                <Column Name="action.type"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="action.recipients"	DataType="DT_I4"/>
+                <Column Name="action.frequency"	DataType="DT_WSTR" Length="44"/>
+                <Column Name="action.includeAllColumns"	DataType="DT_NUMERIC"/>
+                <Column Name="action.includeAttachments"	DataType="DT_BOOL"/>
+                <Column Name="action.includeDiscussions"	DataType="DT_BOOL"/>
+                <Column Name="action.notifyAllSharedUsers"	DataType="DT_BOOL"/>
+            </OutputColumns>
+        </EndPoint>
         <!--List All Automation Rules -->
         <EndPoint Name="get_sheet_automation_rules" Label="Gets a list of all attachments that are on the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-all-automation-rules" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules" Method="GET" BatchSize="1" Filter="$.data[*]">
             <Params>
@@ -866,32 +898,6 @@
                 <Column Name="action.notifyAllSharedUsers"	DataType="DT_BOOL"/>
                 <Column Name="action.includeMessageOnly"	DataType="DT_BOOL"/>
             </OutputColumns>  
-        </EndPoint>
-        <!-- Get an Automation Rule -->
-        <EndPoint Name="get_an_automation_rule" Label="Returns the specified automation rule, including any action values" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="GET" BatchSize="1" Filter="">
-            <Params>
-                <Param Name="SheetId"  Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="AutomationruleId"  Label="Automation rule Id" Required="true" Desc="ID from the automation rule" />
-            </Params>
-            <OutputColumns>
-                <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="enabled"	DataType="DT_BOOL"/>
-                <Column Name="createdBy.name"	DataType="DT_WSTR" Length="36"/>
-                <Column Name="createdBy.email"	DataType="DT_WSTR" Length="76"/>
-                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="modifiedBy.name"	DataType="DT_WSTR" Length="36"/>
-                <Column Name="modifiedBy.email"	DataType="DT_WSTR" Length="76"/>
-                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="userCanModify"	DataType="DT_BOOL"/>
-                <Column Name="action.type"	DataType="DT_WSTR" Length="64"/>
-                <Column Name="action.recipients"	DataType="DT_I4"/>
-                <Column Name="action.frequency"	DataType="DT_WSTR" Length="44"/>
-                <Column Name="action.includeAllColumns"	DataType="DT_NUMERIC"/>
-                <Column Name="action.includeAttachments"	DataType="DT_BOOL"/>
-                <Column Name="action.includeDiscussions"	DataType="DT_BOOL"/>
-                <Column Name="action.notifyAllSharedUsers"	DataType="DT_BOOL"/>
-            </OutputColumns>
         </EndPoint>
         <!--Update an Automation Rule -->
         <EndPoint Name="update_an_automation_rule" Label="Updates an existing automation rule" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$]" Body="[$Query$]" Method="PUT" BatchSize="1" Filter="" >
@@ -930,62 +936,32 @@
                 <Column Name="action.notifyAllSharedUsers"	DataType="DT_BOOL"/>
             </OutputColumns>            
         </EndPoint>
-        <!-- Delete an Automation Rule -->
-        <EndPoint Name="delete_an_automation_rule" Label="Deletes an automation rule" Desc="Read Sheet automation rule information" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-an-automation-rule" Group="Automation rules" Url="/sheets/[$SheetId$]/automationrules/[$AutomationrulesId$] " Method="DELETE" Filter="">
-            <Params>
-                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
-                <Param Name="AutomationrulesId" Label="Automation rule Id" Required="True" Desc="ID from the Automation Rule" />
-            </Params>
 
-        </EndPoint>
         <!-- ______________________________________________________ CELL ______________________________________________________ -->
 
         <!--  Get Cell History -->
         <EndPoint Name="get_cell_history" Label="Gets the cell modification history." HelpLink="Gets the cell modification history." Group="Cell" Url="/sheets/[$SheetId$]/rows/[$RowId$]/columns/[$ColumnId$]/history?include=columnType'" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties" Required="True"/>
-                <Param Name="RowId" Desc="ID from the Row" Required="True"/>
-                <Param Name="ColumnId" Desc="ID from the Column" Required="True"/>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="RowId" Label="Row Id" Desc="ID from the Row" Required="True"/>
+                <Param Name="ColumnId" Label="Column Id" Desc="ID from the Column" Required="True"/>
             </Params>
+            <OutputColumns>
+                <Column Name="columnId"	DataType="DT_I8"/>
+                <Column Name="value"	DataType="DT_WSTR"/>
+                <Column Name="displayValue"	DataType="DT_WSTR"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedBy.name"	DataType="DT_WSTR"/>
+                <Column Name="modifiedBy.email"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>      
         <!-- ______________________________________________________ Columns ______________________________________________________ -->
 
-        <!-- Get Column-->
-        <EndPoint Name="get_sheet_column" Label="Gets a specified column from the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-columns" Group="Column" Url="/sheets/[$SheetId$]/columns" Method="GET" BatchSize="1" Filter="$.data[*]">
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="id"	DataType="DT_I8" />
-                <Column Name="version"	DataType="DT_I8" />
-                <Column Name="index"	DataType="DT_I8" Length="20"/>
-                <Column Name="title"	DataType="DT_WSTR" Length="44"/>
-                <Column Name="type"	DataType="DT_WSTR" />
-                <Column Name="validation"	DataType="DT_BOOL" />
-                <Column Name="width"	DataType="DT_I8" />
-            </OutputColumns>
-        </EndPoint>
-        <!-- List Columns -->
-        <EndPoint Name="get_sheet_column_info" Label="Gets a list of all columns belonging to the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-column" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$] " Method="GET" BatchSize="1" Filter="">
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="id"	DataType="DT_I8" />
-                <Column Name="version"	DataType="DT_I8" />
-                <Column Name="index"	DataType="DT_I8" Length="20"/>
-                <Column Name="title"	DataType="DT_WSTR" Length="44"/>
-                <Column Name="type"	DataType="DT_WSTR" />
-                <Column Name="primary"	DataType="DT_WSTR" />
-                <Column Name="validation"	DataType="DT_BOOL" />
-                <Column Name="width"	DataType="DT_I8" />
-            </OutputColumns>
-        </EndPoint>
         <!--Add Columns -->
-        <EndPoint Name="add_column" Label="Inserts one or more columns into the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-columns" Body="[$Query$]" Group="Column" Url="/sheets/[$SheetId$]/columns/" Method="POST" Filter="">
+        <EndPoint Name="add_column" Label="Inserts one or more columns into the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-columns" Body="[$Query$]" Group="Column" Url="/sheets/[$SheetId$]/columns/" Method="POST" Filter=""  ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Query" Editor="MultiLine" Desc="Column object or an array of Column objects" Required="True"
+                <Param Name="SheetId" Label="SheetId" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="Query" Label="Column object/array" Editor="MultiLine" Desc="Column object or an array of Column objects" Required="True"
                 Value="[{
                     &quot;title&quot;: &quot;New Multi-Pick column&quot;,
                     &quot;type&quot;: &quot;MULTI_PICKLIST&quot;,
@@ -1000,12 +976,56 @@
                 <Column Name="version"	DataType="DT_I8" />
             </OutputColumns>            
         </EndPoint> 
+        <!--Delete Column -->
+        <EndPoint Name="delete_column" Label="Deletes the column specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-column" Body="[$Query$]" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$]" Method="DELETE" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="ColumnId" Label="Column Id" Required="True" Desc="ID from the column"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I8" />
+            </OutputColumns>  
+        </EndPoint>  
+        <!-- Get Column-->
+        <EndPoint Name="get_sheet_column" Label="Gets a specified column from the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-column" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$]" Method="GET"  Filter="">
+            <Params>
+                <Param Name="SheetId" Label="SheetId" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="ColumnId" Label="Column Id" Required="True" Desc="ID from the column"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8" />
+                <Column Name="version"	DataType="DT_I8" />
+                <Column Name="index"	DataType="DT_I8" Length="20"/>
+                <Column Name="title"	DataType="DT_WSTR" Length="44"/>
+                <Column Name="type"	DataType="DT_WSTR" />
+                <Column Name="validation"	DataType="DT_BOOL" />
+                <Column Name="width"	DataType="DT_I8" />
+            </OutputColumns>
+        </EndPoint>
+        <!-- List Columns -->
+        <EndPoint Name="get_sheet_column_info" Label="Gets a list of all columns belonging to the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-columns" Group="Column" Url="/sheets/[$SheetId$]/columns/" Method="GET"  Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Label="SheetId" Required="True" Desc="ID located in sheet properties"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8" />
+                <Column Name="version"	DataType="DT_I4" />
+                <Column Name="index"	DataType="DT_I4" />
+                <Column Name="title"	DataType="DT_WSTR"/>
+                <Column Name="type"	DataType="DT_WSTR" />
+                <Column Name="primary"	DataType="DT_WSTR" />
+                <Column Name="validation"	DataType="DT_WSTR" />
+                <Column Name="width"	DataType="DT_I4" />
+                <Column Name="options"	DataType="DT_WSTR" />
+            </OutputColumns>
+        </EndPoint>
         <!--Update Column -->
         <EndPoint Name="update_column" Label="Updates properties of the column, moves the column, and/or renames the column." HelpLink="https://smartsheet-platform.github.io/api-docs/#update-column" Body="[$Query$]" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$]" Method="PUT" Filter="">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="ColumnId" Required="True" Desc="ID from the column"/>
-                <Param Name="Query" Required="True" Editor="MultiLine" Desc="Column object"
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="ColumnId" Label="Column Id" Required="True" Desc="ID from the column"/>
+                <Param Name="Query" Label="Column object" Required="True" Editor="MultiLine" Desc="Column object"
                 Value="{
                     &quot;title&quot;: &quot;New multi-select dropdown column&quot;,
                     &quot;index&quot;: 1,
@@ -1027,17 +1047,7 @@
                 <Column Name="version"	DataType="DT_I8"/>
             </OutputColumns> 
         </EndPoint> 
-        <!--Delete Column -->
-        <EndPoint Name="delete_column" Label="Deletes the column specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-column" Body="[$Query$]" Group="Column" Url="/sheets/[$SheetId$]/columns/[$ColumnId$]" Method="DELETE" Filter="" ContentType="application/json">
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="ColumnId" Required="True" Desc="ID from the column"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
-                <Column Name="resultCode"	DataType="DT_I8" />
-            </OutputColumns>  
-        </EndPoint>                
+              
         <!-- ______________________________________________________ Commnets ______________________________________________________ -->
 
         <!-- Add Comment-->
