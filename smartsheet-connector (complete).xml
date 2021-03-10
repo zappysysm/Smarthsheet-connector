@@ -1051,82 +1051,97 @@
         <!-- ______________________________________________________ Commnets ______________________________________________________ -->
 
         <!-- Add Comment-->
-        <EndPoint Name="add_comment" Label="Adds a comment to a discussion" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-comment" Group="Commnets" Url="/sheets/[$SheetId$]/discussions/[$DiscussionId$]/comments" Method="GET" Filter="">
-            <Body>
-                <![CDATA[
-                {
-                  "text": [[$text$]]
-                }
-                ]]>
-            </Body>
+        <EndPoint Name="add_comment" Label="Adds a comment to a discussion" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-comment" Group="Commnets" Url="/sheets/[$SheetId$]/discussions/[$DiscussionId$]/comments" Method="POST" Filter="" Body="{&quot;text&quot;:&quot;[$text$]&quot;}"  ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="DiscussionId" Required="True" Desc="ID from the discussion"/>
-                <Param Name="text" Required="True" Desc="New text"  Value="This is a new comment"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="DiscussionId" Label="Discussion Id" Required="True" Desc="ID from the discussion"/>
+                <Param Name="text" Label="Text" Required="True" Desc="New text"  Value="This is a new comment"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.text"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="version"	DataType="DT_I4"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Edit Comment-->
-        <EndPoint Name="edit_comment" Label="Updates the text of a comment. NOTE: Only the user that created the comment is permitted to update it" HelpLink="https://smartsheet-platform.github.io/api-docs/#edit-comment" Group="Commnets" Url="/sheets/[$SheetId$]/comments/[$CommentId$]" Method="PUT" Filter="">
-            <Body>
-                <![CDATA[
-                {
-                  "text": [[$text$]]
-                }
-                ]]>
-            </Body>
+        <EndPoint Name="edit_comment" Label="Updates the text of a comment. NOTE: Only the user that created the comment is permitted to update it" HelpLink="https://smartsheet-platform.github.io/api-docs/#edit-comment" Group="Commnets" Url="/sheets/[$SheetId$]/comments/[$CommentId$]" Method="PUT" Filter="" Body="{&quot;text&quot;:&quot;[$text$]&quot;}" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="DiscussionId" Required="True" Desc="ID from the discussion"/>
-                <Param Name="text" Required="True" Desc="New text" Value="This is the updated comment text"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="CommentId" Label="Comment Id" Required="True" Desc="ID from the comment"/>
+                <Param Name="text" Label="Text" Required="True" Desc="New text" Value="This is the updated comment text"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.discussionId"	DataType="DT_I8"/>
+                <Column Name="result.text"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="version"	DataType="DT_I4"/>
+            </OutputColumns>
+        </EndPoint>        
+        <!-- Delete Comment-->
+        <EndPoint Name="delete_comment" Label="Deletes the comment specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-comment" Group="Commnets" Url="/sheets/[$SheetId$]/comments/[$CommentId$]" Method="DELETE" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="CommentId" Label="Comment Id" Required="True" Desc="ID from the comment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4" />
+                <Column Name="version"	DataType="DT_I4" />
+            </OutputColumns> 
         </EndPoint>        
         <!-- Get Commnet-->
         <EndPoint Name="get_comment" Label="Gets the comment specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-comment" Group="Commnets" Url="/sheets/[$SheetId$]/comments/[$CommentId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="CommentId" Required="True" Desc="ID from the comment"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="CommentId" Label="Comment Id" Required="True" Desc="ID from the comment"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_I8" />
-                <Column Name="discussionId"	DataType="DT_I8" />
-                <Column Name="text"	DataType="DT_WSTR" Length="20"/>
-                <Column Name="createdBy.name"	DataType="DT_WSTR"/>
-                <Column Name="createdBy.email"	DataType="DT_WSTR" />
-                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP" />
-                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP" />
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.discussionId"	DataType="DT_I8"/>
+                <Column Name="result.text"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"/>
+                <Column Name="result.createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="version"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
-        <!-- Delete Comment-->
-        <EndPoint Name="delete_comment" Label="Deletes the comment specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#Delete-comment" Group="Commnets" Url="/sheets/[$SheetId$]/comments/[$CommentId$]" Method="DELETE" Filter="">
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="CommentId" Required="True" Desc="ID from the comment"/>
-            </Params>
-        </EndPoint>        
         <!-- ______________________________________________________ CONTACTS ______________________________________________________ -->
-
-        <!-- Contact -->
-        <EndPoint Name="get_sheet_contact" Label="Read contacts" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-contact" Group="Contact" Url="/contacts" Method="GET" BatchSize="1" Filter="$.data[*]"></EndPoint>
-        <!-- Contact info -->
-        <EndPoint Name="get_sheet_contact_info" Label="Read Sheet's contact's information" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-contact" Group="Contact" Url="/contacts/[$contactId$] " Method="GET" BatchSize="1" Filter="">
+        <!-- Get Contact -->
+        <EndPoint Name="get_get_contact" Label="Gets the specified contact." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-contact" Group="Contact" Url="/contacts/[$contactId$] " Method="GET" Filter="">
             <Params>
-                <Param Name="contactId" />
+                <Param Name="contactId" Label="Contact Id" Required="True" Desc="ID from the contact"/>
             </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>
+
+        <!-- List Contacts -->
+        <EndPoint Name="get_list_contacts" Label="Gets a list of the user's Smartsheet contacts" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-contacts" Group="Contact" Url="/contacts" Method="GET" Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!-- ______________________________________________________ Cross sheet references ______________________________________________________ -->
-        <!-- List Cross-sheet References -->
-        <EndPoint Name="get_sheet_cross_references" Label="Read cross sheet references list" HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences " Method="GET" Filter="$.data[*]">
-            <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-            </Params>
-        </EndPoint>
-        <!-- Get Cross-sheet Reference -->
-        <EndPoint Name="get_sheet_cross_references_info" Label="Read cross sheet reference info" HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/[$crosssheetreferencesId$]" Method="GET" Filter="$.data[*]">
-            <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-                <Param Name="crosssheetreferencesId" />
-            </Params>
-        </EndPoint>
         <!-- Create Cross-sheet References -->
         <EndPoint Name="create_sheet_cross_references" Label="Adds a cross-sheet reference between two sheets and defines the data range for formulas. Each distinct data range requires a new cross-sheet reference." HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/" Method="GET" Filter="$.data[*]">
             <Body>
@@ -1147,6 +1162,19 @@
                 <Param Name="endRowId" Desc=" Defines ending edge of range when specifying one or more rows.Must be used with startRowId" Required="True"/>
                 <Param Name="startColumnId" Desc="Defines beginning edge of range when specifying one or more columns. Must be used with endColumnId" Required="True"/>
                 <Param Name="endColumnId" Desc="Defines ending edge of range when specifying one or more columns. Must be used with startColumnId." Required="True"/>
+            </Params>
+        </EndPoint>
+        <!-- Get Cross-sheet Reference -->
+        <EndPoint Name="get_sheet_cross_references_info" Label="Read cross sheet reference info" HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/[$crosssheetreferencesId$]" Method="GET" Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Desc="ID located in sheet properties"/>
+                <Param Name="crosssheetreferencesId" />
+            </Params>
+        </EndPoint>
+        <!-- List Cross-sheet References -->
+        <EndPoint Name="get_sheet_cross_references" Label="Lists all cross-sheet references for the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences " Method="GET" Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Desc="ID located in sheet properties"/>
             </Params>
         </EndPoint>
         <!-- ______________________________________________________ Dashboards ______________________________________________________ -->
