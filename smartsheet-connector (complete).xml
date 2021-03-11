@@ -1143,39 +1143,70 @@
         </EndPoint>
         <!-- ______________________________________________________ Cross sheet references ______________________________________________________ -->
         <!-- Create Cross-sheet References -->
-        <EndPoint Name="create_sheet_cross_references" Label="Adds a cross-sheet reference between two sheets and defines the data range for formulas. Each distinct data range requires a new cross-sheet reference." HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/" Method="GET" Filter="$.data[*]">
+        <EndPoint Name="create_cross_sheet_references" Label="Adds a cross-sheet reference between two sheets and defines the data range for formulas. Each distinct data range requires a new cross-sheet reference." HelpLink="https://smartsheet-platform.github.io/api-docs/#create-cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/" Method="POST" Filter="" ContentType="application/json">
             <Body>
                 <![CDATA[{
                 "name":"[$name$]",
                 "sourceSheetId":[$sourceSheetId$],
                 "startRowId":[$startRowId$],
                 "endRowId":[$endRowId$],
-                "startColumnId":[$startColumnId$]
+                "startColumnId":[$startColumnId$],
                 "endColumnId":[$endColumnId$]
                 }]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties" Required="True"/>
-                <Param Name="name" Desc="(optional): unique name for reference. If you omit this parameter, Smartsheet will autogenerate a name." Required="True" Value="Sample Time Log Sheet Range 1"/>
-                <Param Name="sourceSheetId" Desc="sheetId for data source" Required="True"/>
-                <Param Name="startRowId" Desc="  Defines beginning edge of range when specifying one or more rows. Must be used with endRowId" Required="True"/>
-                <Param Name="endRowId" Desc=" Defines ending edge of range when specifying one or more rows.Must be used with startRowId" Required="True"/>
-                <Param Name="startColumnId" Desc="Defines beginning edge of range when specifying one or more columns. Must be used with endColumnId" Required="True"/>
-                <Param Name="endColumnId" Desc="Defines ending edge of range when specifying one or more columns. Must be used with startColumnId." Required="True"/>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="name" Label="Name" Desc="(optional): unique name for reference. If you omit this parameter, Smartsheet will autogenerate a name." Required="True" Value="Sample Time Log Sheet Range 1"/>
+                <Param Name="sourceSheetId" Label="Source Sheet Id" Desc="sheetId for data source" Required="True"/>
+                <Param Name="startRowId" Label="Start Row Id" Desc="  Defines beginning edge of range when specifying one or more rows. Must be used with endRowId" Required="True"/>
+                <Param Name="endRowId" Label="End Row Id" Desc=" Defines ending edge of range when specifying one or more rows.Must be used with startRowId" Required="True"/>
+                <Param Name="startColumnId" Label="Start Column Id" Desc="Defines beginning edge of range when specifying one or more columns. Must be used with endColumnId" Required="True"/>
+                <Param Name="endColumnId" Label="End Column Id" Desc="Defines ending edge of range when specifying one or more columns. Must be used with startColumnId." Required="True"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.sourceSheetId"	DataType="DT_I8"/>
+                <Column Name="result.startRowId"	DataType="DT_I8"/>
+                <Column Name="result.endRowId"	DataType="DT_I8"/>
+                <Column Name="result.startColumnId"	DataType="DT_I8"/>
+                <Column Name="result.endColumnId"	DataType="DT_I8"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Get Cross-sheet Reference -->
-        <EndPoint Name="get_sheet_cross_references_info" Label="Read cross sheet reference info" HelpLink="https://smartsheet-platform.github.io/api-docs/#cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/[$crosssheetreferencesId$]" Method="GET" Filter="$.data[*]">
+        <EndPoint Name="get_sheet_cross_references_info" Label="Get Cross-sheet Reference" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-cross-sheet-reference" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences/[$crosssheetreferencesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-                <Param Name="crosssheetreferencesId" />
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="crosssheetreferencesId" Label="Cross sheet references Id" Desc="ID from the Cross sheet references" Required="True"/>
             </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="status"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="sourceSheetId"	DataType="DT_I8"/>
+                <Column Name="startRowId"	DataType="DT_I8"/>
+                <Column Name="endRowId"	DataType="DT_I8"/>
+                <Column Name="startColumnId"	DataType="DT_I8"/>
+                <Column Name="endColumnId"	DataType="DT_I8"/>
+            </OutputColumns>
         </EndPoint>
         <!-- List Cross-sheet References -->
         <EndPoint Name="get_sheet_cross_references" Label="Lists all cross-sheet references for the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-cross-sheet-references" Group="Cross sheet reference" Url="/sheets/[$SheetId$]/crosssheetreferences " Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
             </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="status"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="sourceSheetId"	DataType="DT_I8"/>
+                <Column Name="startRowId"	DataType="DT_I8"/>
+                <Column Name="endRowId"	DataType="DT_I8"/>
+                <Column Name="startColumnId"	DataType="DT_I8"/>
+                <Column Name="endColumnId"	DataType="DT_I8"/>
+            </OutputColumns>
         </EndPoint>
         <!-- ______________________________________________________ Dashboards ______________________________________________________ -->
         <!-- Copy Dashboard -->
@@ -1188,10 +1219,10 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="SightsId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
-                <Param Name="newName" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="newDashboardName" />
+                <Param Name="SightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="home" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" Value="null"/>
+                <Param Name="newName" Label="New Name" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="New Dashboard Name" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1205,7 +1236,7 @@
         <!-- Delete Dashboard -->
         <EndPoint Name="delete_dashboards" Label="Deletes the dashboard specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-dashboard" Group="Dashboards" Url="/sights/[$sightsId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="sightsId" />
+                <Param Name="sightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1213,12 +1244,34 @@
             </OutputColumns>
         </EndPoint>       
         <!-- List Dashboards-->
-        <EndPoint Name="get_list_dashboards" Label="Gets a list of all dashboards that the user has access to." HelpLink="https://smartsheet-platform.github.io/api-docs/#list-sight-shares" Group="Dashboards" Url="/sights" Method="GET" Filter="$.data[*]"></EndPoint>
+        <EndPoint Name="get_list_dashboards" Label="Gets a list of all dashboards that the user has access to." HelpLink="https://smartsheet-platform.github.io/api-docs/#list-dashboards" Group="Dashboards" Url="/sights" Method="GET" Filter="$.data[*]">
+        <OutputColumns>
+            <Column Name="id"	DataType="DT_I8"/>
+            <Column Name="name"	DataType="DT_WSTR"/>
+            <Column Name="accessLevel"	DataType="DT_WSTR"/>
+            <Column Name="permalink"	DataType="DT_WSTR"/>
+            <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+            <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+        </OutputColumns>
+        </EndPoint>
         <!-- Get Dashboard -->
-        <EndPoint Name="get_dashboards" Label="Gets the specified dashboard." HelpLink="https://smartsheet-platform.github.io/api-docs/#list-sight-shares" Group="Dashboards" Url="/sights/[$sightsId$]" Method="GET" Filter="">
+        <EndPoint Name="get_dashboard" Label="Gets the specified dashboard." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-dashboard" Group="Dashboards" Url="/sights/[$sightsId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="sightsId" />
+                <Param Name="sightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
             </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR"/>
+                <Column Name="backgroundColor"	DataType="DT_WSTR"/>
+                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="columnCount"	DataType="DT_I4"/>
+                <Column Name="widgets"	DataType="DT_WSTR"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="workspace.id"	DataType="DT_I8"/>
+                <Column Name="workspace.name"	DataType="DT_WSTR"/>
+            </OutputColumns>
         </EndPoint>
         <!-- Move Dashboard -->
         <EndPoint Name="move_dashboard" Label="Moves the specified dashboard to a new location." Desc="Moves the specified dashboard to a new location." HelpLink="https://smartsheet-platform.github.io/api-docs/#move-dashboard" Group="Dashboards" Url="/sights/[$SightsId$]/move" Method="POST" Filter="" ContentType="application/json">
@@ -1229,9 +1282,9 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="SightsId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
+                <Param Name="SightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="home" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" Value="null"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1245,10 +1298,12 @@
         <!-- Get Dashboard Publish Status -->
         <EndPoint Name="get_dashboards_publish_status" Label="Gets the dashboard 'publish' settings" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-dashboard-publish-status" Group="Dashboards" Url="/sights/[$sightsId$]/publish" Method="GET" Filter="">
             <Params>
-                <Param Name="sightsId" />
+                <Param Name="sightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
             </Params>
             <OutputColumns>
                 <Column Name="readOnlyFullEnabled"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullAccessibleBy"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullUrl"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
         <!-- Set Dashboard Publish Status -->
@@ -1260,9 +1315,9 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="SightsId" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="SightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
                 <Param Name="readOnlyFullEnabled" Desc="If true, a rich version of the dashboard is published with the ability to use shortcuts and widget interactions" Required="True" Options="true;false" Value="true" />
-                <Param Name="readOnlyFullAccessibleBy" Desc="Indicates who can access the 'Read-Only Full' view of the published dashboard: &quot;ALL&quot; -- available to anyone who has the link; &quot;ORG&quot; -- available only to members of the dashboard owner's Smartsheet organization account" Options="ALL;ORG" Value="" Required="True" />
+                <Param Name="readOnlyFullAccessibleBy" Desc="Indicates who can access the 'Read-Only Full' view of the published dashboard: &quot;ALL&quot; -- available to anyone who has the link; &quot;ORG&quot; -- available only to members of the dashboard owner's Smartsheet organization account" Options="ALL;ORG" Value="ALL" Required="True" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1273,15 +1328,10 @@
             </OutputColumns>
         </EndPoint>    
         <!-- update Dashboard -->
-        <EndPoint Name="update_dashboards" Label="Updates (renames) the specified dashboard" Desc="Updates (renames) the specified dashboard" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-dashboard" Group="Dashboards" Url="/sights/[$SightsId$]/" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[{
-                "name":"[$name$]"
-                }]]>
-            </Body>
+        <EndPoint Name="update_dashboards" Label="Updates (renames) the specified dashboard" Desc="Updates (renames) the specified dashboard" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-dashboard" Group="Dashboards" Url="/sights/[$SightsId$]/" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;name&quot;: &quot;[$name$]&quot;}">
             <Params>
-                <Param Name="SightsId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="name" Desc="New name" Required="True" Value="New Dashboard Name" />
+                <Param Name="SightsId" Label="Sights Id" Required="True" Desc="ID from the dashboard"/>
+                <Param Name="name" Label="New name" Desc="New name" Required="True" Value="New Dashboard Name" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1299,11 +1349,66 @@
         </EndPoint>   
         <!-- ______________________________________________________ Discussions ______________________________________________________ -->
 
-        <!-- Discussions list -->
-        <EndPoint Name="get_sheet_discussions" Label="Read Discussions" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-discussions" Group="Discussions" Url="/sheets/[$SheetId$]/discussions?include=[$Include$]" Method="GET" BatchSize="1" Filter="$.data[*]">
+
+        <!-- Create Discussion on Row -->
+        <EndPoint Name="post_discussion_Row" Label="Create Discussion on Row" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-discussion-on-row" Group="Discussions" Url="/sheets/[$SheetId$]/rows/[$RowId$]/discussions" Method="POST" ContentType="application/json" Filter="" Body="{&quot;comment&quot;: {&quot;text&quot;:&quot;[$newText$]&quot;}}">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Include" Desc="(optional, It can be empty) a comma-separated list of optional elements to include in the response: attachments and comments." Value="comments,attachments"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="RowId" Label="Row Id" Required="True" Desc="ID from the row"/>
+                <Param Name="newText" Label="New Text" Required="True" Desc="A new comment in a threaded conversation" Value="This text is the body of the first comment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"	/>
+                <Column Name="result.id"	DataType="DT_I8"	/>
+                <Column Name="result.title"	DataType="DT_WSTR"	Length="116"/>
+                <Column Name="result.comments"	DataType="DT_WSTR"	Length="1064"/>
+                <Column Name="result.commentCount"	DataType="DT_I4"	/>
+                <Column Name="result.lastCommentedAt"	DataType="DT_DBTIMESTAMP"	/>
+                <Column Name="result.lastCommentedUser.name"	DataType="DT_WSTR"	Length="36"/>
+                <Column Name="result.lastCommentedUser.email"	DataType="DT_WSTR"	Length="76"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"	Length="36"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"	Length="76"/>
+                <Column Name="version"	DataType="DT_NUMERIC"	/>
+            </OutputColumns>
+        </EndPoint>        
+        <!-- Create Discussion on Sheet -->
+        <EndPoint Name="post_discussion_sheet" Label="Create Discussion on Sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-discussion-on-sheet" Group="Discussions" Url="/sheets/[$SheetId$]/discussions" Method="POST" ContentType="application/json" Filter="" Body="{&quot;comment&quot;: {&quot;text&quot;:&quot;[$newText$]&quot;}}">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="newText" Label="New Text" Required="True" Desc="A new comment in a threaded conversation" Value="This text is the body of the first comment"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"	/>
+                <Column Name="result.id"	DataType="DT_I8"	/>
+                <Column Name="result.title"	DataType="DT_WSTR"	Length="116"/>
+                <Column Name="result.comments"	DataType="DT_WSTR"	Length="1064"/>
+                <Column Name="result.commentCount"	DataType="DT_I4"	/>
+                <Column Name="result.lastCommentedAt"	DataType="DT_DBTIMESTAMP"	/>
+                <Column Name="result.lastCommentedUser.name"	DataType="DT_WSTR"	Length="36"/>
+                <Column Name="result.lastCommentedUser.email"	DataType="DT_WSTR"	Length="76"/>
+                <Column Name="result.createdBy.name"	DataType="DT_WSTR"	Length="36"/>
+                <Column Name="result.createdBy.email"	DataType="DT_WSTR"	Length="76"/>
+                <Column Name="version"	DataType="DT_NUMERIC"	/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Delete Discussion -->
+        <EndPoint Name="delete_discussions" Label="Deletes the discussion specified in the URL" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-discussion" Group="Discussions" Url="/sheets/[$SheetId$]/discussions/[$DiscussionsId$] " Method="DELETE" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="DiscussionsId"  Label="Discussions Id" Required="True" Desc="ID from the Discussion"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I8"	/>
+                <Column Name="version"	DataType="DT_I8"	/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Discussions list -->
+        <EndPoint Name="get_sheet_discussions" Label="Gets a list of all discussions associated with the specified sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-discussions" Group="Discussions" Url="/sheets/[$SheetId$]/discussions" Method="GET" Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
@@ -1321,80 +1426,11 @@
                 <Column Name="createdBy.email"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
-        <!-- Create Discussion on Sheet -->
-        <EndPoint Name="post_discussion_sheet" Label="Create Discussion on Sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-discussion-on-sheet" Group="Discussions" Url="/sheets/[$SheetId$]/discussions" Method="POST" ContentType="application/json" Filter="">
-            <Body>
-                <![CDATA[{
-            "comment": {
-              "text": "[$Comment$]"
-            }
-        }]]>
-            </Body>
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Comment" Required="True" Desc="A new comment in a threaded conversation" Value="This text is the body of the first comment"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_I4"	/>
-                <Column Name="result.id"	DataType="DT_I8"	/>
-                <Column Name="result.title"	DataType="DT_WSTR"	Length="116"/>
-                <Column Name="result.comments"	DataType="DT_WSTR"	Length="1064"/>
-                <Column Name="result.commentCount"	DataType="DT_I4"	/>
-                <Column Name="result.lastCommentedAt"	DataType="DT_DBTIMESTAMP"	/>
-                <Column Name="result.lastCommentedUser.name"	DataType="DT_WSTR"	Length="36"/>
-                <Column Name="result.lastCommentedUser.email"	DataType="DT_WSTR"	Length="76"/>
-                <Column Name="result.createdBy.name"	DataType="DT_WSTR"	Length="36"/>
-                <Column Name="result.createdBy.email"	DataType="DT_WSTR"	Length="76"/>
-                <Column Name="version"	DataType="DT_NUMERIC"	/>
-            </OutputColumns>
-        </EndPoint>
-        <!-- Create Discussion on Row -->
-        <EndPoint Name="post_discussion_Row" Label="Create Discussion on Row" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-discussion-on-row" Group="Discussions" Url="/sheets/[$SheetId$]/rows/[$RowId$]/discussions" Method="POST" ContentType="application/json" Filter="">
-            <Body>
-            <![CDATA[{
-                "comment": {
-                "text": "[$newText$]"
-                }
-            }]]>
-            </Body>
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="RowId" Required="True" Desc="ID from the row"/>
-                <Param Name="newText" Required="True" Desc="A new comment in a threaded conversation" Value="This text is the body of the first comment"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_I4"	/>
-                <Column Name="result.id"	DataType="DT_I8"	/>
-                <Column Name="result.title"	DataType="DT_WSTR"	Length="116"/>
-                <Column Name="result.comments"	DataType="DT_WSTR"	Length="1064"/>
-                <Column Name="result.commentCount"	DataType="DT_I4"	/>
-                <Column Name="result.lastCommentedAt"	DataType="DT_DBTIMESTAMP"	/>
-                <Column Name="result.lastCommentedUser.name"	DataType="DT_WSTR"	Length="36"/>
-                <Column Name="result.lastCommentedUser.email"	DataType="DT_WSTR"	Length="76"/>
-                <Column Name="result.createdBy.name"	DataType="DT_WSTR"	Length="36"/>
-                <Column Name="result.createdBy.email"	DataType="DT_WSTR"	Length="76"/>
-                <Column Name="version"	DataType="DT_NUMERIC"	/>
-            </OutputColumns>
-        </EndPoint>        
-        <!-- Delete Discussion -->
-        <EndPoint Name="delete_discussions" Label="Deletes the discussion specified in the URL" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-discussion" Group="Discussions" Url="/sheets/[$SheetId$]/discussions/[$DiscussionsId$] " Method="DELETE" Filter="">
-            <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-                <Param Name="DiscussionsId" />
-            </Params>
-            <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_I8"	/>
-                <Column Name="version"	DataType="DT_I8"	/>
-            </OutputColumns>
-        </EndPoint>
         <!-- Discussions info -->
-        <EndPoint Name="get_sheet_discussions_replies" Label="Read Discussions's replies" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-discussions" Group="Discussions" Url="/sheets/[$SheetId$]/discussions/[$DiscussionsId$] " Method="GET"  Filter="">
+        <EndPoint Name="get_sheet_discussions_replies" Label="Gets the discussion specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-discussion" Group="Discussions" Url="/sheets/[$SheetId$]/discussions/[$DiscussionsId$] " Method="GET"  Filter="">
             <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-                <Param Name="DiscussionsId" />
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="DiscussionsId" Label="Discussions Id" Required="True" Desc="ID from the Discussion"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
