@@ -1470,20 +1470,11 @@
             </OutputColumns>
         </EndPoint>           
         <!-- ______________________________________________________ favorites ______________________________________________________ -->
-               <!-- Add Favorites -->
+        <!-- Add Favorites -->
         <EndPoint Name="add_favorite" Label="Adds one or more items to the user's list of favorite items. This operation supports both single-object and bulk semantics." HelpLink="https://smartsheet-platform.github.io/api-docs/#add-favorites" Group="Favorites" Url="/favorites" Method="POST" Filter="" Body="[$Query$]"  ContentType="application/json">
             <Params>
-            <Param Name="Query"  Editor="MultiLine" Required="True" Desc="objectId: Id of the favorited item. If type is template, only private sheet-type template Id is allowed; type: One of: folder, report, sheet, sight, template, or workspace" 
-                Value="
-                [{
-                         &quot;type&quot;:  &quot;sheet&quot;,
-                         &quot;objectId&quot;: 5598249034770308
-                    },
-                    {
-                         &quot;type&quot;:  &quot;folder&quot;,
-                         &quot;objectId&quot;: 7739127878707076
-                    }
-                ]"/>
+            <Param Name="Query" Label="Favorite object/array"  Editor="MultiLine" Required="True" Desc="Favorite object or an array of Favorite objects, with the following attributes: objectId, type ( folder, report, sheet, sight, template, or workspace)" 
+                Value="[{&quot;type&quot;:  &quot;sheet&quot;,&quot;objectId&quot;: 5598249034770308},{&quot;type&quot;:  &quot;folder&quot;, &quot;objectId&quot;: 7739127878707076}]"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1492,13 +1483,18 @@
             </OutputColumns>   
         </EndPoint>
         <!--List Favorites -->
-        <EndPoint Name="list_favorites" Label="Gets a list of all of the user's favorite items" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-favorites" Group="Favorites" Url="/favorites" Method="GET" BatchSize="1" Filter="$.data[*]"></EndPoint>
+        <EndPoint Name="list_favorites" Label="Gets a list of all of the user's favorite items" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-favorites" Group="Favorites" Url="/favorites" Method="GET" Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="objectId"	DataType="DT_I8"/>
+            </OutputColumns>           
+        </EndPoint>
        
         <!--Remove Favorite -->
-        <EndPoint Name="delete_favorite" Label="Removes a single folder/Report/Sheet/Dashboard/Template/Workspace from the user's list of favorite items." HelpLink="https://smartsheet-platform.github.io/api-docs/#remove-favorite" Group="Favorites" Url="/favorites/[$type$]/[$objectId$]" Method="DELETE" BatchSize="1" Filter="">
+        <EndPoint Name="delete_favorite" Label="Removes a single folder/Report/Sheet/Dashboard/Template/Workspace from the user's list of favorite items." HelpLink="https://smartsheet-platform.github.io/api-docs/#remove-favorite" Group="Favorites" Url="/favorites/[$type$]/[$objectId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="type" Required="true" Desc="Type of the object" Value="folder" Options="folder;report;sheet;dashboard;template;workspace"/>
-                <Param Name="objectId" Required="true" Desc="Id of the object"/>
+                <Param Name="type" Label="Type" Required="true" Desc="Type of the object" Value="folder" Options="folder;report;sheet;dashboard;template;workspace"/>
+                <Param Name="objectId" Label="Object Id" Required="true" Desc="Id of the object"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1509,8 +1505,8 @@
         <!--Remove Multiple Favorites -->
         <EndPoint Name="delete_multiple_favorites" Label="Removes multiple folders/Reports/Sheets/Dashboards/Templates/Workspaces from the user's list of favorite items." HelpLink="https://smartsheet-platform.github.io/api-docs/#remove-multiple-favorites" Group="Favorites" Url="/favorites/[$type$]?objectIds=[$objectIdList$]" Method="DELETE" BatchSize="1" Filter="">
             <Params>
-                <Param Name="type" Required="true" Desc="Type of the object" Value="folder" Options="folder;report;sheet;dashboard;template;workspace"/>
-                <Param Name="objectIdList" Required="true" Desc="a comma-separated list of object Ids representing the items to remove from favorites"/>
+                <Param Name="type" Label="Type" Required="true" Desc="Type of the object" Value="folder" Options="folder;report;sheet;dashboard;template;workspace"/>
+                <Param Name="objectIdList" Label="Object Id List" Required="true" Desc="a comma-separated list of object Ids representing the items to remove from favorites"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1520,7 +1516,7 @@
 
         <!-- ______________________________________________________ Folders ______________________________________________________ -->       
         <!-- Copy Folder -->
-        <EndPoint Name="copy_folder" Label="Creates a copy of the specified folder" HelpLink="https://smartsheet-platform.github.io/api-docs/#copy-folder" Group="Folders" Url="/folders/[$folderID$]/copy[$Parameters$]" Method="POST" Filter="" ContentType="application/json">
+        <EndPoint Name="copy_folder" Label="Creates a copy of the specified folder" HelpLink="https://smartsheet-platform.github.io/api-docs/#copy-folder" Group="Folders" Url="/folders/[$folderID$]/copy" Method="POST" Filter="" ContentType="application/json">
             <Body>
                 <![CDATA[{
                 "destinationType":"[$destinationType$]",
@@ -1529,11 +1525,10 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="folderID" Required="True" Desc="ID located in folder properties"/>
-                <Param Name="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
-                <Param Name="newName" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="newFolderName" />
-                 <Param Name="Parameters"  Desc="(optional) include, exclude and more. Se more details on Learn more. Example ?include=data&amp;skipRemap=reports"/>
+                <Param Name="folderID" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="home" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" Value="null"/>
+                <Param Name="newName" Label="New Name" Desc="Name of the newly created object (when creating a copy of a dashboard, folder, sheet, or workspace). This attribute is not supported for &quot;move&quot; operations (that is, a moved dashboard, folder, sheet, or workspace retains its original name)." Required="True" Value="New Folder Name" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1545,14 +1540,9 @@
             </OutputColumns>
         </EndPoint>  
          <!-- Create Folder (Sheets Level) -->
-        <EndPoint Name="create_folder_sheet_level" Label="Creates a folder in the user's Sheets folder (Home)" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-sheets-level" Group="Folders" Url="/home/folders/" Method="POST" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[{
-                "name":"[$name$]"
-                }]]>
-            </Body>
+        <EndPoint Name="create_folder_sheet_level" Label="Creates a folder in the user's Sheets folder (Home)" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-sheets-level" Group="Folders" Url="/home/folders/" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;: &quot;[$name$]&quot;}">
             <Params>
-                <Param Name="name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
+                <Param Name="name" Label="Name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1563,15 +1553,10 @@
         </EndPoint> 
 
         <!-- Create Folder (Subfolder) -->
-        <EndPoint Name="create_folder_subfolder" Label="Creates a folder in the specified folder" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-sheets-level" Group="Folders" Url="/folders/[$folderId$]/folders" Method="POST" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[{
-                "name":"[$name$]"
-                }]]>
-            </Body>
+        <EndPoint Name="create_folder_subfolder" Label="Creates a folder in the specified folder" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-subfolder" Group="Folders" Url="/folders/[$folderId$]/folders" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;: &quot;[$name$]&quot;}">
             <Params>
-                <Param Name="name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
-                <Param Name="folderId" Required="True" Desc="ID located in folder properties"/>
+                <Param Name="name" Label="Name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
+                <Param Name="folderId" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1582,15 +1567,10 @@
         </EndPoint> 
 
         <!-- Create Folder (Workspace) -->
-        <EndPoint Name="create_folder_workspace" Label="Creates a folder in the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-workspace" Group="Folders" Url="workspaces/[$workspacesId$]/folders/" Method="POST" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[{
-                "name":"[$name$]"
-                }]]>
-            </Body>
+        <EndPoint Name="create_folder_workspace" Label="Creates a folder in the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-folder-workspace" Group="Folders" Url="workspaces/[$workspacesId$]/folders/" Method="POST" Filter="" ContentType="application/json" Body="{&quot;name&quot;: &quot;[$name$]&quot;}">
             <Params>
-                <Param Name="name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
-                <Param Name="workspacesId" Required="True" Desc="ID located in workspaces properties"/>
+                <Param Name="name" Label="Name" Desc="Name does not have to be unique" Required="True" Value="New folder" />
+                <Param Name="workspacesId" Label="Workspaces Id" Required="True" Desc="ID located in workspaces properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1602,7 +1582,7 @@
         <!-- Delete Folder -->
         <EndPoint Name="delete_folder" Label="Deletes the folder (and its contents) specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-folder" Group="Folders" Url="/folders/[$folderId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="folderId" />
+                <Param Name="folderId" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1610,9 +1590,9 @@
             </OutputColumns>
         </EndPoint>
         <!-- Get Folder -->
-        <EndPoint Name="get_folder" Label="Read folder information" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-folder" Group="Folders" Url="/folders/[$folderId$]" Method="GET" Filter="">
+        <EndPoint Name="get_folder" Label="Gets the specified folder (and lists its contents)." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-folder" Group="Folders" Url="/folders/[$folderId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="folderId" />
+                <Param Name="folderId" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
@@ -1633,13 +1613,13 @@
         <!-- List Folders (Subfolder) -->
         <EndPoint Name="get_folders_from_folder" Label="Gets a list of the top-level child folders within the specified folder" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-folders-subfolder" Group="Folders" Url="/folders/[$folderId$]/folders" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="folderId" />
+                <Param Name="folderId" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
             </Params>
         </EndPoint>
         <!-- List Folders (Workspace)-->
-        <EndPoint Name="get_folders_from_workspace" Label="Gets a list of the top-level child folders within the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-folders-workspace" Group="Folders" Url="/workspaces/[$folderId$]/folders" Method="GET" Filter="$.data[*]">
+        <EndPoint Name="get_folders_from_workspace" Label="Gets a list of the top-level child folders within the specified workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-folders-workspace" Group="Folders" Url="/workspaces/[$workspacesId$]/folders" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="folderId" />
+                <Param Name="workspacesId" Label="Workspaces Id" Required="True" Desc="ID located in workspaces properties"/>
             </Params>
         </EndPoint>        
          <!-- Move Folder -->
@@ -1651,9 +1631,9 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="folderID" Required="True" Desc="ID located in folder properties"/>
-                <Param Name="destinationType" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="folder" />
-                <Param Name="destinationId" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" />
+                <Param Name="folderID" Label="Folder ID" Required="True" Desc="ID located in folder properties"/>
+                <Param Name="destinationType" Label="Destination Type" Options="folder;home;workspace" Desc="Type of the destination container (when copying or moving a folder or a sheet)" Required="True" Value="home" />
+                <Param Name="destinationId" Label="Destination Id" Desc="Id of the destination container (when copying or moving a folder or a sheet). Required if destinationType is &quot;folder&quot; or &quot;workspace&quot; If destinationType is &quot;home&quot;, this value must be null." Required="True" Value="null" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1665,15 +1645,10 @@
             </OutputColumns>
         </EndPoint> 
          <!-- Update Folder -->
-        <EndPoint Name="update_folder" Label="Updates the folder specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-folder" Group="Folders" Url="/folders/[$folderID$]/" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[{
-                "name":"[$name$]"
-                }]]>
-            </Body>
+        <EndPoint Name="update_folder" Label="Updates the folder specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-folder" Group="Folders" Url="/folders/[$folderID$]/" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;name&quot;: &quot;[$name$]&quot;}">
             <Params>
-                <Param Name="folderID" Required="True" Desc="ID located in folder properties"/>
-                <Param Name="name" Desc="Name does not have to be unique" Required="True" Value="New name for folder" />
+                <Param Name="folderID" Label="Folder Id" Required="True" Desc="ID located in folder properties"/>
+                <Param Name="name" Label="Name" Desc="Name does not have to be unique" Required="True" Value="New name for folder" />
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
