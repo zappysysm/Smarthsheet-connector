@@ -1668,14 +1668,9 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="name" Required="True" Desc="Must be unique within the organization accoun" Value="API-created Group"/>
-                <Param Name="description" Desc="Optional, it can be empty. Description of the group" Value="Group created"/>
-                <Param Name="members"  Editor="MultiLine" Desc="Optional, it can be empty. Array of GroupMember objects, each limited to the following attribute:email" 
-                Value="{
-                    &quot;email&quot;: &quot;example1@smartsheet.com&quot;
-                },{
-                    &quot;email&quot;: &quot;example2@smartsheet.com&quot;
-                }"/>
+                <Param Name="name" Label="Name" Required="True" Desc="Must be unique within the organization accoun" Value="API-created Group"/>
+                <Param Name="description" Label="Description" Desc="Optional, it can be empty. Description of the group" Value="Group created"/>
+                <Param Name="members" Label="Members"  Editor="MultiLine" Desc="Optional, it can be empty. Array of GroupMember objects, each limited to the following attribute:email" Value="{ &quot;email&quot;: &quot;example1@smartsheet.com&quot; },{&quot;email&quot;: &quot;example2@smartsheet.com&quot;}"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1691,9 +1686,9 @@
             </OutputColumns>
         </EndPoint>
         <!-- Delete Group -->
-        <EndPoint Name="delete_group" Label="Deletes the group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-group" Group="Groups" Url="/groups/[$groupsId$]" Method="DELETE" Filter="">
+        <EndPoint Name="delete_group" Label="Deletes the group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-group" Group="Groups" Url="/groups/[$groupId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="groupsId" Desc="ID located in group properties"/>
+                <Param Name="groupId" Label="Group Id" Required="True" Desc="ID located in group properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_I8"/>
@@ -1701,9 +1696,9 @@
             </OutputColumns>
         </EndPoint>
         <!-- Get Group -->
-        <EndPoint Name="get_group" Label="Gets information about and an array of members for the group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-group" Group="Groups" Url="/groups/[$groupsId$]" Method="GET" Filter="">
+        <EndPoint Name="get_group" Label="Gets information about and an array of members for the group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-group" Group="Groups" Url="/groups/[$groupId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="groupsId" Desc="ID located in group properties"/>
+                <Param Name="groupId" Label="Group Id" Required="True" Desc="ID located in group properties"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
@@ -1729,11 +1724,11 @@
             </OutputColumns>
         </EndPoint>
         <!-- Update Group -->
-        <EndPoint Name="update_group" Label="Updates the Group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-group" Group="Groups" Url="/groups/[$groupsId$]" Method="PUT" Filter="" Body="[$Query$]" ContentType="application/json">
+        <EndPoint Name="update_group" Label="Updates the Group specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-group" Group="Groups" Url="/groups/[$groupId$]" Method="PUT" Filter="" ContentType="application/json" Body="{ &quot;name&quot;: &quot;[$newName$]&quot;, &quot;description&quot;: &quot;[$newDescription$]&quot; }">
             <Params>
-                <Param Name="groupsId" Desc="ID located in group properties"/>
-                <Param Name="Query" Editor="MultiLine" Required="True" Desc="Array of SummaryField objects" 
-                Value="{ &quot;name&quot;: &quot;Renamed Group&quot;, &quot;description&quot;: &quot;Some new description&quot; }"/>
+                <Param Name="groupId" Label="Group Id" Required="True" Desc="ID located in group properties"/>
+                <Param Name="newName" Label="New name" Required="True" Desc="Must be unique within the organization account" Value="Renamed Group"/>
+                <Param Name="newDescription" Label="New description" Desc="Optional, it can be empty. Description of the group" Value="Some new description"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -1746,7 +1741,41 @@
                 <Column Name="result.createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="result.modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
-        </EndPoint>        
+        </EndPoint>  
+        <!-- ______________________________________________________ Group Members ______________________________________________________ -->
+        <!-- Add Group Members -->
+        <EndPoint Name="post_add_group_members" Label="Adds one or more members to a group" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-group-members" Group="Group Members" Url="/groups/[$groupId$]/members" Method="POST" Filter="" ContentType="application/json" Body="[$Query$]"> 
+            <Params>
+                <Param Name="groupId" Label="Group Id" Required="True" Desc="ID located in group properties"/>
+                <Param Name="Query" Label=" GroupMember object array"  Editor="MultiLine" Required="True" Desc="A single GroupMember object or an array of GroupMember objects, limited to the following attribute: email" Value="[{ &quot;email&quot;: &quot;jane.doe@smartsheet.com&quot; }]"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint>   
+        <!-- Remove Group Member -->
+        <EndPoint Name="delete_Remove_Group_Member" Label="Removes a member from a group" HelpLink="https://smartsheet-platform.github.io/api-docs/#remove-group-member" Group="Group Members" Url="/groups/[$groupId$]/members/[$userId$]" Method="DELETE" Filter="">
+            <Params>
+                <Param Name="groupId" Label="Group Id" Required="True" Desc="ID located in group properties"/>
+                <Param Name="userId" Label="User Id" Required="True" Desc="ID from the user"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_I8"/>
+                <Column Name="resultCode"	DataType="DT_I8"/>
+            </OutputColumns>
+        </EndPoint> 
+        <!-- ______________________________________________________ Home ______________________________________________________ -->
+        <!-- List Contents -->
+        <EndPoint Name="get_list_content" Label="Gets a nested list of all Home objects" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-contents" Group="Home" Url="/home?include=source" Method="GET" Filter="" > 
+            <OutputColumns>
+                <Column Name="sheets"	DataType="DT_NTEXT"/>
+                <Column Name="folders"	DataType="DT_NTEXT"/>
+                <Column Name="workspaces"	DataType="DT_NTEXT"/>
+                <Column Name="sights"	DataType="DT_WSTR"/>
+            </OutputColumns>
+        </EndPoint> 
         <!-- ______________________________________________________ Reports ______________________________________________________ -->
         <!-- List Reports-->
         <EndPoint Name="get_reports_list" Label="Gets a list of all reports that the user has access to in alphabetical order by name. The list contains an abbreviated Report object for each report" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-reports" Group="Reports" Url="/reports" Method="GET" Filter="$.data[*]">
