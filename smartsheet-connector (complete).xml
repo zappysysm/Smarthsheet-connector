@@ -1776,6 +1776,106 @@
                 <Column Name="sights"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint> 
+        <!-- ______________________________________________________ Proofs ______________________________________________________ -->
+        <!-- List Reports-->
+        <EndPoint Name="get_list_proofs" Label="Gets a list of all proofs for a given sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-proofs" Group="Proofs" Url="/sheets/[$SheetId$]/proofs" Method="GET" Filter="$.data[*]">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="originalId"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="240"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="32"/>
+                <Column Name="proofRequestUrl"	DataType="DT_WSTR" Length="524"/>
+                <Column Name="version"	DataType="DT_I4"/>
+                <Column Name="lastUpdatedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="lastUpdatedBy.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="lastUpdatedBy.email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="isCompleted"	DataType="DT_WSTR" Length="20"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Create Proof-->
+        <EndPoint Name="post_create_proofs" Label="Creates a proof on a row" HelpLink="https://smartsheet-platform.github.io/api-docs/#create-proof" Group="Proofs" Url="/sheets/[$SheetId$]/rows/[$rowId$]/proofs" Method="POST" Body="@C:\Users\USUARIO\Downloads\googledrive.csv" IsMultiPart="True">
+            <Params>
+                <Param Name="Path" Required="True" Label="File Path (Local)" Value="Not working the path here"/>
+                <Param Name="Content-Type" Type="Header" Value="application/msword"/>
+                <Param Name="Content-Disposition" Type="Header"  Value="attachment; filename=&quot;googledrive.csv&quot;"/>
+                <Param Name="Content-Length" Required="true" Type="Header" Value="118"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="rowId" Label="Row Id" Required="True" Desc="ID from the row"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.originalId"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="32"/>
+                <Column Name="result.proofRequestUrl"	DataType="DT_WSTR" Length="524"/>
+                <Column Name="result.version"	DataType="DT_I4"/>
+                <Column Name="result.lastUpdatedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.lastUpdatedBy.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="result.lastUpdatedBy.email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="result.isCompleted"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="version"	DataType="DT_I4"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Get Proof -->
+        <EndPoint Name="get_proof" Label="Gets the proof specified " HelpLink="https://smartsheet-platform.github.io/api-docs/#get-proof" Group="Proofs" Url="/sheets/[$SheetId$]/proofs/[$proofId$]" Method="GET" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="proofId" Label="Proof Id" Required="True" Desc="ID from the proof"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.originalId"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="32"/>
+                <Column Name="result.proofRequestUrl"	DataType="DT_WSTR" Length="524"/>
+                <Column Name="result.version"	DataType="DT_I4"/>
+                <Column Name="result.lastUpdatedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.lastUpdatedBy.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="result.lastUpdatedBy.email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="result.isCompleted"	DataType="DT_WSTR" Length="20"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Update Proof Status -->
+        <EndPoint Name="put_update_proof_status" Label="Sets the proof status as either complete or incomplete" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-proof-status" Group="Proofs" Url="/sheets/[$SheetId$]/proofs/[$proofId$]" Method="GET" Filter="" Body="{&quot;isCompleted&quot;: [$isCompleted$]}">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="proofId" Label="Proof Id" Required="True" Desc="ID from the proof"/>
+                <Param Name="isCompleted " Label="is completed?" Required="True" Desc="Boolean to indicate whether the proof is complete or incomplete" Options="true;false" Value="true"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.originalId"	DataType="DT_I8"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="32"/>
+                <Column Name="result.proofRequestUrl"	DataType="DT_WSTR" Length="524"/>
+                <Column Name="result.version"	DataType="DT_I4"/>
+                <Column Name="result.lastUpdatedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="result.lastUpdatedBy.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="result.lastUpdatedBy.email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="result.isCompleted"	DataType="DT_WSTR" Length="20"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Delete Proof -->
+        <EndPoint Name="delete_proof" Label="Deletes the proof including all versions. The proofId must be for the original version" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-proof" Group="Proofs" Url="/sheets/[$SheetId$]/proofs/[$proofId$]" Method="DELETE" Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="proofId" Label="Proof Id" Required="True" Desc="ID from the proof"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="version"	DataType="DT_I8"/>
+            </OutputColumns>
+        </EndPoint>
         <!-- ______________________________________________________ Reports ______________________________________________________ -->
         <!-- List Reports-->
         <EndPoint Name="get_reports_list" Label="Gets a list of all reports that the user has access to in alphabetical order by name. The list contains an abbreviated Report object for each report" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-reports" Group="Reports" Url="/reports" Method="GET" Filter="$.data[*]">

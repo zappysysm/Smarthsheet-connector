@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{836FC689-64C3-404E-9B36-EC6AACAC5F7C}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{CD4E19B5-2F1A-4C81-BEB9-F7F90C990DD9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,7 @@
           ConnectionString="ServiceUrl=https://api.smartsheet.com/2.0;ConfigFile=C:\Users\USUARIO\Downloads\Connectors XML\Smartsheet connector\smartsheet-connector (complete).xml;Provider=Custom;AuthName=TokenAuth;UserName=;ClientId=;Parameters=;UseEmbeddedConfig=False;TrustedDomains=;ConfigText=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFZxkFk4eHWAd+GnCpMvdzD1d2VD3Jjty/G1bqUk0rxQAAAAAOgAAAAAIAACAAAAB1vo7ufw5uzAL8QV5/NcQ0LDDsi10AZgJsOfdwpYEIdEAAAADJIexcJCxih/EJNhIuDqHDYLs3XUZyRY0vZ/kplcspKE5Ie32HMAt852IQuiXslVI66Dcm+EvNOFQ5ZLbZaeZrQAAAAM+nKRkVblgo2XhkoxpKyDYZ+PUSPm7AHMK/tXyUAMzFAYm2tr09ZCuRwGKoD99RE9l/6EV6aNdH1UankuFyUZs</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACzLuD0gEMe97laONsfY15YBNF9wW2Evcv0sQC0yIRtxAAAAAAOgAAAAAIAACAAAABMY98S641RttyD/yp8fDbxBTNR3VNWZ+/Htl4OBz8I80AAAAAXrwOD/3FK5MvNTV3LyfvWf2RqMkaptOnnyPCLJk8cUckHbbXHD2D+Hi4KFCtKqfK7+PdACqn1f8wtV6G3A+8WQAAAAGHAO9uBx2qv9t2DipazbEO+oRwCLcnUFjGxm9/naNo8uON5SB3Riku16MHgy8clbnTfGrHTfd4m0VoEn9BwLUc</Password>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -54,13 +54,13 @@
           ConnectionString="Provider=Google;OAuthVersion=Default;ScopeSeparator={space};ReturnUrl=;ExtraAttributesForTokenRequest=;ExtraAttributesForAuthRequest=;TokenRefreshMode=Default;SslVersion=Default;Prop1Name=;Prop1Value=;Prop2Name=;Prop2Value=;GrantType=Default;UserName=;DoNotIncludeCredentialsInHeader=False;DoNotIncludeCredentialsInBody=False;DoNotIncludeEmptyParamsInSignature=False;ContentType=;ExpiresInAttribute=;AuthUrl=;TokenUrl=;RequestTokenUrl=;ClientId=;Scope=https://www.googleapis.com/auth/adwords;Timeout=100000;UseCustomApp=False;CustomAuthHeader=;CustomTokenPrefix=;EnableOAuthOverUrl=False;RefreshTokenFilePath=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABtz5w061RnC9MdOUNatChzy4dr2SJRNkPIo2f2BMbkTwAAAAAOgAAAAAIAACAAAAB4+OeuL6Xwtn+mtsmK7ONw1zTQD5Kx7nu1cnDofSmT8xAAAADySyjJb6voLPXqYKsaweXLQAAAAHqZ4fWwc5nMZTSubb2ut9wBZoVkAm1uuKWt5p/CVSEeGH1SLNdUAL2SxKK/XWdJ4nNqVIVIP1dh+qDg3ryPhxU</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9HzCDJSe/ha0gCiysGnOhkenUrHOT9iEzCejKrsdPFQAAAAAOgAAAAAIAACAAAAAKogjCn8ALMsnHoeXI4hotBQTHfsaDmmOf2WRmVKyVTRAAAAA+5FYs+T5/Rr3daXgF9C7rQAAAALT/D+d5TDk2L2UjMbJXmOTs1ANidNAl0VbFMdKYfSRDX6ZlOxXsLhfvMFFzb3TkVoSpLyHiAEy7DBv9aKJB20g</Password>
           <AccessToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADJHU5fqv10bznE5Ug/Hc6WGE5rjRBTZ9VC66z8b02zDwAAAAAOgAAAAAIAACAAAADy/RxDHHfhfUq4kFf/BwGmHgeUqY9puW2nq1bkkd4uLlABAAAYn5Q6RmYmF7ugI1NtmeHJUqyAe14du0+YLmRacWHJX6q5XvvlMQkmMM/K0cScTAT/7y3EXDG1fk58wmToXD3L3erdpO/IsZxtHE2N52K/tXMknYV/toJN2UasuyIrgTqcfDGAk/PvUX+gkCiAhYDKfCD23fO78CvkJQbVyscnfadktPon5z43kNGKFT4uESqMzjaNz8vVtD1Z4Pil96mKRNIrk7nL3KytZp9N2e2UOPjECpVAVKDkk+d78GNpgB+JN3tJcJBbEkUg+bNhp/SukzUbKky10QIHtIdQc9nBPPLWp/v0CMfKeHVRP1+ufehM+dYw2QWj/AokCvlcsPe3sHcnTJzMPuEpmKT9AkrOQKA4b2rXsNOXxjyjA+kbyOVGczZX2P20AO3KHbuLZPMLmaYUIcGcjKcjpDICyICkPQHFWPBV1EjgfBoYcJVpX0VAAAAAYziAFvOce75WArNe60js658RyvR2r8EZ52sKj8IPOhzBEeoZIZd5KCKyZzMH1PkFrD2XR2nwM9yIm/xAiKjfmg</AccessToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACDJ/Th8g9egjdiG9LdWkLpJVKb2XCB0dyt/a1STUVk3gAAAAAOgAAAAAIAACAAAAAaEngtGLmLK3Ec9cNRdEj7pKNiz2b67CmU4sg+QJvFh1ABAABnvEHYxEuLHWLwvoME7x5GY5WfSSRLS8Tx3PLrsJJMLtwBk9tM2OHuOYrI14pwEqi0WDP1ngF8ga1Ye1rZGCHXe3XWaxaOOaf344IGy/6YGPA4EtbdX/fnqH8vblf1ulEtnarYsuOgz5ddSgNcn8HZo5FXiRKoeFXBlR59Bw+WzkfwqCG7KVBq4Y7W1WWZGU2MfANiLCGIEVkUZBl2ptjUcxgZR9aX/5UqCf3hof1nxr95sHLPI3J4jvznNYR7/79JStrz8C4nIZbJPkZFhjt26V/J3WcmRCt9ANnSC1v1gZAMkGQElyUC6vxFczI+oEUy87KlECgUGvPDg2lHuzfDlRP1MucYTBsVIxlOrUUiO73SnRv8I/QwHPLFvZp8uN4oyHGN+lo31BuuoZiY/cLiB03slsglN1tA/19VLdTCeT881kHq4kRJa1Wi+dxVTvBAAAAA7yMNMG4C46OmuJikz+tRFFTzK7O2C4UgPlg2d7VH1CRh07hxzaJundStodXRrdd1BBCOXCKkejSClJrHmi8FWg</AccessToken>
           <RefreshToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACXb922bcZP0Gb3wslJbBGOt/S/VTBrP3tvzPCQwBRWxAAAAAAOgAAAAAIAACAAAADDnuIcYmooj/KP7nK0icNcGmB8MxEPA9bF5TL8N4jSLdAAAAD4wMY31XRWiyeJ4hjcFnguEGy2/aUzDDICIjBcFOC015Oa9z1PwDkg9h8MrTkLFSSLo6ngDJ43Dxyj0sMzAjSDqceb9MfMyzmJxCd7oBwiv2r/+cnnsssBkmF0jMjFnh3QjXgOQf05ky5UPZNxMfKs3q3U5obiV9Ej0QHAoB59LD7RQtcf3/rB9H//ubOoBp9cwquxvofZK9kuj9Vj9Waqgh82SvGb8Y8zrPtssK09ZRTM/QeTDPqoIsDF1daU2hzF8bSCM+yUrvmTc3PdM3mMQAAAABgpbLIUC1SwaBdZZuKsYEJK+/62VDpFNLUcxXqLOrDs0oejfAlHoZ4Dgeda3oueA0aQnFdM7mSpJi9Jb2njR+o</RefreshToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEAm9CFqDAd/1BB720Lby9oz2iEiKbz79j9f9MbgoepQAAAAAOgAAAAAIAACAAAACmYb96ifugMArUafFzHonL2bkRqGMIeo5TqMt1b957y9AAAADXmxLreFezDmvl2oPWSfB7GGslew+zTIK6bVd3gWhfUN8F9wyaOpBE/TgXFK5gphf5o1L35t8zO/jTmWBjYqev9p/cXzLw5yvhSlTz66XRTM76v+4C2c8g0LgG33HvDvQdEw24AuMdOSsFXz4yCXyDTR8MoZgrpA0vng3gDJ/g/Xr/AzfHvJb7mTeg+N7M+S4Uft/meyfpQPkj+TOrP3pRs3e9uQ9iRq30WC0HlnoZpCquR/BAJqjtETCS6vn3A+cPRlZOEsOW2ltZut6LljBVQAAAAJxl4WRHRdJY3lOrlYA8yyptH0egwvlVRXOP26ZtHsa0j3EWMDbNfQazr4gkJ289e+4giaKtg7Ws/Mfb0aAoBjY</RefreshToken>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -11731,6 +11731,1538 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{828606D4-DC99-49C4-A3D8-63486B2F18D0}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Create Proof"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Create Proof"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">post_create_proofs</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"rowId",Value:"254431209777028"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Create Proof.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.id]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].Columns[version]"
+                      name="version" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      dataType="i8"
+                      name="result.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      dataType="i8"
+                      name="result.originalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      name="result.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      name="result.type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      name="result.proofRequestUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      dataType="i4"
+                      name="result.version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="result.lastUpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      name="result.lastUpdatedBy.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      name="result.lastUpdatedBy.email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      name="result.isCompleted" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      dataType="i4"
+                      name="version" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.id]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\Create Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Delete Proof"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Delete Proof"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">delete_proof</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"proofId",Value:"5558117548222340"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Delete Proof.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].Columns[version]"
+                      name="version" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      dataType="i4"
+                      name="version" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\Delete Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Get Proof"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Get Proof"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">get_proof</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"proofId",Value:"2252435839313796"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Get Proof.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.id]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      dataType="i8"
+                      name="result.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      dataType="i8"
+                      name="result.originalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      name="result.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      name="result.type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      name="result.proofRequestUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      dataType="i4"
+                      name="result.version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="result.lastUpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      name="result.lastUpdatedBy.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      name="result.lastUpdatedBy.email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      name="result.isCompleted" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.id]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\Get Proof.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\List Reports"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="List Reports"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">get_list_proofs</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\List Reports.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[id]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[name]"
+                      length="240"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[originalId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[originalId]"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[originalId]"
+                      name="originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[type]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[type]"
+                      name="type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[proofRequestUrl]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[proofRequestUrl]"
+                      length="524"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[proofRequestUrl]"
+                      name="proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedAt]"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedAt]"
+                      name="lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedBy.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedBy.name]"
+                      length="56"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedBy.name]"
+                      name="lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedBy.email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedBy.email]"
+                      length="80"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[lastUpdatedBy.email]"
+                      name="lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[isCompleted]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[isCompleted]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].Columns[isCompleted]"
+                      name="isCompleted" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[originalId]"
+                      dataType="i8"
+                      name="originalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="240"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[type]"
+                      dataType="wstr"
+                      length="32"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      name="proofRequestUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      dataType="i4"
+                      name="version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="lastUpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      name="lastUpdatedBy.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      name="lastUpdatedBy.email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSourceOutput].ExternalColumns[isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      name="isCompleted" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[id]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[name]"
+                      dataType="wstr"
+                      length="240"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[originalId]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[originalId]"
+                      name="originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[type]"
+                      dataType="wstr"
+                      length="32"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[type]"
+                      name="type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[proofRequestUrl]"
+                      name="proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedAt]"
+                      name="lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedBy.name]"
+                      name="lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[lastUpdatedBy.email]"
+                      name="lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[isCompleted]"
+                      name="isCompleted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\List Reports.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Update Proof Status"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Update Proof Status"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">put_update_proof_status</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"proofId",Value:"2252435839313796"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Update Proof Status.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.id]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.type]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.id]"
+                      dataType="i8"
+                      name="result.id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.originalId]"
+                      dataType="i8"
+                      name="result.originalId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      name="result.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      name="result.type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      name="result.proofRequestUrl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.version]"
+                      dataType="i4"
+                      name="result.version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="result.lastUpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      name="result.lastUpdatedBy.name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      name="result.lastUpdatedBy.email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSourceOutput].ExternalColumns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      name="result.isCompleted" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.id]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.id]"
+                      name="result.id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      dataType="i8"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.originalId]"
+                      name="result.originalId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.name]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.name]"
+                      name="result.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.type]"
+                      dataType="wstr"
+                      length="32"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.type]"
+                      name="result.type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      dataType="wstr"
+                      length="524"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.proofRequestUrl]"
+                      name="result.proofRequestUrl" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.version]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.version]"
+                      name="result.version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedAt]"
+                      name="result.lastUpdatedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      dataType="wstr"
+                      length="56"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.name]"
+                      name="result.lastUpdatedBy.name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.lastUpdatedBy.email]"
+                      name="result.lastUpdatedBy.email" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[result.isCompleted]"
+                      name="result.isCompleted" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task\Update Proof Status.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Discussions"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
@@ -18000,7 +19532,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -18187,7 +19719,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -18371,7 +19903,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -26612,7 +28144,7 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.FileOperationTask.FileOperationTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS Advanced File System Task"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileOperationTask
@@ -26656,7 +28188,7 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.RestApiTask.RestApiTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS REST API Task"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <RestApiTask
@@ -26780,6 +28312,14 @@
           Id="Package\Group"
           TopLeft="853,86" />
         <NodeLayout
+          Size="158,42"
+          Id="Package\Group Members"
+          TopLeft="69,142" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Home"
+          TopLeft="246,145" />
+        <NodeLayout
           Size="113,42"
           Id="Package\Sheets"
           TopLeft="399,265" />
@@ -26796,13 +28336,9 @@
           Id="Package\ZS REST API Task"
           TopLeft="159,270" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\Group Members"
-          TopLeft="69,142" />
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Home"
-          TopLeft="246,145" />
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="376,151" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -27171,6 +28707,34 @@
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\Group Members">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Group Members\Add Group Members"
+          TopLeft="88,58" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Group Members\Remove Group Member"
+          TopLeft="322,61" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Home">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Home\API Source (Predefined Templates)"
+          TopLeft="111,56" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Sheets">
     <LayoutInfo>
       <GraphLayout
@@ -27315,30 +28879,30 @@
     </LayoutInfo>
   </TaskHost>
   <TaskHost
-    design-time-name="Package\Group Members">
+    design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="181,42"
-          Id="Package\Group Members\Add Group Members"
-          TopLeft="88,58" />
+          Size="138,42"
+          Id="Package\Data Flow Task\List Reports"
+          TopLeft="30.5,21.5" />
         <NodeLayout
-          Size="197,42"
-          Id="Package\Group Members\Remove Group Member"
-          TopLeft="322,61" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Home">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+          Size="141,42"
+          Id="Package\Data Flow Task\Create Proof"
+          TopLeft="27,76" />
         <NodeLayout
-          Size="252,42"
-          Id="Package\Home\API Source (Predefined Templates)"
-          TopLeft="111,56" />
+          Size="126,42"
+          Id="Package\Data Flow Task\Get Proof"
+          TopLeft="30,130" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Data Flow Task\Update Proof Status"
+          TopLeft="30,183" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Data Flow Task\Delete Proof"
+          TopLeft="28,237" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
