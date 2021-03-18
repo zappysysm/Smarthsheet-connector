@@ -2068,49 +2068,49 @@
             </OutputColumns>
         </EndPoint>
         <!-- ______________________________________________________ Reports ______________________________________________________ -->
+        <!-- Get Report -->
+        <EndPoint Name="get_reports" Label="Gets the report, including one page of rows, and optionally populated with attachments, discussions, and source sheets" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-report" Group="Reports" Url="/reports/[$reportId$]" Method="GET" Filter="">
+            <Params>
+                <Param Name="reportId" Label="Report Id" Required="True" Desc="Report Id denoting container source" />
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="totalRowCount"	DataType="DT_I4"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR" Length="460"/>
+                <Column Name="readOnly"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="ganttEnabled"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="300"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="columns"	DataType="DT_WSTR" Length="1672"/>
+                <Column Name="rows"	DataType="DT_WSTR" Length="8"/>
+                <Column Name="isSummaryReport"	DataType="DT_WSTR" Length="20"/>
+            </OutputColumns>
+        </EndPoint>
         <!-- List Reports-->
         <EndPoint Name="get_reports_list" Label="Gets a list of all reports that the user has access to in alphabetical order by name. The list contains an abbreviated Report object for each report" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-reports" Group="Reports" Url="/reports" Method="GET" Filter="$.data[*]">
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="isSummaryReport"	DataType="DT_WSTR"/>
-            </OutputColumns>
-        </EndPoint>
-        <!-- Get Report -->
-        <EndPoint Name="get_reports" Label="Gets the report, including one page of rows, and optionally populated with attachments, discussions, and source sheets" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-report" Group="Reports" Url="/reports/[$reportId$]" Method="GET" Filter="">
-            <Params>
-                <Param Name="reportId" Required="True" Desc="Report Id denoting container source" />
-            </Params>
-            <OutputColumns>
-                <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="totalRowCount"	DataType="DT_I4"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR"/>
-                <Column Name="readOnly"	DataType="DT_WSTR"/>
-                <Column Name="ganttEnabled"	DataType="DT_WSTR"/>
-                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
-                <Column Name="columns"	DataType="DT_WSTR"/>
-                <Column Name="rows"	DataType="DT_WSTR"/>
-                <Column Name="isSummaryReport"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="300"/>
+                <Column Name="isSummaryReport"	DataType="DT_WSTR" Length="20"/>
             </OutputColumns>
         </EndPoint>
         <!-- Get Report Publish Status -->
         <EndPoint Name="get_reports_publish" Label="Gets the Report's 'Publish' settings" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-report-publish-status" Group="Reports" Url="/reports/[$reportId$]/publish" Method="GET" Filter="">
             <Params>
-                <Param Name="reportId" Required="True" Desc="Report Id denoting container source" />
+                <Param Name="reportId" Label="Report Id" Required="True" Desc="Report Id denoting container source" />
             </Params>
             <OutputColumns>
-                <Column Name="readOnlyFullEnabled"	DataType="DT_BOOL"/>
-                <Column Name="readOnlyFullAccessibleBy"	DataType="DT_WSTR"/>
-                <Column Name="readOnlyFullDefaultView"	DataType="DT_WSTR"/>
-                <Column Name="readOnlyFullShowToolbar"	DataType="DT_BOOL"/>
-                <Column Name="readOnlyFullUrl"	DataType="DT_WSTR"/>
+                <Column Name="readOnlyFullEnabled"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="readOnlyFullAccessibleBy"	DataType="DT_WSTR" Length="12"/>
+                <Column Name="readOnlyFullDefaultView"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="readOnlyFullShowToolbar"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="readOnlyFullUrl"	DataType="DT_WSTR" Length="300"/>
             </OutputColumns>
         </EndPoint>
         <!-- Set Report Publish Status -->
@@ -2124,18 +2124,18 @@
                 ]]>
             </Body>
             <Params>
-                <Param Name="reportId" Required="True" Desc="Report Id denoting container source" />
-                <Param Name="readOnlyFullEnabled"  Required="True" Desc="If true, a rich version of the report is published with the ability to download row attachments and discussions" Options="true;false" Value="true"/>
-                <Param Name="readOnlyFullAccessibleBy"  Required="True" Desc="Indicates who can access. If ALL, it is available to anyone who has the link. If ORG, it is available only to members of the report owner's Smartsheet organization account" Options="ALL;ORG" Value="ORG"/>
+                <Param Name="reportId" Label="Report Id" Required="True" Desc="Report Id denoting container source" />
+                <Param Name="readOnlyFullEnabled" Label="Read Only Full Enabled" Required="True" Desc="If true, a rich version of the report is published with the ability to download row attachments and discussions" Options="true;false" Value="true"/>
+                <Param Name="readOnlyFullAccessibleBy" Label="Read Only Full AccessibleBy" Required="True" Desc="Indicates who can access. If ALL, it is available to anyone who has the link. If ORG, it is available only to members of the report owner's Smartsheet organization account" Options="ALL;ORG" Value="ORG"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result.readOnlyFullEnabled"	DataType="DT_BOOL"/>
-                <Column Name="result.readOnlyFullAccessibleBy"	DataType="DT_WSTR"/>
-                <Column Name="result.readOnlyFullDefaultView"	DataType="DT_WSTR"/>
-                <Column Name="result.readOnlyFullShowToolbar"	DataType="DT_BOOL"/>
-                <Column Name="result.readOnlyFullUrl"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.readOnlyFullEnabled"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.readOnlyFullAccessibleBy"	DataType="DT_WSTR" Length="12"/>
+                <Column Name="result.readOnlyFullDefaultView"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.readOnlyFullShowToolbar"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="result.readOnlyFullUrl"	DataType="DT_WSTR" Length="300"/>
             </OutputColumns>
         </EndPoint>
          <!--Send Report via Email -->
@@ -2157,25 +2157,25 @@
                 ]]>
             </Body>
             <Params>
-                <Param Name="reportId" Required="True" Desc="Report Id denoting container source" />
-                <Param Name="emailsList" Editor="MultiLine" Required="True" Desc="ID located in sheet properties" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;email&quot;: &quot;test2@gmail.com&quot;}"/>
-                <Param Name="subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
-                <Param Name="message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
-                <Param Name="ccMe" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
-                <Param Name="format" Required="True" Desc="Extends the Email object" Options="EXCEL;PDF;PDF_GANTT" Value="EXCEL"/>
-                <Param Name="paperSize" Required="True" Desc="Size of the peaper" Options="LETTER;LEGAL;WIDE;ARCHD;A4;A3;A2;A1;A0" Value="LETTER"/>
+                <Param Name="reportId" Label="Report Id" Required="True" Desc="Report Id denoting container source" />
+                <Param Name="emailsList" Label="Email List" Editor="MultiLine" Required="True" Desc="ID located in sheet properties" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;email&quot;: &quot;test2@gmail.com&quot;}"/>
+                <Param Name="subject" Label="Subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
+                <Param Name="message" Label="Message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
+                <Param Name="ccMe" Label="CCMe" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
+                <Param Name="format" Label="Format" Required="True" Desc="Extends the Email object" Options="EXCEL;PDF;PDF_GANTT" Value="EXCEL"/>
+                <Param Name="paperSize" Label="Paper Size" Required="True" Desc="Size of the peaper" Options="LETTER;LEGAL;WIDE;ARCHD;A4;A3;A2;A1;A0" Value="LETTER"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>        
 <!-- ______________________________________________________ ROWS ______________________________________________________ -->
         <!-- Add Rows -->
         <EndPoint Name="post_new_row" Label="Inserts one or more rows into the sheet specified in the URL" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-rows" Group="Row" Url="/sheets/[$SheetId$]/rows" Body="[$Query$]" Method="POST" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Query" Editor="MultiLine" Required="True" 
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="Query" Label="Row object" Editor="MultiLine" Required="True" 
           Value="[{
                   &quot;toTop&quot;: true,
                   &quot;cells&quot;: [{
@@ -2198,6 +2198,12 @@
                   }]
                 }]"/>
             </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result"	DataType="DT_WSTR"	Length="3724"/>
+                <Column Name="version"	DataType="DT_I4"/>
+            </OutputColumns>
         </EndPoint>
         <!--Copy/Move Rows to Another Sheet -->
         <EndPoint Name="copy_or_move_row_another_sheet" Label="Copy or move rows from one sheet specified to another sheet." HelpLink="https://smartsheet-platform.github.io/api-docs/#move-rows-to-another-sheet" Group="Row" Url="/sheets/[$SheetId$]/rows/[$Option$]"  Method="POST" Filter="" ContentType="application/json">
