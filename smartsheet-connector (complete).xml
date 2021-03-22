@@ -2218,21 +2218,100 @@
                 ]]>
             </Body>
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Option" Required="True" Value="move" Options="move;copy" Desc="Option to move or copy the rows"/>
-                <Param Name="rowIds" Required="True" Desc="The Ids of the rows to move or copy from the source sheet" Value="5215373813147524, 3962239795128196"/>
-                <Param Name="sheetIdDestination" Required="True" Desc="Id of the destination sheet" Value="5598249034770308"/>
+                <Param Name="SheetId" Label="Sheet Id source" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="Option" Label="Option" Required="True" Value="move" Options="move;copy" Desc="Option to move or copy the rows"/>
+                <Param Name="rowIds" Label="Row Id" Required="True" Desc="The Ids of the rows to move or copy from the source sheet, comma-separated list" Value=""/>
+                <Param Name="sheetIdDestination" Label="Sheet Id Destination" Required="True" Desc="Id of the destination sheet" Value=""/>
             </Params>
             <OutputColumns>
                 <Column Name="destinationSheetId"	DataType="DT_I8"	/>
-                <Column Name="rowMappings"	DataType="DT_WSTR"	 Length="572"/>
+                <Column Name="rowMappings"	DataType="DT_WSTR"	 Length="292"/>
             </OutputColumns>
         </EndPoint>
-         <!--Update Rows -->
+        <!-- Delete Rows -->
+        <EndPoint Name="delete_row" Label="Deletes one or more rows from the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-rows" Group="Row" Url="/sheets/[$SheetId$]/rows?ids=[$rowIds$]&amp;ignoreRowsNotFound=[$ignoreRowsNotFound$]" Method="DELETE"  Filter="">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id"  Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="rowIds" Label="List row Ids" Required="True" Desc="The Ids of the rows to delete from the sheet" Value="5550953969280900,2525639135520644,7029238762891140"/>
+                <Param Name="ignoreRowsNotFound" Label="Ignore Rows Not Found"  Required="True" Value="true" Options="true;false" Desc="If set to true, specifying row Ids that do not exist within the source sheet do not cause an error response. If omitted or set to false, specifying row Ids that do not exist within the source sheet causes an error response (and no rows are moved)."/>
+            </Params>
+            <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	 Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"	/>
+                <Column Name="result"	DataType="DT_WSTR"	 Length="96"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- Get Row -->
+        <EndPoint Name="get_row" Label="Gets the row specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-row" Group="Row" Url="/sheets/[$SheetId$]/rows/[$rowId$]?include=discussions,attachments,columns,columnType" Method="GET"  Filter="$.cells[*]">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties" Required="True"/>
+                <Param Name="rowId" Label="Row Id" Desc="ID from the Row" Required="True"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="columnId"	DataType="DT_I8"	 />
+                <Column Name="columnType"	DataType="DT_WSTR"	Length="44"/>
+                <Column Name="value"	DataType="DT_WSTR"	 Length="4"/>
+                <Column Name="displayValue"	DataType="DT_WSTR"	 Length="4"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- List Rows -->
+        <EndPoint Name="get_list_rows" Label="Get the list of all rows in a sheet," HelpLink="https://smartsheet-platform.github.io/api-docs/#list-rows" Group="Row" Url="/sheets/[$SheetId$]/" Method="GET" Filter="$.rows[*]">
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Desc="ID located in sheet properties"/>
+            </Params>
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"	 />
+                <Column Name="rowNumber"	DataType="DT_I4"/>
+                <Column Name="expanded"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="cells"	DataType="DT_WSTR" Length="972"/>
+                <Column Name="siblingId"	DataType="DT_I8"/>
+            </OutputColumns>
+        </EndPoint>
+        <!--Send Rows via Email -->
+        <EndPoint Name="send_rows_email" Label="Sends one or more rows via email" HelpLink="https://smartsheet-platform.github.io/api-docs/#send-rows-via-email" Group="Row" Url="/sheets/[$SheetId$]/rows/emails"  Method="POST" Filter="" ContentType="application/json">
+            <Body>
+                <![CDATA[
+                  { 
+                    "sendTo": [  
+                          [$emailList$]
+                    ], 
+                    "subject": "[$subject$]", 
+                    "message": "[$message$]", 
+                    "ccMe": [$ccMe$], 
+                    "rowIds": [ 
+                      [$rowIds$]
+                    ], 
+                    "columnIds": [ 
+                      [$columnIds$] 
+                    ], 
+                    "includeAttachments": [$includeAttachments$], 
+                    "includeDiscussions": [$includeDiscussions$] 
+                  }
+                ]]>
+            </Body>
+            <Params>
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="emailList" Label="Emails List" Editor="MultiLine" Required="True" Desc="ID located in sheet properties" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;email&quot;: &quot;test2@gmail.com&quot;}"/>
+                <Param Name="subject" Label="Subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
+                <Param Name="message" Label="Message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
+                <Param Name="ccMe" Label="CCMe" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
+                <Param Name="rowIds" Label="List Row Ids" Required="True" Desc="Ids of the rows to be included, comma-separated list " Value=""/>
+                <Param Name="columnIds" Label="List Column Ids" Required="True" Desc="Ids of the columns to be included, comma-separated list " Value=""/>
+                <Param Name="includeAttachments" Label="Include Attachments" Required="True" Value="false" Options="true;false" Desc="Indicates whether to include attachments in the email."/>
+                <Param Name="includeDiscussions" Label="Include Discussions" Required="True" Value="false" Options="true;false" Desc="Indicates whether to include discussions in the email"/>
+            </Params>
+            <!-- <OutputColumns>
+                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+            </OutputColumns> -->
+        </EndPoint>  
+        <!--Update Rows -->
         <EndPoint Name="update_rows" Label="Updates cell values in the specified rows, expands/collapses the specified rows, and/or modifies the position of specified rows (including indenting/outdenting)" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-rows" Group="Row" Body="[$Query$]" Url="/sheets/[$SheetId$]/rows/"  Method="PUT" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="The Ids of the rows to move or copy from the source sheet" 
+                <Param Name="SheetId" Label="Sheet Id" Required="True" Desc="ID located in sheet properties"/>
+                <Param Name="Query" Label="Row object"  Editor="MultiLine" Required="True" Desc="The Ids of the rows to move or copy from the source sheet" 
                 Value="[{
                         &quot;id&quot;: &quot;6572427401553796&quot;,
                         &quot;cells&quot;: [{
@@ -2272,70 +2351,11 @@
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_I8"	 />
-                <Column Name="result"	DataType="DT_NTEXT"	/>
-                <Column Name="version"	DataType="DT_I8"	 Length="600"/>
+                <Column Name="resultCode"	DataType="DT_I4"	 />
+                <Column Name="result"	DataType="DT_WSTR"	Length="2088"/>
+                <Column Name="version"	DataType="DT_I4"	 />
             </OutputColumns>
-        </EndPoint>
-        <!-- Delete Rows -->
-        <EndPoint Name="delete_row" Label="Deletes one or more rows from the sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-rows" Group="Row" Url="/sheets/[$SheetId$]/rows?ids=[$rowIds$]&quot;ignoreRowsNotFound=[$ignoreRowsNotFound$]" Method="DELETE"  Filter="">
-            <Params>
-                <Param Name="SheetId"  Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="rowIds" Required="True" Desc="The Ids of the rows to delete from the sheet" Value="5550953969280900,2525639135520644,7029238762891140"/>
-                <Param Name="ignoreRowsNotFound"  Required="True" Value="true" Options="true;false" Desc="If set to true, specifying row Ids that do not exist within the source sheet do not cause an error response. If omitted or set to false, specifying row Ids that do not exist within the source sheet causes an error response (and no rows are moved)."/>
-            </Params>
-        </EndPoint>
-        <!-- Get Row -->
-        <EndPoint Name="get_row" Label="Gets the row specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-row" Group="Row" Url="/sheets/[$SheetId$]/rows/[$rowId$]?include=discussions,attachments,columns,columnType" Method="GET"  Filter="$.cells[*]">
-            <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties" Required="True"/>
-                <Param Name="rowId" Desc="ID from the Row" Required="True"/>
-            </Params>
-        </EndPoint>
-        <!-- Sheet's row -->
-        <EndPoint Name="get_sheet_rows" Label="Read Sheet's rows" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-rows" Group="Row" Url="/sheets/[$SheetId$]/" Method="GET" Filter="$.rows[*]">
-            <Params>
-                <Param Name="SheetId" Desc="ID located in sheet properties"/>
-            </Params>
-        </EndPoint>
-        <!--Send Rows via Email -->
-        <EndPoint Name="send_rows_email" Label="Sends one or more rows via email" HelpLink="https://smartsheet-platform.github.io/api-docs/#send-rows-via-email" Group="Row" Url="/sheets/[$SheetId$]/rows/emails"  Method="POST" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[
-                  { 
-                    "sendTo": [  
-                          [$emailsList$]
-                    ], 
-                    "subject": "[$subject$]", 
-                    "message": "[$message$]", 
-                    "ccMe": [$ccMe$], 
-                    "rowIds": [ 
-                      [$rowIds$]
-                    ], 
-                    "columnIds": [ 
-                      [$columnIds$] 
-                    ], 
-                    "includeAttachments": [$includeAttachments$], 
-                    "includeDiscussions": [$includeDiscussions$] 
-                  }
-                ]]>
-            </Body>
-            <Params>
-                <Param Name="SheetId" Required="True" Desc="ID located in sheet properties"/>
-                <Param Name="emailsList" Editor="MultiLine" Required="True" Desc="ID located in sheet properties" Value="{&quot;email&quot;: &quot;test1m@gmail.com&quot;},{&quot;email&quot;: &quot;test2@gmail.com&quot;}"/>
-                <Param Name="subject" Required="True" Desc="The subject of the email" Value="Check these rows out!"/>
-                <Param Name="message" Required="True" Desc="The message of the email" Value="Here are the rows I mentioned in our meeting"/>
-                <Param Name="ccMe" Required="True" Desc="Indicates whether to send a copy of the email to the sender" Value="false" Options="true;false"/>
-                <Param Name="rowIds" Required="True" Desc="Ids of the rows to be included" Value="3707835846289284,5396685706553220,7648485520238468"/>
-                <Param Name="columnIds" Required="True" Desc="Ids of the columns to be included" Value="3367911040542596,7871510667913092,8228553580930948"/>
-                <Param Name="includeAttachments" Required="True" Value="false" Options="true;false" Desc="Indicates whether to include attachments in the email."/>
-                <Param Name="includeDiscussions" Required="True" Value="false" Options="true;false" Desc="Indicates whether to include discussions in the email"/>
-            </Params>
-            <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"	Length="28"/>
-                <Column Name="resultCode"	DataType="DT_WSTR"/>
-            </OutputColumns>
-        </EndPoint>        
+        </EndPoint>      
         <!-- ______________________________________________________ Search ______________________________________________________ -->
         <!-- Search Everything -->
         <EndPoint Name="search_everything" Label="Searches all sheets that the user can access, for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-everything" Group="Search" Url="/search?query=[$search$]&amp;include=[$include$]&amp;location=[$location$]&amp;modifiedSince=[$modifiedSince$]&amp;scopes=[$scopes$]" Method="GET" Filter="$.results[*]">

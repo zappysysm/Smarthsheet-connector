@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{922C052C-5A75-4C72-9CBE-C79F390A586C}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{32C77B11-128B-4AA4-B91D-42BE61335ECC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,7 @@
           ConnectionString="ServiceUrl=https://api.smartsheet.com/2.0;ConfigFile=C:\Users\USUARIO\Downloads\Connectors XML\Smartsheet connector\smartsheet-connector (complete).xml;Provider=Custom;AuthName=TokenAuth;UserName=;ClientId=;Parameters=;UseEmbeddedConfig=False;TrustedDomains=;ConfigText=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADoydz4Oz64aZl3DlHNupnkjuj+YkkHSBfpkeKm8qHKlwAAAAAOgAAAAAIAACAAAAAub8q7ZTcQSaX1SH0Dt8Gl7oxqzlQzlrWyETZuFyBAXEAAAAAwIVPeram/3XjM/7put7IWH51v3yThWNBTQd7qP8wsA8ZS6XzHcjJHbCzAq80HHWWTLjrug/4IQF+7j3KcmaDeQAAAAMZfSyP0MuUKRaO2CHJw51DrcV20pFvC/vTjDx1VRLWiSAlaGPaJRsAHBzXD/aFtd7owxwNgIGKEP+sgEcUdIL0</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABjqVaTeu2xn3+RBxbShMpurh/w/i5WN0iHNZo1zJ7ywQAAAAAOgAAAAAIAACAAAAAcuRX191NmABqHDYnw5gAwk97PQfW4s0XA57LP8PHkwUAAAACPAyddfjUKKpB12kRifeCJsAA+ysJIbY0ndcdWax/bjKUUj7UOC+4BRNX3xRcPjLPm7md8ZgieQIHUKqDiKW2XQAAAABFkgN+sluSw0Di1FPnmeRFb5hjMZJ+dj98emJLaN8X13euYO6E0Ez0YxWKHWX0yiwUIeLIMRi+wDKamIgwEiBo</Password>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -54,13 +54,13 @@
           ConnectionString="Provider=Google;OAuthVersion=Default;ScopeSeparator={space};ReturnUrl=;ExtraAttributesForTokenRequest=;ExtraAttributesForAuthRequest=;TokenRefreshMode=Default;SslVersion=Default;Prop1Name=;Prop1Value=;Prop2Name=;Prop2Value=;GrantType=Default;UserName=;DoNotIncludeCredentialsInHeader=False;DoNotIncludeCredentialsInBody=False;DoNotIncludeEmptyParamsInSignature=False;ContentType=;ExpiresInAttribute=;AuthUrl=;TokenUrl=;RequestTokenUrl=;ClientId=;Scope=https://www.googleapis.com/auth/adwords;Timeout=100000;UseCustomApp=False;CustomAuthHeader=;CustomTokenPrefix=;EnableOAuthOverUrl=False;RefreshTokenFilePath=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACM0D9xtOcFSSHXeqRngg4fJWHuKhBwz5T4d5WnaLJo8wAAAAAOgAAAAAIAACAAAADrdXLsjOxyopmCl0a1XtOpP8Jz10QYj4jtNidLbbWHDRAAAABp7rQZtgWWSKhth/Q3WhMhQAAAAFu9iDiLiK4O7zIUImcVl5N/RhCwyscRf62R3AniMKPp+5lEEPPLr/iKBFOGtCgXrlA22hxK9JwP0EPXBWpB05Y</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcZVxilgmU3LsCGKvubf77zngdBXxc3oSmu2+lhtZeSAAAAAAOgAAAAAIAACAAAABmVLIG3Slwkdq7NCyhZlzpLIVjmAnwd2x/Ytq7TjGVRxAAAADE9HUj26+ENGHiw/ADWD8gQAAAAN2DZB3rVKL8YctbLM2fwO3KH9UrsubmsNVXxO4+eSR/fPmB/+FhTUgTZ+UuwO1+C6ycDGiun+MnWn0aBpEyR9g</Password>
           <AccessToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAW4TNOMCwMv0sbE/KKuvaBKL3BzR7DbdWeVjnqDof+TwAAAAAOgAAAAAIAACAAAADCDEAYlqfWstPzhRGjMpIHWJLATkoz5WFoBuEAHo2mr1ABAACz8zml36Ot8ugYIo7/sA0TZRDqQ8SDpl54Y3WgdVrpCkALB5F8zFmn4jWdCSTaaB99G+NWdeQV3A5e6ztk70i6uhtMO5e+cynwDRDaDvY87qm4I+szOyRkyvdwuvs/6eW10UZKts58mOc2hdW01jgFCsLnEUJma2jWIIgpugpAx2s0LBWNR1avs13AJpwAx3kzw9WFjM6/F2rN79tlve+byzmBNER/IvUYST/B0XYjhPsG7xpIFrZ6cXthD0F31mc5IsdWB65U16i+5RyG1G6NURqtiHalEGWP0SM6FrWF6xmBXPZX69k6Q3UhwfOvys2NXLrrZ10O1KyMLBaI40bLRUv+mFXud4BRG8fDml/bq1HrZctX1YZRJiUq44CHjkioq5kz2FjXa+stoMVK+jpq/2hzB/FoMgPSlpLpPH/a3BA+Nd9aXcFjBZrIvycqO9RAAAAA7iGNGWIa/VaABgUYUbcWx3D8PHw03oRcoWnssw8l/thQqw5dKFV6SfeS7XyVvQJ2PzL/V0v1Tn949uKphGaU7Q</AccessToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtREbs4Z0TU0kbql8ZTpTau9KaQhCtvrTBSMw0K6altgAAAAAOgAAAAAIAACAAAADsHe21ilfgwel+SEKACSWQessCeSiXNlh6wTimS6lVvVABAAAaaAjtosipBK69jsaVYOvedJ6ysVnuy2Bcs7oiE3/8irTrIyZ3j56VHsEZEESpJnmntOCHXyh2VMQKQv5XPQZNiFEBZzydT0PN68UoxAavS7NqVesWvqoLxBOXd29zZPG/IVT8AgqsZLnUsMCp0dVTq+a9gpw63TiXtH0UsRvWteOCRSi0i17TMFI6MAWBh+kiu7hqnx3utDOgArAXJwxJQsdVjkFjwrhGwglgR9sa0P/f3QmnyPjL86xJJNmd3sK2Jsy6wne3ON7QHzUv0hEowEgoBfIMFAw45I9tjCH4/R1ZNP3UcxaP0JU/YQ76qLVHPitdR3/BEBlvDlHwxLlluaozYq/E4YvYoRFfWaHp5AGlZuF7Pj0zqK3UW7y88+7HqWbo8pnQLNbl4QonKcBNbg1Ioz8366aVEPLVVfWEWGH+QGMfkmnPoqIIuoEAgbdAAAAAPO6Zzu5x1fbNQa5cPWSdF3btbMOVOQObYmJ7QE34MmFyZQoG6eh2H3n5pUslJbsrqX5jTxI80pV0/J9UgBs6EQ</AccessToken>
           <RefreshToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA56xTdH5qh1HrwmhoHpQgqx4/MKio21BZ1PIqDTXF2gQAAAAAOgAAAAAIAACAAAADa+xmorjcC7F7FRiyqZL7zPHkztYgmBb1lzrI0O2jiedAAAABL/Xo+hASrRptl2XIxq2fCVftemw2KK1ohOgr8MZaImDFYWqGQcIB1KmVimoNVl4cJ6iXbOA3QeZctq9peLGeMShtFBl1FOgzeFd6V/enuCqwmC2xvbfL7l5TLTKkglkB/1U8EYRHqjge7lB6GLX9RAf0lNaMfYhCauFY/+I/2oY/poiaC8Tj3z3p4+BlD9nnx35l5VNOTo5/7l1oogpuYCtOI6XCUO79HLk6RBKUUbyLmeFiRXSs1B2zw28IKEEABJ91eCpUQXUzvMm+s3n+NQAAAAIQnvsiV5FC4ZxF3J6UZh66rfkanPx9eeHKNTcxb3XrPm86RlRWovqZRo/Ayj3/oQ2cSlI6iI/SpPZDaRTjITgc</RefreshToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtRmni96hR0kZ4h9Sgd8tE+2JqTWBX353L0yOZKIQRBQAAAAAOgAAAAAIAACAAAABhPs3/sA4I5r9gNWnmgicddu7Hcvxg65DsIfPJAsm4+tAAAABWLmwllW3/hiwjz0mwUJ2FIYJZJDn+3sTHjnVVzX5VZesuk1z3j8w4/LQH5OqZ9fLm4bf7qOdyOnirgsf+wUA0qhcZrz4Fu3aJZCrgEmqw6iHoHeBUBUiT7doN4UHmRVf5I0fP3nel1pJOVwYLRCpD6VlhTWNof4pSX3xcAwg/qkN4jsTmhL3zFmyshbKa0qAl06p2RK8mnLwNrCwfCE6NdpoUPXtOtrUsM4nBcv3TSENPxfGKAIeXNPq1dzXiULOjo31dJnmFqriKbUiVabaqQAAAAO2mQyM8OoSgJ2rQVVFQIlrf5+hRqEHLf1RdtgiKgejaIoAoWqcYkPe6Xt7doDScjna7KzFlQBxJPhDW0xw/D90</RefreshToken>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -20871,7 +20871,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -21085,7 +21085,7 @@
                   description="Specifies which security protocol is supported for HTTPS communication. Using this option you can enable legacy protocol or enforce to use latest version of security protocol (Note: TLS 1.2 is only supported in SSIS 2014 or Higher)."
                   expressionType="Notify"
                   name="SecurityProtocol"
-                  typeConverter="ZappySys.PowerPack.Common.HttpsSecurityProtocolType, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.HttpsSecurityProtocolType, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Enable support for gzip or deflate compression. When you check this option compressed response automatically de-compressed saving bandwidth. This option is only valid if web server supports compressed response stream. Check your API documentation for more information."
@@ -23279,7 +23279,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -23655,7 +23655,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -23881,7 +23881,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -24104,7 +24104,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -24273,7 +24273,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -24504,7 +24504,7 @@
                   dataType="System.String"
                   description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
                   expressionType="Notify"
-                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"Query",Value:"[{\r\n                  \"toTop\": true,\r\n                  \"cells\": [ {\r\n                    \"columnId\": 4830739379316612,\r\n                    \"value\": \"New statuaass\",\r\n                    \"strict\": false\r\n                  }]\r\n                }]"}]</property>
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"},{Name:"Query",Value:"[{\r\n                  \"toTop\": true,\r\n                  \"cells\": [ {\r\n                    \"columnId\": 8029210299131780,\r\n                    \"value\": \"New statuaass2\",\r\n                    \"strict\": false\r\n                  }]\r\n                }]"}]</property>
                 <property
                   dataType="System.Boolean"
                   description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
@@ -24550,7 +24550,7 @@
                   description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
                   expressionType="Notify"
                   name="LoggingMode"
-                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
                 <property
                   dataType="System.Boolean"
                   description="When you enable this property it will prefix timestamp before Log messages."
@@ -24598,7 +24598,7 @@
                       refId="Package\Row\Add Rows.Outputs[ApiSourceOutput].Columns[result]"
                       dataType="wstr"
                       externalMetadataColumnId="Package\Row\Add Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
-                      length="3724"
+                      length="1908"
                       lineageId="Package\Row\Add Rows.Outputs[ApiSourceOutput].Columns[result]"
                       name="result" />
                     <outputColumn
@@ -24622,7 +24622,7 @@
                     <externalMetadataColumn
                       refId="Package\Row\Add Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
                       dataType="wstr"
-                      length="3724"
+                      length="1908"
                       name="result" />
                     <externalMetadataColumn
                       refId="Package\Row\Add Rows.Outputs[ApiSourceOutput].ExternalColumns[version]"
@@ -24649,7 +24649,7 @@
                     <outputColumn
                       refId="Package\Row\Add Rows.Outputs[ApiSource Error Output].Columns[result]"
                       dataType="wstr"
-                      length="3724"
+                      length="1908"
                       lineageId="Package\Row\Add Rows.Outputs[ApiSource Error Output].Columns[result]"
                       name="result" />
                     <outputColumn
@@ -24681,6 +24681,1354 @@
                       dataType="wstr"
                       length="1024"
                       lineageId="Package\Row\Add Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Copy rows to another sheet"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Copy rows to another sheet"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">copy_or_move_row_another_sheet</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"Option",Value:"copy"},{Name:"rowIds",Value:"4898768325502852"},{Name:"sheetIdDestination",Value:"7939817490147204"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Copy rows to another sheet.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].Columns[destinationSheetId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[destinationSheetId]"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].Columns[destinationSheetId]"
+                      name="destinationSheetId" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].Columns[rowMappings]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[rowMappings]"
+                      length="292"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].Columns[rowMappings]"
+                      name="rowMappings" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[destinationSheetId]"
+                      dataType="i8"
+                      name="destinationSheetId" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[rowMappings]"
+                      dataType="wstr"
+                      length="292"
+                      name="rowMappings" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[destinationSheetId]"
+                      dataType="i8"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[destinationSheetId]"
+                      name="destinationSheetId" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[rowMappings]"
+                      dataType="wstr"
+                      length="292"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[rowMappings]"
+                      name="rowMappings" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Copy rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Delete Rows"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Delete Rows"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">delete_row</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"},{Name:"rowIds",Value:"8029171642591108"},{Name:"ignoreRowsNotFound",Value:"false"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Delete Rows.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[result]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
+                      length="96"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].Columns[result]"
+                      name="result" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
+                      dataType="wstr"
+                      length="96"
+                      name="result" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[result]"
+                      dataType="wstr"
+                      length="96"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[result]"
+                      name="result" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Delete Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Get Row"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Get Row"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">get_row</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"},{Name:"rowId",Value:"2228688856344452"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Get Row.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Get Row.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[columnId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[columnId]"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[columnId]"
+                      name="columnId" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[columnType]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[columnType]"
+                      length="44"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[columnType]"
+                      name="columnType" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[value]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[value]"
+                      length="4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[value]"
+                      name="value" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[displayValue]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[displayValue]"
+                      length="4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSourceOutput].Columns[displayValue]"
+                      name="displayValue" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[columnId]"
+                      dataType="i8"
+                      name="columnId" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[columnType]"
+                      dataType="wstr"
+                      length="44"
+                      name="columnType" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[value]"
+                      dataType="wstr"
+                      length="4"
+                      name="value" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSourceOutput].ExternalColumns[displayValue]"
+                      dataType="wstr"
+                      length="4"
+                      name="displayValue" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Get Row.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[columnId]"
+                      dataType="i8"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[columnId]"
+                      name="columnId" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[columnType]"
+                      dataType="wstr"
+                      length="44"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[columnType]"
+                      name="columnType" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[value]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[value]"
+                      name="value" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[displayValue]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[displayValue]"
+                      name="displayValue" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Get Row.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\List Rows"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="List Rows"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">get_list_rows</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\List Rows.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\List Rows.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[id]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[rowNumber]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[rowNumber]"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[rowNumber]"
+                      name="rowNumber" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[expanded]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[expanded]"
+                      length="16"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[expanded]"
+                      name="expanded" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[createdAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[createdAt]"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[createdAt]"
+                      name="createdAt" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[modifiedAt]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[modifiedAt]"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[modifiedAt]"
+                      name="modifiedAt" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[cells]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[cells]"
+                      length="972"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[cells]"
+                      name="cells" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[siblingId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[siblingId]"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSourceOutput].Columns[siblingId]"
+                      name="siblingId" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[rowNumber]"
+                      dataType="i4"
+                      name="rowNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[expanded]"
+                      dataType="wstr"
+                      length="16"
+                      name="expanded" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[createdAt]"
+                      dataType="dbTimeStamp"
+                      name="createdAt" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[modifiedAt]"
+                      dataType="dbTimeStamp"
+                      name="modifiedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[cells]"
+                      dataType="wstr"
+                      length="972"
+                      name="cells" />
+                    <externalMetadataColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSourceOutput].ExternalColumns[siblingId]"
+                      dataType="i8"
+                      name="siblingId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\List Rows.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[id]"
+                      dataType="i8"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[rowNumber]"
+                      dataType="i4"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[rowNumber]"
+                      name="rowNumber" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[expanded]"
+                      dataType="wstr"
+                      length="16"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[expanded]"
+                      name="expanded" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[createdAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[createdAt]"
+                      name="createdAt" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[modifiedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[modifiedAt]"
+                      name="modifiedAt" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[cells]"
+                      dataType="wstr"
+                      length="972"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[cells]"
+                      name="cells" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[siblingId]"
+                      dataType="i8"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[siblingId]"
+                      name="siblingId" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\List Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Move rows to another sheet"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Move rows to another sheet"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">copy_or_move_row_another_sheet</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"7393635089049476"},{Name:"rowIds",Value:"7009830650832772"},{Name:"sheetIdDestination",Value:"7939817490147204"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Move rows to another sheet.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].Columns[destinationSheetId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[destinationSheetId]"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].Columns[destinationSheetId]"
+                      name="destinationSheetId" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].Columns[rowMappings]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[rowMappings]"
+                      length="572"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].Columns[rowMappings]"
+                      name="rowMappings" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[destinationSheetId]"
+                      dataType="i8"
+                      name="destinationSheetId" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSourceOutput].ExternalColumns[rowMappings]"
+                      dataType="wstr"
+                      length="572"
+                      name="rowMappings" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[destinationSheetId]"
+                      dataType="i8"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[destinationSheetId]"
+                      name="destinationSheetId" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[rowMappings]"
+                      dataType="wstr"
+                      length="572"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[rowMappings]"
+                      name="rowMappings" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Move rows to another sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Send Rows via Email"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Send Rows via Email"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">send_rows_email</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"},{Name:"emailList",Value:"{\"email\": \"test1m@gmail.com\"}"},{Name:"rowIds",Value:"2228688856344452,4480488670029700"},{Name:"columnIds",Value:"8930745224849284,134652202641284"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Send Rows via Email.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Send Rows via Email.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Row\Update Rows"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Update Rows"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">update_rows</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"SheetId",Value:"1958336796092292"},{Name:"Query",Value:"\t\t\t\t\t[{\r\n                        \"id\": \"4480488670029700\",\r\n                        \"cells\": [{\r\n                            \"columnId\": 134652202641284,\r\n                            \"value\": \"new value\"\r\n                        }]\r\n                    }]"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack90, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Row\Update Rows.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Row\Update Rows.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[message]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      length="28"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[result]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
+                      length="2088"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[result]"
+                      name="result" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[version]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSourceOutput].Columns[version]"
+                      name="version" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[message]"
+                      dataType="wstr"
+                      length="28"
+                      name="message" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[resultCode]"
+                      dataType="i4"
+                      name="resultCode" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[result]"
+                      dataType="wstr"
+                      length="2088"
+                      name="result" />
+                    <externalMetadataColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      dataType="i4"
+                      name="version" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Row\Update Rows.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[message]"
+                      dataType="wstr"
+                      length="28"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[message]"
+                      name="message" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[resultCode]"
+                      name="resultCode" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[result]"
+                      dataType="wstr"
+                      length="2088"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[result]"
+                      name="result" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[version]"
+                      dataType="i4"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Row\Update Rows.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
                       name="ErrorMessage" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -32794,7 +34142,7 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.FileOperationTask.FileOperationTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS Advanced File System Task"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileOperationTask
@@ -32838,7 +34186,77 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.RestApiTask.RestApiTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS REST API Task"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <RestApiTask
+          RequestAccessMode="DirectUrl"
+          RequestUrlVariable=""
+          EnableStatusCheck="False"
+          StatusCheckMaxWaitSeconds="1200"
+          StatusFieldFilterType="None"
+          StatusFieldFilterExpr=""
+          StatusCheckIterationWaitSeconds="5"
+          StatusCheckForFailedValue="False"
+          StatusSuccessValue=""
+          StatusContinueValue=""
+          StatusFailedValue=""
+          IsMultiPartUpload="False"
+          AddMultiPartPostamble="False"
+          PreventAutoRedirect="False"
+          RequestTimeoutMs="0"
+          SecurityProtocol="Default"
+          EnableCompressionSupport="True"
+          EnableRequestCompression="False"
+          AllowUnsecureSuite="False"
+          IgnoreCertificateErrors="False"
+          RequestUrl="https://services.odata.org/V3/OData/OData.svc/Products?$format=json&amp;src={{System::PackageName,URLENCODE}}"
+          RequestUrlConnection=""
+          RequestMethod="GET"
+          RequestContentType="Default"
+          OverrideConnectionUrl="False"
+          RequestHeaders="&lt;request&gt;&lt;header&gt;&lt;name&gt;Accept&lt;/name&gt;&lt;value&gt;*/*&lt;/value&gt;&lt;/header&gt;&lt;header&gt;&lt;name&gt;Cache-Control&lt;/name&gt;&lt;value&gt;no-cache&lt;/value&gt;&lt;/header&gt;&lt;/request&gt;"
+          RequestData=""
+          SaveResponse="False"
+          SaveResponseStatusCode="False"
+          ResponseAccessMode="Variable"
+          SaveAsBinary="False"
+          ResponseDataFilePath=""
+          ResponseHeaderMappings=""
+          ResponseCookieMappings=""
+          CookieContainerVariable=""
+          ConvertXmlToJson="False"
+          ResponseDataVariable=""
+          ResponseStatusCodeVariable=""
+          ResponseContentType="None"
+          ResponseContentFilter=""
+          ContinueOnResponseFilterError="False"
+          ResponseCharset=""
+          ValidateResponse="False"
+          ValidationRules=""
+          ConsumeResponseOnError="False"
+          ContineOnAnyError="False"
+          ContineOnErrorForMessage="False"
+          ContineOnErrorForStatusCode="False"
+          ErrorStatusCodeToMatch="404"
+          MatchForEqual="True"
+          ErrorSubstringToMatch=""
+          ContineOn404Error="False"
+          SaveErrorFlagToVariable="False"
+          ErrorFlagVariableName=""
+          LogLevel="Normal"
+          PrefixTimestamp="False" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ZS REST API Task 1"
+      DTS:CreationName="ZappySys.PowerPack.Task.RestApiTask.RestApiTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
+      DTS:Description="ZS REST API Task"
+      DTS:DTSID="{63E48A56-1C6B-45EE-9CA3-0E0EF3393517}"
+      DTS:ExecutableType="ZappySys.PowerPack.Task.RestApiTask.RestApiTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ZS REST API Task 1"
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <RestApiTask
@@ -32946,10 +34364,6 @@
           Id="Package\Dashboards"
           TopLeft="284,82" />
         <NodeLayout
-          Size="105,42"
-          Id="Package\Proof"
-          TopLeft="376,151" />
-        <NodeLayout
           Size="138,42"
           Id="Package\Discussions"
           TopLeft="441,83" />
@@ -32974,6 +34388,18 @@
           Id="Package\Home"
           TopLeft="246,145" />
         <NodeLayout
+          Size="105,42"
+          Id="Package\Proof"
+          TopLeft="376,151" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Reports"
+          TopLeft="497,150" />
+        <NodeLayout
+          Size="101,42"
+          Id="Package\Row"
+          TopLeft="636,150" />
+        <NodeLayout
           Size="113,42"
           Id="Package\Sheets"
           TopLeft="399,265" />
@@ -32990,13 +34416,9 @@
           Id="Package\ZS REST API Task"
           TopLeft="159,270" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\Reports"
-          TopLeft="497,150" />
-        <NodeLayout
-          Size="101,42"
-          Id="Package\Row"
-          TopLeft="634,150" />
+          Size="182,42"
+          Id="Package\ZS REST API Task 1"
+          TopLeft="493,374" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -33229,78 +34651,6 @@
     </LayoutInfo>
   </TaskHost>
   <TaskHost
-    design-time-name="Package\Proof">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Proof\List Reports"
-          TopLeft="30.5,21.5" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Proof\List Proof Attachments"
-          TopLeft="23,346" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Proof\Create Proof Request"
-          TopLeft="278,183" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Proof\Delete Proof Requests"
-          TopLeft="272,238" />
-        <NodeLayout
-          Size="208,42"
-          Id="Package\Proof\List Proof Request Actions"
-          TopLeft="280,130" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Proof\Create Proof"
-          TopLeft="27,76" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Proof\List Proof Versions"
-          TopLeft="269,356" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Proof\Delete Proof Version"
-          TopLeft="532,21" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Proof\Update Proof Status"
-          TopLeft="30,183" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Proof\Create Proof Version-"
-          TopLeft="271,298" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Proof\Create Proof Discussion"
-          TopLeft="282,23" />
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Proof\Get Proof"
-          TopLeft="30,130" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Proof\List Proof Discussions"
-          TopLeft="281,77" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Proof\Attach File to Proof"
-          TopLeft="28,291" />
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Proof\Delete Proof"
-          TopLeft="28,237" />
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Proof\JSON Attach File to Proof"
-          TopLeft="703,336" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\Discussions">
     <LayoutInfo>
       <GraphLayout
@@ -33465,6 +34815,146 @@
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\Proof">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Proof\List Reports"
+          TopLeft="30.5,21.5" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Proof\List Proof Attachments"
+          TopLeft="23,346" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Proof\Create Proof Request"
+          TopLeft="278,183" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Proof\Delete Proof Requests"
+          TopLeft="272,238" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Proof\List Proof Request Actions"
+          TopLeft="280,130" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Proof\Create Proof"
+          TopLeft="27,76" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Proof\List Proof Versions"
+          TopLeft="269,356" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Proof\Delete Proof Version"
+          TopLeft="532,21" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Proof\Update Proof Status"
+          TopLeft="30,183" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Proof\Create Proof Version-"
+          TopLeft="271,298" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Proof\Create Proof Discussion"
+          TopLeft="282,23" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Proof\Get Proof"
+          TopLeft="30,130" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Proof\List Proof Discussions"
+          TopLeft="281,77" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Proof\Attach File to Proof"
+          TopLeft="28,291" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Proof\Delete Proof"
+          TopLeft="28,237" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Proof\JSON Attach File to Proof"
+          TopLeft="703,336" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Reports">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Reports\List Reports"
+          TopLeft="55,83" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Reports\Get Report"
+          TopLeft="57,24" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Reports\Get Report Publish Status"
+          TopLeft="58,145" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Reports\Set Report Publish Status"
+          TopLeft="56,204" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Reports\Send Report via Email"
+          TopLeft="54,260" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Row">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Row\Add Rows"
+          TopLeft="66,55" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Row\Move rows to another sheet"
+          TopLeft="69,120" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Row\Copy rows to another sheet"
+          TopLeft="301,121" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Row\Update Rows"
+          TopLeft="484,181" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Row\Delete Rows"
+          TopLeft="66,283" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Row\Get Row"
+          TopLeft="66,385" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Row\List Rows"
+          TopLeft="194,399" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Row\Send Rows via Email"
+          TopLeft="66,501" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
     design-time-name="Package\Sheets">
     <LayoutInfo>
       <GraphLayout
@@ -33605,46 +35095,6 @@
           Size="200,42"
           Id="Package\Update Requests (C)\Change Update Request"
           TopLeft="142,314" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Reports">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Reports\List Reports"
-          TopLeft="55,83" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Reports\Get Report"
-          TopLeft="57,24" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\Reports\Get Report Publish Status"
-          TopLeft="58,145" />
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Reports\Set Report Publish Status"
-          TopLeft="56,204" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Reports\Send Report via Email"
-          TopLeft="54,260" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Row">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Row\Add Rows"
-          TopLeft="66,55" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
