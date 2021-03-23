@@ -337,32 +337,35 @@
             </OutputColumns>
         </EndPoint>
         <!-- Search Sheet -->
-        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet" Group="Sheets" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
+        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet-2" Group="Sheets" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
             <Params>
                 <Param Name="sheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
                 <Param Name="search"  Label="Search"  Required="true" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="version"	DataType="DT_WSTR"/>
-                <Column Name="totalRowCount"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR"/>
-                <Column Name="ganttEnabled"	DataType="DT_WSTR"/>
-                <Column Name="dependenciesEnabled"	DataType="DT_WSTR"/>
-                <Column Name="resourceManagementEnabled"	DataType="DT_WSTR"/>
-                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR"/>
-                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_WSTR"/>
-                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_WSTR"/>
-                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR"/>
-                <Column Name="hasSummaryFields"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="createdAt"	DataType="DT_WSTR"/>
-                <Column Name="modifiedAt"	DataType="DT_WSTR"/>
-                <Column Name="isMultiPicklistEnabled"	DataType="DT_WSTR"/>
-                <Column Name="columns"	DataType="DT_WSTR"/>
-                <Column Name="rows"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="version"	DataType="DT_I8"/>
+                <Column Name="totalRowCount"	DataType="DT_I8"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR" Length="460"/>
+                <Column Name="ganttEnabled"	DataType="DT_BOOL"/>
+                <Column Name="dependenciesEnabled"	DataType="DT_BOOL"/>
+                <Column Name="resourceManagementEnabled"	DataType="DT_BOOL"/>
+                <Column Name="cellImageUploadEnabled"	DataType="DT_BOOL"/>
+                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_BOOL"/>
+                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_BOOL"/>
+                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="projectSettings.workingDays"	DataType="DT_WSTR" Length="296"/>
+                <Column Name="projectSettings.nonWorkingDays"	DataType="DT_WSTR" Length="8"/>
+                <Column Name="projectSettings.lengthOfDay"	DataType="DT_R8"/>
+                <Column Name="hasSummaryFields"	DataType="DT_BOOL"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="296"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="isMultiPicklistEnabled"	DataType="DT_BOOL"/>
+                <Column Name="columns"	DataType="DT_NTEXT"/>
+                <Column Name="rows"	DataType="DT_NTEXT"/>
             </OutputColumns>
         </EndPoint>
         <!--Send Sheet via Email -->
@@ -2358,42 +2361,55 @@
         </EndPoint>      
         <!-- ______________________________________________________ Search ______________________________________________________ -->
         <!-- Search Everything -->
-        <EndPoint Name="search_everything" Label="Searches all sheets that the user can access, for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-everything" Group="Search" Url="/search?query=[$search$]&amp;include=[$include$]&amp;location=[$location$]&amp;modifiedSince=[$modifiedSince$]&amp;scopes=[$scopes$]" Method="GET" Filter="$.results[*]">
+        <EndPoint Name="search_everything" Label="Searches all sheets that the user can access, for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-everything" Group="Search" Url="/search?query=[$search$]" Method="GET" Filter="$.results[*]">
             <Params>
-                <Param Name="search" Required="True" Desc="Text with which to perform the search. Use double-quotes for an exact search"/>
-                <Param Name="include" Desc="(optional): when specified with a value of favoriteFlag, response indicates which returned items are favorites. &quot;favorite&quot; -- dashboards, folders, reports, sheets, templates, and workspaces will have the property favorite: true; &quot;parentObjectFavorite&quot; -- attachments, discussions, summary fields, and rows will have the property parentObjectFavorite: true"/>
+                <Param Name="search" Label="Search"  Required="True" Desc="Text with which to perform the search. Use double-quotes for an exact search"/>
+                <!-- <Param Name="include" Desc="(optional): when specified with a value of favoriteFlag, response indicates which returned items are favorites. &quot;favorite&quot; dashboards, folders, reports, sheets, templates, and workspaces will have the property favorite: true; &quot;parentObjectFavorite&quot; attachments, discussions, summary fields, and rows will have the property parentObjectFavorite: true"/>
                 <Param Name="location" Desc="(optional): when specified with a value of personalWorkspace, limits the response to only those items in the user's workspaces."/>
                 <Param Name="modifiedSince" Desc=" (optional): when specified with a date and time value, response only includes the objects that are modified on or after the date and time specified. If you need to keep track of frequent changes, it may be more useful to use Get Sheet Version. Example: 2020-12-28T14:37:36Z"/>
-                <Param Name="scopes" Desc=" (optional): If search fails, try using an array for each type of this comma-separated list of search filters: attachments,cellData,comments,folderNames,reportNames,sheetNames,sightNames,summaryFields,templateNames,workspaceNames"/>
+                <Param Name="scopes" Desc=" (optional): If search fails, try using an array for each type of this comma-separated list of search filters: attachments,cellData,comments,folderNames,reportNames,sheetNames,sightNames,summaryFields,templateNames,workspaceNames"/> -->
+
             </Params>
+            <OutputColumns>
+                <Column Name="text"	DataType="DT_WSTR"	Length="132"/>
+                <Column Name="objectType"	DataType="DT_WSTR"	Length="40" />
+                <Column Name="objectId"	DataType="DT_I8"/>
+                <Column Name="contextData"	DataType="DT_WSTR"	Length="168" />
+                <Column Name="parentObjectType"	DataType="DT_WSTR"	 Length="20"/>
+                <Column Name="parentObjectId"	DataType="DT_I8"/>
+                <Column Name="parentObjectName"	DataType="DT_WSTR"	Length="108" />
+            </OutputColumns>
         </EndPoint>
         <!-- Search Sheet -->
-        <EndPoint Name="search_sheet" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet-2" Group="Sheets" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
+        <EndPoint Name="search_sheet2" Label="Searches a sheet for the specified text" HelpLink="https://smartsheet-platform.github.io/api-docs/#search-sheet-2" Group="Search" Url="/sheets/[$sheetId$]/?query=[$search$]" Method="GET" Filter="">
             <Params>
                 <Param Name="sheetId" Label="Sheet Id"  Required="true" Desc="ID located in sheet properties"/>
                 <Param Name="search"  Label="Search"  Required="true" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="version"	DataType="DT_WSTR"/>
-                <Column Name="totalRowCount"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR"/>
-                <Column Name="ganttEnabled"	DataType="DT_WSTR"/>
-                <Column Name="dependenciesEnabled"	DataType="DT_WSTR"/>
-                <Column Name="resourceManagementEnabled"	DataType="DT_WSTR"/>
-                <Column Name="cellImageUploadEnabled"	DataType="DT_WSTR"/>
-                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_WSTR"/>
-                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_WSTR"/>
-                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR"/>
-                <Column Name="hasSummaryFields"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="createdAt"	DataType="DT_WSTR"/>
-                <Column Name="modifiedAt"	DataType="DT_WSTR"/>
-                <Column Name="isMultiPicklistEnabled"	DataType="DT_WSTR"/>
-                <Column Name="columns"	DataType="DT_WSTR"/>
-                <Column Name="rows"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="version"	DataType="DT_I8"/>
+                <Column Name="totalRowCount"	DataType="DT_I8"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="effectiveAttachmentOptions"	DataType="DT_WSTR" Length="460"/>
+                <Column Name="ganttEnabled"	DataType="DT_BOOL"/>
+                <Column Name="dependenciesEnabled"	DataType="DT_BOOL"/>
+                <Column Name="resourceManagementEnabled"	DataType="DT_BOOL"/>
+                <Column Name="cellImageUploadEnabled"	DataType="DT_BOOL"/>
+                <Column Name="userSettings.criticalPathEnabled"	DataType="DT_BOOL"/>
+                <Column Name="userSettings.displaySummaryTasks"	DataType="DT_BOOL"/>
+                <Column Name="userPermissions.summaryPermissions"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="projectSettings.workingDays"	DataType="DT_WSTR" Length="296"/>
+                <Column Name="projectSettings.nonWorkingDays"	DataType="DT_WSTR" Length="8"/>
+                <Column Name="projectSettings.lengthOfDay"	DataType="DT_R8"/>
+                <Column Name="hasSummaryFields"	DataType="DT_BOOL"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="296"/>
+                <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
+                <Column Name="isMultiPicklistEnabled"	DataType="DT_BOOL"/>
+                <Column Name="columns"	DataType="DT_NTEXT"/>
+                <Column Name="rows"	DataType="DT_NTEXT"/>
             </OutputColumns>
         </EndPoint>
         <!-- ______________________________________________________ Server Info ______________________________________________________ -->
@@ -2402,26 +2418,26 @@
             <OutputColumns>
                 <Column Name="supportedLocales"	DataType="DT_NTEXT"/>
                 <Column Name="featureInfo.symbolsVersion"	DataType="DT_I4"/>
-                <Column Name="formats.defaults"	DataType="DT_WSTR"/>
-                <Column Name="formats.fontFamily"	DataType="DT_WSTR"/>
-                <Column Name="formats.fontSize"	DataType="DT_WSTR"/>
-                <Column Name="formats.bold"	DataType="DT_WSTR"/>
-                <Column Name="formats.italic"	DataType="DT_WSTR"/>
-                <Column Name="formats.underline"	DataType="DT_WSTR"/>
-                <Column Name="formats.strikethrough"	DataType="DT_WSTR"/>
-                <Column Name="formats.horizontalAlign"	DataType="DT_WSTR"/>
-                <Column Name="formats.verticalAlign"	DataType="DT_WSTR"/>
-                <Column Name="formats.color"	DataType="DT_WSTR"/>
+                <Column Name="formats.defaults"	DataType="DT_WSTR" Length="132"/>
+                <Column Name="formats.fontFamily"	DataType="DT_WSTR" Length="1276"/>
+                <Column Name="formats.fontSize"	DataType="DT_WSTR" Length="436"/>
+                <Column Name="formats.bold"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.italic"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.underline"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.strikethrough"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.horizontalAlign"	DataType="DT_WSTR" Length="212"/>
+                <Column Name="formats.verticalAlign"	DataType="DT_WSTR" Length="212"/>
+                <Column Name="formats.color"	DataType="DT_WSTR" Length="2368"/>
                 <Column Name="formats.currency"	DataType="DT_NTEXT"/>
-                <Column Name="formats.decimalCount"	DataType="DT_WSTR"/>
-                <Column Name="formats.thousandsSeparator"	DataType="DT_WSTR"/>
-                <Column Name="formats.numberFormat"	DataType="DT_WSTR"/>
-                <Column Name="formats.textWrap"	DataType="DT_WSTR"/>
-                <Column Name="formats.dateFormat"	DataType="DT_I4"/>
-                <Column Name="appleAuthInfos"	DataType="DT_WSTR"/>
-                <Column Name="azureAuthInfo.clientId"	DataType="DT_WSTR"/>
-                <Column Name="azureAuthInfo.resource"	DataType="DT_WSTR"/>
-                <Column Name="azureAuthInfo.authority"	DataType="DT_WSTR"/>
+                <Column Name="formats.decimalCount"	DataType="DT_WSTR" Length="204"/>
+                <Column Name="formats.thousandsSeparator"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.numberFormat"	DataType="DT_WSTR" Length="224"/>
+                <Column Name="formats.textWrap"	DataType="DT_WSTR" Length="92"/>
+                <Column Name="formats.dateFormat"	DataType="DT_WSTR" Length="856"/>
+                <Column Name="appleAuthInfos"	DataType="DT_WSTR" Length="836"/>
+                <Column Name="azureAuthInfo.clientId"	DataType="DT_WSTR" Length="144"/>
+                <Column Name="azureAuthInfo.resource"	DataType="DT_WSTR" Length="144"/>
+                <Column Name="azureAuthInfo.authority"	DataType="DT_WSTR" Length="160"/>
                 <Column Name="serverVersion"	DataType="DT_R8"/>
             </OutputColumns>
         </EndPoint>

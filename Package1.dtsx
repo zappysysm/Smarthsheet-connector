@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{32C77B11-128B-4AA4-B91D-42BE61335ECC}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{5806F2C5-8DA5-4E26-946C-E9E985CC7C4C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,7 +26,7 @@
           ConnectionString="ServiceUrl=https://api.smartsheet.com/2.0;ConfigFile=C:\Users\USUARIO\Downloads\Connectors XML\Smartsheet connector\smartsheet-connector (complete).xml;Provider=Custom;AuthName=TokenAuth;UserName=;ClientId=;Parameters=;UseEmbeddedConfig=False;TrustedDomains=;ConfigText=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABjqVaTeu2xn3+RBxbShMpurh/w/i5WN0iHNZo1zJ7ywQAAAAAOgAAAAAIAACAAAAAcuRX191NmABqHDYnw5gAwk97PQfW4s0XA57LP8PHkwUAAAACPAyddfjUKKpB12kRifeCJsAA+ysJIbY0ndcdWax/bjKUUj7UOC+4BRNX3xRcPjLPm7md8ZgieQIHUKqDiKW2XQAAAABFkgN+sluSw0Di1FPnmeRFb5hjMZJ+dj98emJLaN8X13euYO6E0Ez0YxWKHWX0yiwUIeLIMRi+wDKamIgwEiBo</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADSeaXxDUf4Ahz5pfDoMKL5WAFO/6QRZC1m6kFIkUhQuwAAAAAOgAAAAAIAACAAAABlUodwnA3+wdOnc71DTnucz1vInrIphDAVrnXijrUhj0AAAABmYq4I8nWyE8xdgnnstHJbVAX6sQx4HMx1GoQbkXwT4ABDJFOZe+jNojmiB6Q0RzGRYPDKpUizH3Zv6fOKaduSQAAAACWZPNsTPj6YHD34RjLr4YOwNbYAluivhHhkgMLMneauralT+CrPQpFHgcPQg1N8mcMYIjILaeQjVSW5crE/bwA</Password>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -54,13 +54,13 @@
           ConnectionString="Provider=Google;OAuthVersion=Default;ScopeSeparator={space};ReturnUrl=;ExtraAttributesForTokenRequest=;ExtraAttributesForAuthRequest=;TokenRefreshMode=Default;SslVersion=Default;Prop1Name=;Prop1Value=;Prop2Name=;Prop2Value=;GrantType=Default;UserName=;DoNotIncludeCredentialsInHeader=False;DoNotIncludeCredentialsInBody=False;DoNotIncludeEmptyParamsInSignature=False;ContentType=;ExpiresInAttribute=;AuthUrl=;TokenUrl=;RequestTokenUrl=;ClientId=;Scope=https://www.googleapis.com/auth/adwords;Timeout=100000;UseCustomApp=False;CustomAuthHeader=;CustomTokenPrefix=;EnableOAuthOverUrl=False;RefreshTokenFilePath=;UseProxy=False;ProxyUrl=;UseProxyCreds=False;ProxyUserName=;DoNotUseDefaultProxy=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint=;RetryMode=None;RetryCountMax=3;RetryWaitTimeMs=2000;RetryMultiplyWaitTime=False;RetryMessageList=;RetryStatusCodeList=;RetainSameConnection=False">
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcZVxilgmU3LsCGKvubf77zngdBXxc3oSmu2+lhtZeSAAAAAAOgAAAAAIAACAAAABmVLIG3Slwkdq7NCyhZlzpLIVjmAnwd2x/Ytq7TjGVRxAAAADE9HUj26+ENGHiw/ADWD8gQAAAAN2DZB3rVKL8YctbLM2fwO3KH9UrsubmsNVXxO4+eSR/fPmB/+FhTUgTZ+UuwO1+C6ycDGiun+MnWn0aBpEyR9g</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD52Ckb7TKt61JkjgnLms+rmGJmZzXaSUO8UZdfViSZCAAAAAAOgAAAAAIAACAAAAC8kmDg1GQVwNABbpmX++djghhJVTf5a1FYlj1xB8DLrhAAAAAfGOTwHpSOr9QkJSP1VxpPQAAAAKIMCr149qELLf73y3h1eBiQQZcHRgv3GJWey1eWO6XRnvSqtM7L1ohj6pZY6eJ+WHgQGKVNfG78ngSM8HnW1wU</Password>
           <AccessToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtREbs4Z0TU0kbql8ZTpTau9KaQhCtvrTBSMw0K6altgAAAAAOgAAAAAIAACAAAADsHe21ilfgwel+SEKACSWQessCeSiXNlh6wTimS6lVvVABAAAaaAjtosipBK69jsaVYOvedJ6ysVnuy2Bcs7oiE3/8irTrIyZ3j56VHsEZEESpJnmntOCHXyh2VMQKQv5XPQZNiFEBZzydT0PN68UoxAavS7NqVesWvqoLxBOXd29zZPG/IVT8AgqsZLnUsMCp0dVTq+a9gpw63TiXtH0UsRvWteOCRSi0i17TMFI6MAWBh+kiu7hqnx3utDOgArAXJwxJQsdVjkFjwrhGwglgR9sa0P/f3QmnyPjL86xJJNmd3sK2Jsy6wne3ON7QHzUv0hEowEgoBfIMFAw45I9tjCH4/R1ZNP3UcxaP0JU/YQ76qLVHPitdR3/BEBlvDlHwxLlluaozYq/E4YvYoRFfWaHp5AGlZuF7Pj0zqK3UW7y88+7HqWbo8pnQLNbl4QonKcBNbg1Ioz8366aVEPLVVfWEWGH+QGMfkmnPoqIIuoEAgbdAAAAAPO6Zzu5x1fbNQa5cPWSdF3btbMOVOQObYmJ7QE34MmFyZQoG6eh2H3n5pUslJbsrqX5jTxI80pV0/J9UgBs6EQ</AccessToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1QqQ4ieAB4kNuW1tphpCLKMg5KGb7aXVYsO14kkv+6QAAAAAOgAAAAAIAACAAAAD94D4yagx7bkvvnSwzj8COZ+GHQMdMqhPfB6SpvYt7RlABAADFHKcP0+pZG1gU3EeigAEixbzT0m4xvEnzhe7WN0xLqpHxPPKG3A32ef+RsiSyothRJQZ3ppYmm7VZ6w48588WxrmBpJSE+Se7oDgvS4zelBPJA/sO7MXLL7HcH0BBPE46F62vkDPhdzYPH6dcFU0e/bqOSJaXYd7rsLpZRsXqwxizF1PCOQfjTrtxH6btbTghu0SEyDsiwDzyRtIvSL4mHttTB2GefNKweTAGW4QjdjHWhFBpB6uICQYNfzTb0Sv4UMcojHalH/7EQEh7+C3G0pVkrOH+WY8f+oFWQuXDVtYkpW24u2b4NvD0v5MT5+/mhJOOX7h3utiDefOq0hB/AnmkfXfbbmcll+yRYfEKQGe/u9S/829UeQCHBe7jWE+NYS2y1ZSfJ2RX2K65J2zT/sW28RMHIfcNkQMpyNIG/jSPbEtbSuBk5um4OAsuGSZAAAAADa9M22lTdmZbWBLpzoDWo2VqHDHe6c7Bi1m9EK+09riTIeFHv7zmSQFV5Jk/rUPy2yECMKD6+zn0Z1n93j8iXw</AccessToken>
           <RefreshToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtRmni96hR0kZ4h9Sgd8tE+2JqTWBX353L0yOZKIQRBQAAAAAOgAAAAAIAACAAAABhPs3/sA4I5r9gNWnmgicddu7Hcvxg65DsIfPJAsm4+tAAAABWLmwllW3/hiwjz0mwUJ2FIYJZJDn+3sTHjnVVzX5VZesuk1z3j8w4/LQH5OqZ9fLm4bf7qOdyOnirgsf+wUA0qhcZrz4Fu3aJZCrgEmqw6iHoHeBUBUiT7doN4UHmRVf5I0fP3nel1pJOVwYLRCpD6VlhTWNof4pSX3xcAwg/qkN4jsTmhL3zFmyshbKa0qAl06p2RK8mnLwNrCwfCE6NdpoUPXtOtrUsM4nBcv3TSENPxfGKAIeXNPq1dzXiULOjo31dJnmFqriKbUiVabaqQAAAAO2mQyM8OoSgJ2rQVVFQIlrf5+hRqEHLf1RdtgiKgejaIoAoWqcYkPe6Xt7doDScjna7KzFlQBxJPhDW0xw/D90</RefreshToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcuWCZjQfGEGStBjK5ZPlkwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABhq6NwGaIQIgtN12E77UlO1WAlhhKhrawyHhPEBIL2uQAAAAAOgAAAAAIAACAAAAAzYsuH2hMzMSLm0iUamdRmVBWHk3tYCgqmqzetH1Ri69AAAAD/UFTrXTpD8ZMQvleThcraPWtSTVhGJjbHR79P85NHYOMnZOsZ3gTfdHtbhrVg+duV8xj0VL1Vj4hAiC1ZahoMAN3v7ar+D5tWellpcEk0RPTsZtl3H9owPVJomHiflc7TtfA1y1NuOhW7W8HToZ36aIKlr+hgFdZMcOX/B+ZKzxWWh6nCdyohMqmomLgT7+XSB60TXhNiFEOrfwb9p3fbcpeCoAoqiH5Nn2K2n+DS7L0d8iLbBdaPW1n2HBWv/Ic1skVcHVBfl3ace2benvrEQAAAAB9q/ksCINZiY1l3P3eocm85gFRp3MmdktZVZKv7WPFqvooCd7641+PKIIBWbfnIynl+E/IXjmWURtnXqh5B59w</RefreshToken>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -26040,6 +26040,1347 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Search"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DD50A456-F2B3-4B84-B29F-36D1DD07D0A5}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Search"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Search\Search Everything"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Search Everything"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">search_everything</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"search",Value:"new"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Search\Search Everything.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Search\Search Everything.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[text]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[text]"
+                      length="132"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[text]"
+                      name="text" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[objectType]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[objectType]"
+                      length="40"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[objectType]"
+                      name="objectType" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[objectId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[objectId]"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[objectId]"
+                      name="objectId" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[contextData]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[contextData]"
+                      length="168"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[contextData]"
+                      name="contextData" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectType]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectType]"
+                      length="20"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectType]"
+                      name="parentObjectType" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectId]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectId]"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectId]"
+                      name="parentObjectId" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectName]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectName]"
+                      length="108"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSourceOutput].Columns[parentObjectName]"
+                      name="parentObjectName" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[text]"
+                      dataType="wstr"
+                      length="132"
+                      name="text" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[objectType]"
+                      dataType="wstr"
+                      length="40"
+                      name="objectType" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[objectId]"
+                      dataType="i8"
+                      name="objectId" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[contextData]"
+                      dataType="wstr"
+                      length="168"
+                      name="contextData" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectType]"
+                      dataType="wstr"
+                      length="20"
+                      name="parentObjectType" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectId]"
+                      dataType="i8"
+                      name="parentObjectId" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSourceOutput].ExternalColumns[parentObjectName]"
+                      dataType="wstr"
+                      length="108"
+                      name="parentObjectName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Search\Search Everything.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[text]"
+                      dataType="wstr"
+                      length="132"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[text]"
+                      name="text" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[objectType]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[objectType]"
+                      name="objectType" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[objectId]"
+                      dataType="i8"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[objectId]"
+                      name="objectId" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[contextData]"
+                      dataType="wstr"
+                      length="168"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[contextData]"
+                      name="contextData" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectType]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectType]"
+                      name="parentObjectType" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectId]"
+                      dataType="i8"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectId]"
+                      name="parentObjectId" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectName]"
+                      dataType="wstr"
+                      length="108"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[parentObjectName]"
+                      name="parentObjectName" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Search\Search Everything.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Search\Search Sheet"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Search Sheet"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">search_sheet</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters">[{Name:"sheetId",Value:"7393635089049476"},{Name:"search",Value:"a"}]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Search\Search Sheet.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[id]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[name]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[name]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[version]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[totalRowCount]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[totalRowCount]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[totalRowCount]"
+                      name="totalRowCount" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[accessLevel]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[accessLevel]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[accessLevel]"
+                      name="accessLevel" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[effectiveAttachmentOptions]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[effectiveAttachmentOptions]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[effectiveAttachmentOptions]"
+                      name="effectiveAttachmentOptions" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[ganttEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[ganttEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[ganttEnabled]"
+                      name="ganttEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[dependenciesEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[dependenciesEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[dependenciesEnabled]"
+                      name="dependenciesEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[resourceManagementEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[resourceManagementEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[resourceManagementEnabled]"
+                      name="resourceManagementEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[cellImageUploadEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[cellImageUploadEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[cellImageUploadEnabled]"
+                      name="cellImageUploadEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userSettings.criticalPathEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userSettings.criticalPathEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userSettings.criticalPathEnabled]"
+                      name="userSettings.criticalPathEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userSettings.displaySummaryTasks]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userSettings.displaySummaryTasks]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userSettings.displaySummaryTasks]"
+                      name="userSettings.displaySummaryTasks" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userPermissions.summaryPermissions]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userPermissions.summaryPermissions]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[userPermissions.summaryPermissions]"
+                      name="userPermissions.summaryPermissions" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[hasSummaryFields]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[hasSummaryFields]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[hasSummaryFields]"
+                      name="hasSummaryFields" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[permalink]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[permalink]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[permalink]"
+                      name="permalink" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[createdAt]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[createdAt]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[createdAt]"
+                      name="createdAt" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[modifiedAt]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[modifiedAt]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[modifiedAt]"
+                      name="modifiedAt" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[isMultiPicklistEnabled]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[isMultiPicklistEnabled]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[isMultiPicklistEnabled]"
+                      name="isMultiPicklistEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[columns]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[columns]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[columns]"
+                      name="columns" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[rows]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[rows]"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].Columns[rows]"
+                      name="rows" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="4000"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="4000"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[version]"
+                      dataType="wstr"
+                      length="4000"
+                      name="version" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[totalRowCount]"
+                      dataType="wstr"
+                      length="4000"
+                      name="totalRowCount" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[accessLevel]"
+                      dataType="wstr"
+                      length="4000"
+                      name="accessLevel" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[effectiveAttachmentOptions]"
+                      dataType="wstr"
+                      length="4000"
+                      name="effectiveAttachmentOptions" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[ganttEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="ganttEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[dependenciesEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="dependenciesEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[resourceManagementEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="resourceManagementEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[cellImageUploadEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="cellImageUploadEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userSettings.criticalPathEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="userSettings.criticalPathEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userSettings.displaySummaryTasks]"
+                      dataType="wstr"
+                      length="4000"
+                      name="userSettings.displaySummaryTasks" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[userPermissions.summaryPermissions]"
+                      dataType="wstr"
+                      length="4000"
+                      name="userPermissions.summaryPermissions" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[hasSummaryFields]"
+                      dataType="wstr"
+                      length="4000"
+                      name="hasSummaryFields" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[permalink]"
+                      dataType="wstr"
+                      length="4000"
+                      name="permalink" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[createdAt]"
+                      dataType="wstr"
+                      length="4000"
+                      name="createdAt" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[modifiedAt]"
+                      dataType="wstr"
+                      length="4000"
+                      name="modifiedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[isMultiPicklistEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      name="isMultiPicklistEnabled" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[columns]"
+                      dataType="wstr"
+                      length="4000"
+                      name="columns" />
+                    <externalMetadataColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSourceOutput].ExternalColumns[rows]"
+                      dataType="wstr"
+                      length="4000"
+                      name="rows" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[name]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[version]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[version]"
+                      name="version" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[totalRowCount]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[totalRowCount]"
+                      name="totalRowCount" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[accessLevel]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[accessLevel]"
+                      name="accessLevel" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[effectiveAttachmentOptions]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[effectiveAttachmentOptions]"
+                      name="effectiveAttachmentOptions" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ganttEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ganttEnabled]"
+                      name="ganttEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[dependenciesEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[dependenciesEnabled]"
+                      name="dependenciesEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[resourceManagementEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[resourceManagementEnabled]"
+                      name="resourceManagementEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[cellImageUploadEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[cellImageUploadEnabled]"
+                      name="cellImageUploadEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userSettings.criticalPathEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userSettings.criticalPathEnabled]"
+                      name="userSettings.criticalPathEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userSettings.displaySummaryTasks]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userSettings.displaySummaryTasks]"
+                      name="userSettings.displaySummaryTasks" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userPermissions.summaryPermissions]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[userPermissions.summaryPermissions]"
+                      name="userPermissions.summaryPermissions" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[hasSummaryFields]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[hasSummaryFields]"
+                      name="hasSummaryFields" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[permalink]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[permalink]"
+                      name="permalink" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[createdAt]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[createdAt]"
+                      name="createdAt" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[modifiedAt]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[modifiedAt]"
+                      name="modifiedAt" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[isMultiPicklistEnabled]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[isMultiPicklistEnabled]"
+                      name="isMultiPicklistEnabled" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[columns]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[columns]"
+                      name="columns" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[rows]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[rows]"
+                      name="rows" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Search\Search Sheet.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Server Info"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EFDD2D87-4ED5-4CB9-B119-3F4FA4167B8C}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Server Info"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Server Info\Get Server Info"
+              componentClassID="DTS.ManagedComponentWrapper.3"
+              contactInfo="API Source (Predefined Templates); ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="API Source to read data from popular online services using predefined connector files. You can also use custom connector files created by you."
+              name="Get Server Info"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack110.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">get_server_info</property>
+                <property
+                  dataType="System.String"
+                  description="Parameters overrides for selected endpoint. Value set of these parameters overrides any default value defined in API Template"
+                  expressionType="Notify"
+                  name="Parameters"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="If this option is true then component will continue without exception on 404 error (Url not found). This allows you to consume data gracefully."
+                  expressionType="Notify"
+                  name="ContinueOnUrlNotFoundError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue when any type of exception occurs during http request"
+                  expressionType="Notify"
+                  name="ContineOnAnyError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified substring found in response"
+                  expressionType="Notify"
+                  name="ContineOnErrorForMessage">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Continue on error when specified status code returned from web server"
+                  expressionType="Notify"
+                  name="ContineOnErrorForStatusCode">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When error occurs no data is returned. Use this option to get content eventhough error occurs. When this option is checked you can't use [continue on error when specific string found in response] option"
+                  expressionType="Notify"
+                  name="ConsumeResponseOnError">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Status code to match when error occurs and ContineOnErrorForStatusCode option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorStatusCodeToMatch">404</property>
+                <property
+                  dataType="System.String"
+                  description="Error substring to match when error occurs and ContineOnErrorForMessage option is true. If Response status code matches to this code then task continues to run"
+                  expressionType="Notify"
+                  name="ErrorSubstringToMatch"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PowerPack.Adapter.ApiSource.ApiSource, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Server Info\Get Server Info.Connections[ZS-API]"
+                  connectionManagerID="Package.ConnectionManagers[API 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[API 1]"
+                  description="Runtime connection for this component"
+                  name="ZS-API" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ApiSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[supportedLocales]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[supportedLocales]"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[supportedLocales]"
+                      name="supportedLocales" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[featureInfo.symbolsVersion]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[featureInfo.symbolsVersion]"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[featureInfo.symbolsVersion]"
+                      name="featureInfo.symbolsVersion" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.defaults]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.defaults]"
+                      length="132"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.defaults]"
+                      name="formats.defaults" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.fontFamily]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.fontFamily]"
+                      length="1276"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.fontFamily]"
+                      name="formats.fontFamily" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.fontSize]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.fontSize]"
+                      length="436"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.fontSize]"
+                      name="formats.fontSize" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.bold]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.bold]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.bold]"
+                      name="formats.bold" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.italic]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.italic]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.italic]"
+                      name="formats.italic" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.underline]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.underline]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.underline]"
+                      name="formats.underline" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.strikethrough]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.strikethrough]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.strikethrough]"
+                      name="formats.strikethrough" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.horizontalAlign]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.horizontalAlign]"
+                      length="212"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.horizontalAlign]"
+                      name="formats.horizontalAlign" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.verticalAlign]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.verticalAlign]"
+                      length="212"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.verticalAlign]"
+                      name="formats.verticalAlign" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.color]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.color]"
+                      length="2368"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.color]"
+                      name="formats.color" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.currency]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.currency]"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.currency]"
+                      name="formats.currency" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.decimalCount]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.decimalCount]"
+                      length="204"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.decimalCount]"
+                      name="formats.decimalCount" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.thousandsSeparator]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.thousandsSeparator]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.thousandsSeparator]"
+                      name="formats.thousandsSeparator" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.numberFormat]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.numberFormat]"
+                      length="224"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.numberFormat]"
+                      name="formats.numberFormat" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.textWrap]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.textWrap]"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.textWrap]"
+                      name="formats.textWrap" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.dateFormat]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.dateFormat]"
+                      length="856"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[formats.dateFormat]"
+                      name="formats.dateFormat" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[appleAuthInfos]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[appleAuthInfos]"
+                      length="836"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[appleAuthInfos]"
+                      name="appleAuthInfos" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.clientId]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.clientId]"
+                      length="144"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.clientId]"
+                      name="azureAuthInfo.clientId" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.resource]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.resource]"
+                      length="144"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.resource]"
+                      name="azureAuthInfo.resource" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.authority]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.authority]"
+                      length="160"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[azureAuthInfo.authority]"
+                      name="azureAuthInfo.authority" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[serverVersion]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[serverVersion]"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].Columns[serverVersion]"
+                      name="serverVersion" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[supportedLocales]"
+                      dataType="nText"
+                      name="supportedLocales" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[featureInfo.symbolsVersion]"
+                      dataType="i4"
+                      name="featureInfo.symbolsVersion" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.defaults]"
+                      dataType="wstr"
+                      length="132"
+                      name="formats.defaults" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.fontFamily]"
+                      dataType="wstr"
+                      length="1276"
+                      name="formats.fontFamily" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.fontSize]"
+                      dataType="wstr"
+                      length="436"
+                      name="formats.fontSize" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.bold]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.bold" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.italic]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.italic" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.underline]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.underline" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.strikethrough]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.strikethrough" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.horizontalAlign]"
+                      dataType="wstr"
+                      length="212"
+                      name="formats.horizontalAlign" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.verticalAlign]"
+                      dataType="wstr"
+                      length="212"
+                      name="formats.verticalAlign" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.color]"
+                      dataType="wstr"
+                      length="2368"
+                      name="formats.color" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.currency]"
+                      dataType="nText"
+                      name="formats.currency" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.decimalCount]"
+                      dataType="wstr"
+                      length="204"
+                      name="formats.decimalCount" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.thousandsSeparator]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.thousandsSeparator" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.numberFormat]"
+                      dataType="wstr"
+                      length="224"
+                      name="formats.numberFormat" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.textWrap]"
+                      dataType="wstr"
+                      length="92"
+                      name="formats.textWrap" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[formats.dateFormat]"
+                      dataType="wstr"
+                      length="856"
+                      name="formats.dateFormat" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[appleAuthInfos]"
+                      dataType="wstr"
+                      length="836"
+                      name="appleAuthInfos" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.clientId]"
+                      dataType="wstr"
+                      length="144"
+                      name="azureAuthInfo.clientId" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.resource]"
+                      dataType="wstr"
+                      length="144"
+                      name="azureAuthInfo.resource" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[azureAuthInfo.authority]"
+                      dataType="wstr"
+                      length="160"
+                      name="azureAuthInfo.authority" />
+                    <externalMetadataColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSourceOutput].ExternalColumns[serverVersion]"
+                      dataType="r8"
+                      name="serverVersion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output]"
+                  isErrorOut="true"
+                  name="ApiSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[supportedLocales]"
+                      dataType="nText"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[supportedLocales]"
+                      name="supportedLocales" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[featureInfo.symbolsVersion]"
+                      dataType="i4"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[featureInfo.symbolsVersion]"
+                      name="featureInfo.symbolsVersion" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.defaults]"
+                      dataType="wstr"
+                      length="132"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.defaults]"
+                      name="formats.defaults" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.fontFamily]"
+                      dataType="wstr"
+                      length="1276"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.fontFamily]"
+                      name="formats.fontFamily" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.fontSize]"
+                      dataType="wstr"
+                      length="436"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.fontSize]"
+                      name="formats.fontSize" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.bold]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.bold]"
+                      name="formats.bold" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.italic]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.italic]"
+                      name="formats.italic" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.underline]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.underline]"
+                      name="formats.underline" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.strikethrough]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.strikethrough]"
+                      name="formats.strikethrough" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.horizontalAlign]"
+                      dataType="wstr"
+                      length="212"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.horizontalAlign]"
+                      name="formats.horizontalAlign" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.verticalAlign]"
+                      dataType="wstr"
+                      length="212"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.verticalAlign]"
+                      name="formats.verticalAlign" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.color]"
+                      dataType="wstr"
+                      length="2368"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.color]"
+                      name="formats.color" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.currency]"
+                      dataType="nText"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.currency]"
+                      name="formats.currency" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.decimalCount]"
+                      dataType="wstr"
+                      length="204"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.decimalCount]"
+                      name="formats.decimalCount" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.thousandsSeparator]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.thousandsSeparator]"
+                      name="formats.thousandsSeparator" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.numberFormat]"
+                      dataType="wstr"
+                      length="224"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.numberFormat]"
+                      name="formats.numberFormat" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.textWrap]"
+                      dataType="wstr"
+                      length="92"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.textWrap]"
+                      name="formats.textWrap" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.dateFormat]"
+                      dataType="wstr"
+                      length="856"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[formats.dateFormat]"
+                      name="formats.dateFormat" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[appleAuthInfos]"
+                      dataType="wstr"
+                      length="836"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[appleAuthInfos]"
+                      name="appleAuthInfos" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.clientId]"
+                      dataType="wstr"
+                      length="144"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.clientId]"
+                      name="azureAuthInfo.clientId" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.resource]"
+                      dataType="wstr"
+                      length="144"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.resource]"
+                      name="azureAuthInfo.resource" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.authority]"
+                      dataType="wstr"
+                      length="160"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[azureAuthInfo.authority]"
+                      name="azureAuthInfo.authority" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[serverVersion]"
+                      dataType="r8"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[serverVersion]"
+                      name="serverVersion" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Server Info\Get Server Info.Outputs[ApiSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sharing dashboard"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5C9B60C0-7A8A-4CB3-B84C-03536A75FCF0}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sharing dashboard"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Sheets"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
@@ -34142,7 +35483,7 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.FileOperationTask.FileOperationTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS Advanced File System Task"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <FileOperationTask
@@ -34186,7 +35527,7 @@
       DTS:ExecutableType="ZappySys.PowerPack.Task.RestApiTask.RestApiTask, ZappySys.PowerPack110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="ZS REST API Task"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <RestApiTask
@@ -34400,9 +35741,13 @@
           Id="Package\Row"
           TopLeft="636,150" />
         <NodeLayout
+          Size="114,42"
+          Id="Package\Search"
+          TopLeft="758,146" />
+        <NodeLayout
           Size="113,42"
           Id="Package\Sheets"
-          TopLeft="399,265" />
+          TopLeft="907,223" />
         <NodeLayout
           Size="182,42"
           Id="Package\Update Requests (C)"
@@ -34410,15 +35755,23 @@
         <NodeLayout
           Size="232,42"
           Id="Package\ZS Advanced File System Task"
-          TopLeft="634,240" />
+          TopLeft="764,357" />
         <NodeLayout
           Size="173,42"
           Id="Package\ZS REST API Task"
-          TopLeft="159,270" />
+          TopLeft="273,382" />
         <NodeLayout
           Size="182,42"
           Id="Package\ZS REST API Task 1"
           TopLeft="493,374" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Server Info"
+          TopLeft="885,146" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Sharing dashboard"
+          TopLeft="73,204" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -34820,13 +36173,9 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="138,42"
-          Id="Package\Proof\List Reports"
-          TopLeft="30.5,21.5" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Proof\List Proof Attachments"
-          TopLeft="23,346" />
+          Size="205,42"
+          Id="Package\Proof\JSON Attach File to Proof"
+          TopLeft="703,336" />
         <NodeLayout
           Size="185,42"
           Id="Package\Proof\Create Proof Request"
@@ -34835,6 +36184,10 @@
           Size="189,42"
           Id="Package\Proof\Delete Proof Requests"
           TopLeft="272,238" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Proof\List Proof Attachments"
+          TopLeft="23,346" />
         <NodeLayout
           Size="208,42"
           Id="Package\Proof\List Proof Request Actions"
@@ -34852,10 +36205,6 @@
           Id="Package\Proof\Delete Proof Version"
           TopLeft="532,21" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Proof\Update Proof Status"
-          TopLeft="30,183" />
-        <NodeLayout
           Size="185,42"
           Id="Package\Proof\Create Proof Version-"
           TopLeft="271,298" />
@@ -34868,9 +36217,17 @@
           Id="Package\Proof\Get Proof"
           TopLeft="30,130" />
         <NodeLayout
+          Size="178,42"
+          Id="Package\Proof\Update Proof Status"
+          TopLeft="30,183" />
+        <NodeLayout
           Size="187,42"
           Id="Package\Proof\List Proof Discussions"
           TopLeft="281,77" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Proof\List Reports"
+          TopLeft="30.5,21.5" />
         <NodeLayout
           Size="172,42"
           Id="Package\Proof\Attach File to Proof"
@@ -34879,10 +36236,6 @@
           Size="140,42"
           Id="Package\Proof\Delete Proof"
           TopLeft="28,237" />
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Proof\JSON Attach File to Proof"
-          TopLeft="703,336" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -34892,25 +36245,25 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="138,42"
-          Id="Package\Reports\List Reports"
-          TopLeft="55,83" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Reports\Get Report"
-          TopLeft="57,24" />
+          Size="205,42"
+          Id="Package\Reports\Set Report Publish Status"
+          TopLeft="56,204" />
         <NodeLayout
           Size="206,42"
           Id="Package\Reports\Get Report Publish Status"
           TopLeft="58,145" />
         <NodeLayout
-          Size="205,42"
-          Id="Package\Reports\Set Report Publish Status"
-          TopLeft="56,204" />
-        <NodeLayout
           Size="188,42"
           Id="Package\Reports\Send Report via Email"
           TopLeft="54,260" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Reports\Get Report"
+          TopLeft="57,24" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Reports\List Reports"
+          TopLeft="55,83" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -34920,37 +36273,53 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="129,42"
-          Id="Package\Row\Add Rows"
-          TopLeft="66,55" />
-        <NodeLayout
           Size="214,42"
           Id="Package\Row\Move rows to another sheet"
           TopLeft="69,120" />
-        <NodeLayout
-          Size="213,42"
-          Id="Package\Row\Copy rows to another sheet"
-          TopLeft="301,121" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\Row\Update Rows"
-          TopLeft="484,181" />
         <NodeLayout
           Size="141,42"
           Id="Package\Row\Delete Rows"
           TopLeft="66,283" />
         <NodeLayout
-          Size="122,42"
-          Id="Package\Row\Get Row"
-          TopLeft="66,385" />
+          Size="129,42"
+          Id="Package\Row\Add Rows"
+          TopLeft="66,55" />
         <NodeLayout
           Size="127,42"
           Id="Package\Row\List Rows"
           TopLeft="194,399" />
         <NodeLayout
+          Size="145,42"
+          Id="Package\Row\Update Rows"
+          TopLeft="484,181" />
+        <NodeLayout
           Size="183,42"
           Id="Package\Row\Send Rows via Email"
           TopLeft="66,501" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Row\Get Row"
+          TopLeft="66,385" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Row\Copy rows to another sheet"
+          TopLeft="301,121" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Search">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Search\Search Everything"
+          TopLeft="123,60" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Search\Search Sheet"
+          TopLeft="122,126" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -35095,6 +36464,18 @@
           Size="200,42"
           Id="Package\Update Requests (C)\Change Update Request"
           TopLeft="142,314" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Server Info">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Server Info\Get Server Info"
+          TopLeft="69,55" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
