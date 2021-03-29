@@ -2446,28 +2446,28 @@
         <!-- Delete dashboard Share -->
         <EndPoint Name="delete_dashboard_share" Label="Deletes the dashboard shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-dashboard-share" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares/[$sharesId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="sightsId" Required="true" Desc="ID located in dashboard properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="sightsId" Label="Sights Id" Required="true" Desc="ID located in dashboard properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Get dashboard Share -->
         <EndPoint Name="get_dashboard_share" Label="Gets the dashboard shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-dashboard-share" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares/[$sharesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="sightsId" Required="true" Desc="ID located in dashboard properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="sightsId" Label="Sights Id" Required="true" Desc="ID located in dashboard properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2475,16 +2475,16 @@
         <!-- List dashboard Shares -->
         <EndPoint Name="get_dashboard_shares_list" Label="Gets a list of all users and groups to whom the specified dashboard is shared, and their access level" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-dashboard-shares" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="sightsId" Required="true" Desc="ID located in dashboard properties"/>
+                <Param Name="sightsId" Label="Sights Id" Required="true" Desc="ID located in dashboard properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2492,38 +2492,33 @@
         <!-- Share dashboard -->
         <EndPoint Name="share_dashboard" Label="Shares a dashboard with the specified users and groups" HelpLink="https://smartsheet-platform.github.io/api-docs/#share-dashboard-2" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
             <Params>
-                <Param Name="sightsId" Required="true" Desc="ID located in dashboard properties"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartdashboard.com&quot;, &quot;accessLevel&quot;: &quot;VIEWER&quot;}]"/>
+                <Param Name="sightsId" Label="sights Id" Required="true" Desc="ID located in dashboard properties"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
+                <Param Name="Query" Label="Share object"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartdashboard.com&quot;, &quot;accessLevel&quot;: &quot;VIEWER&quot;}]"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Update dashboard Share -->
-        <EndPoint Name="update_dashboard_share" Label="Updates the access level of a user or group for the specified dashboard" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-dashboard-share" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[
-                    {"accessLevel": "[$accessLevel$]"}
-                ]]>
-            </Body>
+        <EndPoint Name="update_dashboard_share" Label="Updates the access level of a user or group for the specified dashboard" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-dashboard-share" Group="Sharing Dashboard" Url="/sights/[$sightsId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
-                <Param Name="sightsId" Required="true" Desc="ID located in dashboard properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared user"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
-                <Param Name="accessLevel" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
+                <Param Name="sightsId" Label="Sights Id" Required="true" Desc="ID located in dashboard properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared user"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
+                <Param Name="accessLevel" Label="Access Level" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I4"/>
-                <Column Name="result.id"	DataType="DT_WSTR"/>
-                <Column Name="result.type"	DataType="DT_WSTR"/>
-                <Column Name="result.userId"	DataType="DT_I8"/>
-                <Column Name="result.email"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.scope"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.id"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="result.userId"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.email"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.accessLevel"	DataType="DT_I8"/>
+                <Column Name="result.scope"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint> 
 
@@ -2531,28 +2526,28 @@
         <!-- Delete reports Share -->
         <EndPoint Name="delete_report_shares" Label="Deletes the reports shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-report-share" Group="Sharing Reports" Url="/reports/[$reportId$]/shares/[$sharesId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="reportId" Required="true" Desc="ID located in report properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="reportId" Label="Report Id" Required="true" Desc="ID located in report properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Get reports Share -->
         <EndPoint Name="get_reports_shares" Label="Gets the reports shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-report-share" Group="Sharing Reports" Url="/reports/[$reportId$]/shares/[$sharesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="reportId" Required="true" Desc="ID located in reports properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="reportId" Label="Report Id" Required="true" Desc="ID located in reports properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2560,40 +2555,35 @@
         <!-- List reports Shares -->
         <EndPoint Name="get_report_shares_list" Label="Gets a list of all users and groups to whom the specified report is shared, and their access level" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-report-shares" Group="Sharing Reports" Url="/reports/[$reportId$]/shares" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="reportId" Required="true" Desc="ID located in report's properties"/>
+                <Param Name="reportId" Label="Report Id" Required="true" Desc="ID located in report's properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
         </EndPoint>
         <!-- Share reports -->
-        <EndPoint Name="share_reports" Label="Shares a reports with the specified users and groups" HelpLink="https://smartsheet-platform.github.io/api-docs/#share-reports" Group="Sharing Reports" Url="/reports/[$reportId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
+        <EndPoint Name="share_reports" Label="Shares a reports with the specified users and groups" HelpLink="https://smartsheet-platform.github.io/api-docs/#share-report-2" Group="Sharing Reports" Url="/reports/[$reportId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
             <Params>
-                <Param Name="reportId" Required="true" Desc="ID located in reports properties"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartreports.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
+                <Param Name="reportId" Label="Report Id" Required="true" Desc="ID located in reports properties"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
+                <Param Name="Query" Label="Share object"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartreports.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Update reports Share -->
-        <EndPoint Name="update_reports_share" Label="Updates the access level of a user or group for the specified reports" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-reports-share" Group="Sharing Reports" Url="/reports/[$reportId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[
-                    {"accessLevel": "[$accessLevel$]"}
-                ]]>
-            </Body>
+        <EndPoint Name="update_reports_share" Label="Updates the access level of a user or group for the specified reports" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-reports-share" Group="Sharing Reports" Url="/reports/[$reportId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
                 <Param Name="reportId" Required="true" Desc="ID located in reports properties"/>
                 <Param Name="sharesId" Required="true" Desc="ID from the shared user"/>
@@ -2601,59 +2591,59 @@
                 <Param Name="accessLevel" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I4"/>
-                <Column Name="result.id"	DataType="DT_WSTR"/>
-                <Column Name="result.type"	DataType="DT_WSTR"/>
-                <Column Name="result.userId"	DataType="DT_I8"/>
-                <Column Name="result.email"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.scope"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.id"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="result.userId"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.email"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.accessLevel"	DataType="DT_I8"/>
+                <Column Name="result.scope"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
         <!-- ______________________________________________________ Sharing Sheet ______________________________________________________ -->
         <!-- Delete Sheet Share -->
         <EndPoint Name="delete_sheet_shares" Label="Deletes the Sheet shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-sheet-share" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares/[$sharesId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Get Sheet Share -->
         <EndPoint Name="get_sheet_shares" Label="Gets the Sheet shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-sheet-share" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares/[$sharesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
         </EndPoint>   
         <!-- List Sheet Shares -->
-        <EndPoint Name="get_sheet_shares_list" Label="Gets a list of all users and groups to whom the specified sheet is shared, and their access level" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-sheet-share" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares" Method="GET" Filter="$.data[*]">
+        <EndPoint Name="get_sheet_shares_list" Label="Gets a list of all users and groups to whom the specified sheet is shared, and their access level" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-sheet-shares" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2661,38 +2651,33 @@
         <!-- Share Sheet -->
         <EndPoint Name="share_sheet" Label="Shares a sheet with the specified users and groups" HelpLink="https://smartsheet-platform.github.io/api-docs/#share-sheet" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartsheet.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
+                <Param Name="Query" Label="Share object"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartsheet.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Update Sheet Share -->
-        <EndPoint Name="update_sheet_share" Label="Updates the access level of a user or group for the specified sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-sheet-share" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[
-                    {"accessLevel": "[$accessLevel$]"}
-                ]]>
-            </Body>
+        <EndPoint Name="update_sheet_share" Label="Updates the access level of a user or group for the specified sheet" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-sheet-share" Group="Sharing Sheet" Url="/sheets/[$SheetId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
-                <Param Name="SheetId" Required="true" Desc="ID located in sheet properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared user"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
-                <Param Name="accessLevel" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
+                <Param Name="SheetId" Label="Sheet Id" Required="true" Desc="ID located in sheet properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared user"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
+                <Param Name="accessLevel" Label="Access Level" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I4"/>
-                <Column Name="result.id"	DataType="DT_WSTR"/>
-                <Column Name="result.type"	DataType="DT_WSTR"/>
-                <Column Name="result.userId"	DataType="DT_I8"/>
-                <Column Name="result.email"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.scope"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.id"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="result.userId"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.email"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.accessLevel"	DataType="DT_I8"/>
+                <Column Name="result.scope"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>    
 
@@ -2701,28 +2686,28 @@
         <!-- Delete workspace Share -->
         <EndPoint Name="delete_workspace_shares" Label="Deletes the workspace shared specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="workspaceId" Required="true" Desc="ID located in workspace properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Get workspace Share -->
         <EndPoint Name="get_workspace_shares" Label="Gets the workspace shared specified" HelpLink="https://smartworkspace-platform.github.io/api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="workspaceId" Required="true" Desc="ID located in workspace properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
+                <Param Name="sharesId" Label="shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2730,16 +2715,16 @@
         <!-- List workspace Shares -->
         <EndPoint Name="get_workspace_shares_list" Label="Gets a list of all users and groups to whom the specified workspace is shared, and their access level" HelpLink="https://smartworkspace-platform.github.io/api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="workspaceId" Required="true" Desc="ID located in workspace properties"/>
+                <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
             </Params>
             <OutputColumns>
-                <Column Name="id"	DataType="DT_WSTR"/>
-                <Column Name="type"	DataType="DT_WSTR"/>
+                <Column Name="id"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="userId"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="scope"	DataType="DT_WSTR"/>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="scope"	DataType="DT_WSTR" Length="16"/>
                 <Column Name="createdAt"	DataType="DT_DBTIMESTAMP"/>
                 <Column Name="modifiedAt"	DataType="DT_DBTIMESTAMP"/>
             </OutputColumns>
@@ -2747,38 +2732,33 @@
         <!-- Share workspace -->
         <EndPoint Name="share_workspace" Label="Shares a workspace with the specified users and groups" HelpLink="https://smartworkspace-platform.github.io/api-docs/#share-workspace" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
             <Params>
-                <Param Name="workspaceId" Required="true" Desc="ID located in workspace properties"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartworkspace.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
+                <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
+                <Param Name="Query" Label="Share object"  Editor="MultiLine" Required="True" Desc="Share object or an array of Share objects, More information on learn more" Value="[{&quot;email&quot;: &quot;jane.doe@smartworkspace.com&quot;, &quot;accessLevel&quot;: &quot;EDITOR&quot;}]"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint> 
         <!-- Update workspace Share -->
-        <EndPoint Name="update_workspace_share" Label="Updates the access level of a user or group for the specified workspace" HelpLink="https://smartworkspace-platform.github.io/api-docs/#update-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json">
-            <Body>
-                <![CDATA[
-                    {"accessLevel": "[$accessLevel$]"}
-                ]]>
-            </Body>
+        <EndPoint Name="update_workspace_share" Label="Updates the access level of a user or group for the specified workspace" HelpLink="https://smartworkspace-platform.github.io/api-docs/#update-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
-                <Param Name="workspaceId" Required="true" Desc="ID located in workspace properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared user"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
-                <Param Name="accessLevel" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
+                <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared user"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
+                <Param Name="accessLevel" Label="Access Level" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I4"/>
-                <Column Name="result.id"	DataType="DT_WSTR"/>
-                <Column Name="result.type"	DataType="DT_WSTR"/>
-                <Column Name="result.userId"	DataType="DT_I8"/>
-                <Column Name="result.email"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.scope"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="result.id"	DataType="DT_WSTR" Length="108"/>
+                <Column Name="result.type"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="result.userId"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.email"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.accessLevel"	DataType="DT_I8"/>
+                <Column Name="result.scope"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>         
         <!-- ______________________________________________________ Templates ______________________________________________________ -->
