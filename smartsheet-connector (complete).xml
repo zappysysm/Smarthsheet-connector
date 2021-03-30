@@ -2585,10 +2585,10 @@
         <!-- Update reports Share -->
         <EndPoint Name="update_reports_share" Label="Updates the access level of a user or group for the specified reports" HelpLink="https://smartsheet-platform.github.io/api-docs/#update-reports-share" Group="Sharing Reports" Url="/reports/[$reportId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
-                <Param Name="reportId" Required="true" Desc="ID located in reports properties"/>
-                <Param Name="sharesId" Required="true" Desc="ID from the shared user"/>
-                <Param Name="sendEmail" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
-                <Param Name="accessLevel" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
+                <Param Name="reportId" Label="Report Id" Required="true" Desc="ID located in reports properties"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared user"/>
+                <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email" Value="true" Option="true;false"/>
+                <Param Name="accessLevel" Label="Access Level" Required="True" Desc="User or group's access level on shared object" Value="VIEWER" Options="The user can edit and share the resource, and can alter the structure of the resource as well=ADMIN;The user can edit the resource, but cannot alter the structure of, delete, or share the resource=EDITOR;The same as EDITOR, but with the ability to share the resource to other users=EDITOR_SHARE;The user has complete control over the resource=OWNER;The user has read-only access to the resource=VIEWER"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR" Length="28"/>
@@ -2695,10 +2695,10 @@
             </OutputColumns>
         </EndPoint> 
         <!-- Get workspace Share -->
-        <EndPoint Name="get_workspace_shares" Label="Gets the workspace shared specified" HelpLink="https://smartworkspace-platform.github.io/api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="GET" Filter="">
+        <EndPoint Name="get_workspace_shares" Label="Gets the workspace shared specified" HelpLink="https://smartsheet-platform.github.io//api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="GET" Filter="">
             <Params>
                 <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
-                <Param Name="sharesId" Label="shares Id" Required="true" Desc="ID from the shared dashboard"/>
+                <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared dashboard"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_WSTR" Length="48"/>
@@ -2713,7 +2713,7 @@
             </OutputColumns>
         </EndPoint>   
         <!-- List workspace Shares -->
-        <EndPoint Name="get_workspace_shares_list" Label="Gets a list of all users and groups to whom the specified workspace is shared, and their access level" HelpLink="https://smartworkspace-platform.github.io/api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares" Method="GET" Filter="$.data[*]">
+        <EndPoint Name="get_workspace_shares_list" Label="Gets a list of all users and groups to whom the specified workspace is shared, and their access level" HelpLink="https://smartsheet-platform.github.io//api-docs/#get-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares" Method="GET" Filter="$.data[*]">
             <Params>
                 <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
             </Params>
@@ -2730,7 +2730,7 @@
             </OutputColumns>
         </EndPoint>
         <!-- Share workspace -->
-        <EndPoint Name="share_workspace" Label="Shares a workspace with the specified users and groups" HelpLink="https://smartworkspace-platform.github.io/api-docs/#share-workspace" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
+        <EndPoint Name="share_workspace" Label="Shares a workspace with the specified users and groups" HelpLink="https://smartsheet-platform.github.io//api-docs/#share-workspace" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares?sendEmail=[$sendEmail$]" Method="POST" Filter="" Body="[$Query$]" ContentType="application/json">
             <Params>
                 <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
                 <Param Name="sendEmail" Label="Send Email" Required="true" Desc="Either true or false to indicate whether to notify the user by email. Default is false" Value="true" Options="true;false"/>
@@ -2743,7 +2743,7 @@
             </OutputColumns>
         </EndPoint> 
         <!-- Update workspace Share -->
-        <EndPoint Name="update_workspace_share" Label="Updates the access level of a user or group for the specified workspace" HelpLink="https://smartworkspace-platform.github.io/api-docs/#update-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
+        <EndPoint Name="update_workspace_share" Label="Updates the access level of a user or group for the specified workspace" HelpLink="https://smartsheet-platform.github.io//api-docs/#update-workspace-share" Group="Sharing Workspace" Url="/workspaces/[$workspaceId$]/shares/[$sharesId$]" Method="PUT" Filter="" ContentType="application/json" Body="{&quot;accessLevel&quot;: &quot;[$accessLevel$]&quot;}">
             <Params>
                 <Param Name="workspaceId" Label="Workspace Id" Required="true" Desc="ID located in workspace properties"/>
                 <Param Name="sharesId" Label="Shares Id" Required="true" Desc="ID from the shared user"/>
@@ -2763,9 +2763,39 @@
         </EndPoint>         
         <!-- ______________________________________________________ Templates ______________________________________________________ -->
         <!-- List Public Templates -->
-        <EndPoint Name="list_public_templates" Group="Templates" Label="Gets a list of public templates that the user has access to." HelpLink="https://smartsheet-platform.github.io/api-docs/#list-public-templates" Url="/templates/public"  Filter="$.data[*]"></EndPoint>
+        <EndPoint Name="list_public_templates" Group="Templates" Label="Gets a list of public templates that the user has access to." HelpLink="https://smartsheet-platform.github.io/api-docs/#list-public-templates" Url="/templates/public"  Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="200"/>
+                <Column Name="blank"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="description"	DataType="DT_WSTR" Length="988"/>
+                <Column Name="locale"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="categories"	DataType="DT_WSTR" Length="112"/>
+                <Column Name="globalTemplate"	DataType="DT_WSTR" Length="52"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="tags"	DataType="DT_WSTR" Length="1480"/>
+                <Column Name="image"	DataType="DT_WSTR" Length="400"/>
+                <Column Name="largeImage"	DataType="DT_WSTR" Length="400"/>
+            </OutputColumns>
+        </EndPoint>
         <!-- List User-created Templates -->
-        <EndPoint Name="list_User_created_templates" Group="Templates" Label="Gets a list of user-created templates that the user has access to" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-user-created-templates" Url="/templates" Filter="$.data[*]"></EndPoint>  
+        <EndPoint Name="list_User_created_templates" Group="Templates" Label="Gets a list of user-created templates that the user has access to" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-user-created-templates" Url="/templates" Filter="$.data[*]">
+            <OutputColumns>
+                <Column Name="id"	DataType="DT_I8"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="200"/>
+                <Column Name="blank"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="description"	DataType="DT_WSTR" Length="988"/>
+                <Column Name="locale"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="type"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="categories"	DataType="DT_WSTR" Length="112"/>
+                <Column Name="globalTemplate"	DataType="DT_WSTR" Length="52"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="tags"	DataType="DT_WSTR" Length="1480"/>
+                <Column Name="image"	DataType="DT_WSTR" Length="400"/>
+                <Column Name="largeImage"	DataType="DT_WSTR" Length="400"/>
+            </OutputColumns>
+        </EndPoint>  
 
         <!-- ______________________________________________________ User ______________________________________________________ -->
         <!-- Add User -->
@@ -2774,124 +2804,166 @@
                 <![CDATA[{
                     "firstName": "[$firstName$]",
                     "lastName": "[$lastName$]",
-                    "email": "[$email$]",Method="POST" Filter="" ContentType="application/json"Method="POST" Filter="" ContentType="application/json"Method="POST" Filter="" ContentType="application/json"
+                    "email": "[$email$]",
                     "admin": [$admin$],
                     "licensedSheetCreator": [$licensedSheetCreator$]
                 }]]>
             </Body>
             <Params>
-                <Param Name="sendEmail" Desc="(optional): A Boolean that indicates whether to send a welcome email. Defaults to false" Options="true;false" Value="false"/>
-                <Param Name="firstName" Required="true" Desc="User's first name"/>
-                <Param Name="lastName" Required="true" Desc="User's last name"/>
-                <Param Name="email" Required="true" Desc="User's primary email address"/>
-                <Param Name="admin" Required="true" Desc="Indicates whether the user is a system admin (can manage user accounts and organization account)" Options="true;false" Value="false"/>
-                <Param Name="licensedSheetCreator" Required="true" Desc="Indicates whether the user is a licensed user (can create and own sheets)" Options="true;false" Value="true"/>
+                <Param Name="sendEmail" Label="Send Email" Desc="(optional): A Boolean that indicates whether to send a welcome email. Defaults to false" Options="true;false" Value="false"/>
+                <Param Name="firstName" Label="Firstname" Required="true" Desc="User's first name"/>
+                <Param Name="lastName" Label="Lastname" Required="true" Desc="User's last name"/>
+                <Param Name="email" Label="Email" Required="true" Desc="User's primary email address"/>
+                <Param Name="admin" Label="Admin" Required="true" Desc="Indicates whether the user is a system admin (can manage user accounts and organization account)" Options="true;false" Value="false"/>
+                <Param Name="licensedSheetCreator" Label="Licensed Sheet Creator" Required="true" Desc="Indicates whether the user is a licensed user (can create and own sheets)" Options="true;false" Value="true"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result.email"	DataType="DT_WSTR"/>
-                <Column Name="result.name"	DataType="DT_WSTR"/>
-                <Column Name="result.firstName"	DataType="DT_WSTR"/>
-                <Column Name="result.lastName"	DataType="DT_WSTR"/>
-                <Column Name="result.admin"	DataType="DT_BOOL"/>
-                <Column Name="result.licensedSheetCreator"	DataType="DT_BOOL"/>
-                <Column Name="result.groupAdmin"	DataType="DT_BOOL"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.email"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="44"/>
+                <Column Name="result.firstName"	DataType="DT_WSTR" Length="40"/>
+                <Column Name="result.lastName"	DataType="DT_WSTR" Length="255"/>
+                <Column Name="result.admin"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="result.licensedSheetCreator"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="result.groupAdmin"	DataType="DT_WSTR" Length="20"/>
                 <Column Name="result.id"	DataType="DT_I8"/>
             </OutputColumns>
         </EndPoint>
         <!-- Add Alternate Emails -->
         <EndPoint Name="add_alternate_emails" Group="Users" Label="Adds one or more alternate email addresses for the specified user" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-alternate-emails" Url="/users/[$userId$]/alternateemails" Method="POST" Filter="" ContentType="application/json" Body="[$Query$]">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
-                <Param Name="Query"  Editor="MultiLine" Required="True" Desc="Array of AlternateEmail objects, each limited to only the email attribute" Value="[{&quot;email&quot;: &quot;jane.doe@smartsheet.com&quot;}]"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
+                <Param Name="Query" Label="Alternate Email objects"  Editor="MultiLine" Required="True" Desc="Array of AlternateEmail objects, each limited to only the email attribute" Value="[{&quot;email&quot;: &quot;jane.doe@smartsheet.com&quot;}]"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint>
         <!-- Make Alternate Email Primary -->
         <EndPoint Name="make_alternate_email" Group="Users" Label="Makes the specified alternate email address to become the primary email address for the specified user" HelpLink="https://smartsheet-platform.github.io/api-docs/#add-alternate-emails" Url="/users/[$userId$]/alternateemails/[$alternateemailsId$]" Method="POST" Filter="" ContentType="application/json" Body="[$Query$]">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
-                <Param Name="alternateemailsId" Required="true" Desc="Id from the alternate email"/>
-                <Param Name="Query" Editor="MultiLine" Desc="Array of AlternateEmail objects, each limited to only the email attribute" Value=""/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
+                <Param Name="alternateemailsId" Label="Alternate Emails Id" Required="true" Desc="Id from the alternate email"/>
+                <Param Name="Query" Label="Query" Editor="MultiLine" Desc="Array of AlternateEmail objects, each limited to only the email attribute" Value=""/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="result"	DataType="DT_WSTR" Length="764"/>
             </OutputColumns>
         </EndPoint>
         <!-- Delete Alternate Email -->
         <EndPoint Name="delete_alternate_email" Group="Users" Label="Deletes the specified alternate email address for the specified user" HelpLink="https://smartsheet-platform.github.io/api-docs/#delete-alternate-email" Method="DELETE" Url="/users/[$userId$]/alternateemails/[$alternateemailId$]" Filter="">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
-                <Param Name="alternateemailId" Required="true" Desc="Id from the Alternate Email"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
+                <Param Name="alternateemailId" Label="Alternate Email Id" Required="true" Desc="Id from the Alternate Email"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
             </OutputColumns>
         </EndPoint>
         <!-- Get Alternate Email -->
         <EndPoint Name="get_alternate_email" Group="Users" Label="Gets the specified alternate email" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-alternate-email" Method="GET" Url="/users/[$userId$]/alternateemails" Filter="$.data[*]">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
             </Params>
         </EndPoint>
         <!--List Alternate Emails -->
         <EndPoint Name="list_alternate_emails" Group="Users" Label="Gets a list of the alternate emails for the specified user" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-alternate-emails" Url="/users/[$userId$]/alternateemails/[$alternateemailId$]" Method="GET" Filter="$.data[*]">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
-                <Param Name="alternateemailId" Required="true" Desc="Id from the Alternate Email"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
+                <Param Name="alternateemailId" Label="Alternate Email Id" Required="true" Desc="Id from the Alternate Email"/>
             </Params>
         </EndPoint>        
         <!-- Get Current User -->
         <EndPoint Name="get_current_user" Group="Users" Label="Gets the current user" HelpLink="https://smartsheet-platform.github.io/api-docs/#users" Url="/users/me" Method="GET" Filter="" ContentType="application/json">
             <OutputColumns>
-                <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="firstName"	DataType="DT_WSTR"/>
-                <Column Name="lastName"	DataType="DT_WSTR"/>
-                <Column Name="locale"	DataType="DT_WSTR"/>
-                <Column Name="timeZone"	DataType="DT_WSTR"/>
-                <Column Name="alternateEmails"	DataType="DT_WSTR"/>
-                <Column Name="title"	DataType="DT_WSTR"/>
-                <Column Name="department"	DataType="DT_WSTR"/>
-                <Column Name="company"	DataType="DT_WSTR"/>
-                <Column Name="workPhone"	DataType="DT_STR"/>
-                <Column Name="mobilePhone"	DataType="DT_WSTR"/>
-                <Column Name="role"	DataType="DT_STR"/>
+                <Column Name="id"	DataType="DT_I8" />
+                <Column Name="email"	DataType="DT_WSTR" Length="80" />
+                <Column Name="firstName"	DataType="DT_WSTR" Length="32" />
+                <Column Name="lastName"	DataType="DT_WSTR" Length="20" />
+                <Column Name="locale"	DataType="DT_WSTR" Length="20" />
+                <Column Name="timeZone"	DataType="DT_WSTR" Length="56" />
+                <Column Name="account.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="account.id"	DataType="DT_I8" />
+                <Column Name="admin"	DataType="DT_WSTR" Length="16" />
+                <Column Name="licensedSheetCreator"	DataType="DT_WSTR" Length="16" />
+                <Column Name="groupAdmin"	DataType="DT_WSTR" Length="16" />
+                <Column Name="resourceViewer"	DataType="DT_WSTR" Length="16" />
+                <Column Name="alternateEmails"	DataType="DT_WSTR" Length="8"/>
+                <Column Name="sheetCount"	DataType="DT_I4"/>
+                <Column Name="lastLogin"	DataType="DT_DBTIMESTAMP" />
+                <Column Name="title"	DataType="DT_WSTR" Length="255" />
+                <Column Name="department"	DataType="DT_WSTR" Length="255" />
+                <Column Name="company"	DataType="DT_WSTR" Length="255" />
+                <Column Name="workPhone"	DataType="DT_WSTR" Length="255" />
+                <Column Name="mobilePhone"	DataType="DT_WSTR" Length="255" />
+                <Column Name="role"	DataType="DT_WSTR" Length="255" />
+                <Column Name="profileImage.imageId"	DataType="DT_WSTR" Length="492"/>
+                <Column Name="profileImage.height"	DataType="DT_I4"/>
+                <Column Name="profileImage.width"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
         <!-- Get User -->
         <EndPoint Name="get_user_from_id" Group="Users" Label="Gets the user specified" HelpLink="https://smartsheet-platform.github.io/api-docs/#get-user" Url="/users/[$userId$]" Method="GET" Filter="" ContentType="application/json">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
             </Params>
             <OutputColumns>
+                <Column Name="id"	DataType="DT_I8" />
+                <Column Name="email"	DataType="DT_WSTR" Length="80" />
+                <Column Name="firstName"	DataType="DT_WSTR" Length="32" />
+                <Column Name="lastName"	DataType="DT_WSTR" Length="20" />
+                <Column Name="locale"	DataType="DT_WSTR" Length="20" />
+                <Column Name="timeZone"	DataType="DT_WSTR" Length="56" />
+                <Column Name="account.name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="account.id"	DataType="DT_I8" />
+                <Column Name="status"	DataType="DT_WSTR" Length="24"/>
+                <Column Name="admin"	DataType="DT_WSTR" Length="16" />
+                <Column Name="licensedSheetCreator"	DataType="DT_WSTR" Length="16" />
+                <Column Name="groupAdmin"	DataType="DT_WSTR" Length="16" />
+                <Column Name="resourceViewer"	DataType="DT_WSTR" Length="16" />
+                <Column Name="alternateEmails"	DataType="DT_WSTR" Length="8"/>
+                <Column Name="sheetCount"	DataType="DT_I4"/>
+                <Column Name="lastLogin"	DataType="DT_DBTIMESTAMP" />
+                <Column Name="title"	DataType="DT_WSTR" Length="255" />
+                <Column Name="department"	DataType="DT_WSTR" Length="255" />
+                <Column Name="company"	DataType="DT_WSTR" Length="255" />
+                <Column Name="workPhone"	DataType="DT_WSTR" Length="255" />
+                <Column Name="mobilePhone"	DataType="DT_WSTR" Length="255" />
+                <Column Name="role"	DataType="DT_WSTR" Length="255" />
+                <Column Name="profileImage.imageId"	DataType="DT_WSTR" Length="492"/>
+                <Column Name="profileImage.height"	DataType="DT_I4"/>
+                <Column Name="profileImage.width"	DataType="DT_I4"/>
+            </OutputColumns>
+        </EndPoint>
+        <!-- List Users -->
+        <EndPoint Name="get_list_user" Group="Users" Label="Gets a list of users in the organization account" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-users" Url="/users" Method="GET" Filter="$.data[*]" ContentType="application/json">
+            <OutputColumns>
+                <Column Name="email"	DataType="DT_WSTR" Length="80"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="56"/>
+                <Column Name="firstName"	DataType="DT_WSTR" Length="40"/>
+                <Column Name="lastName"	DataType="DT_WSTR" Length="255"/>
+                <Column Name="admin"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="licensedSheetCreator"	DataType="DT_WSTR" Length="16"/>
+                <Column Name="groupAdmin"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="resourceViewer"	DataType="DT_WSTR" Length="20"/>
                 <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="email"	DataType="DT_WSTR"/>
-                <Column Name="firstName"	DataType="DT_WSTR"/>
-                <Column Name="lastName"	DataType="DT_WSTR"/>
-                <Column Name="locale"	DataType="DT_WSTR"/>
-                <Column Name="timeZone"	DataType="DT_WSTR"/>
-                <Column Name="alternateEmails"	DataType="DT_WSTR"/>
-                <Column Name="title"	DataType="DT_WSTR"/>
-                <Column Name="department"	DataType="DT_WSTR"/>
-                <Column Name="company"	DataType="DT_WSTR"/>
-                <Column Name="workPhone"	DataType="DT_STR"/>
-                <Column Name="mobilePhone"	DataType="DT_WSTR"/>
-                <Column Name="role"	DataType="DT_STR"/>
+                <Column Name="status"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="profileImage.imageId"	DataType="DT_WSTR" Length="492"/>
+                <Column Name="profileImage.height"	DataType="DT_I4"/>
+                <Column Name="profileImage.width"	DataType="DT_I4"/>
+                <Column Name="sheetCount"	DataType="DT_I4"/>
             </OutputColumns>
         </EndPoint>
         <!-- Remove User -->
         <EndPoint Name="remove_user" Group="Users" Label="Removes a user from an organization account. User is transitioned to a free collaborator with read-only access to owned dashboards, reports, sheets, workspaces, and any shared templates (unless those are optionally transferred to another user)" HelpLink="https://smartsheet-platform.github.io/api-docs/#remove-user" Method="DELETE" Url="/users/[$userId$]" Filter="">
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
@@ -2907,14 +2979,26 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="userId" Required="true" Desc="Id from the user"/>
-                <Param Name="admin" Required="true" Desc="Indicates whether the user is a system admin (can manage user accounts and organization account)" Options="true;false" Value="true"/>
-                <Param Name="licensedSheetCreator" Required="true" Desc="Indicates whether the user is a licensed user (can create and own sheets)" Options="true;false" Value="true"/>
+                <Param Name="userId" Label="User Id" Required="true" Desc="Id from the user"/>
+                <Param Name="admin" Label="Admin" Required="true" Desc="Indicates whether the user is a system admin (can manage user accounts and organization account)" Options="true;false" Value="true"/>
+                <Param Name="licensedSheetCreator" Label="Licensed Sheet Creator" Required="true" Desc="Indicates whether the user is a licensed user (can create and own sheets)" Options="true;false" Value="true"/>
             </Params>
             <OutputColumns>
                 <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I8"/>
-                <Column Name="result"	DataType="DT_WSTR"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
+                <Column Name="result.email"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR"/>
+                <Column Name="result.firstName"	DataType="DT_WSTR"/>
+                <Column Name="result.lastName"	DataType="DT_WSTR"/>
+                <Column Name="result.profileImage.imageId"	DataType="DT_WSTR"/>
+                <Column Name="result.profileImage.height"	DataType="DT_I4"/>
+                <Column Name="result.profileImage.width"	DataType="DT_I4"/>
+                <Column Name="result.admin"	DataType="DT_WSTR"/>
+                <Column Name="result.licensedSheetCreator"	DataType="DT_WSTR"/>
+                <Column Name="result.groupAdmin"	DataType="DT_WSTR"/>
+                <Column Name="result.resourceViewer"	DataType="DT_WSTR"/>
+                <Column Name="result.id"	DataType="DT_I8"/>
+                <Column Name="result.status"	DataType="DT_WSTR"/>
             </OutputColumns>
         </EndPoint>
 
