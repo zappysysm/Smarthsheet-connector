@@ -3012,18 +3012,16 @@
                 }]]>
             </Body>
             <Params>
-                <Param Name="workspacesId" Required="true" Desc="Id from the workspaces"/>
-                <Param Name="name" Required="true" Desc="Name for the new workspace" Value="newWorkspaceName"/>
-                <Param Name="include" Desc="(optional) -- comma-separated list of elements to copy: attachments,cellLinks,data(includes formatting),discussions(includes comments),filters,forms,ruleRecipients(includes notification recipients, must also include rules when using this attribute),rules(includes notifications and workflow rules),shares,all(deprecated)" Value="data"/>
-                <Param Name="skipRemap" Desc="(optional) -- comma-separated list of references to NOT re-map for the newly created workspace: cellLinks,reports,sheetHyperlinks,sights" Value=""/>
+                <Param Name="workspacesId" Label="Workspaces Id"  Required="true" Desc="Id from the workspaces"/>
+                <Param Name="name" Label="Name"  Required="true" Desc="Name for the new workspace" Value="newWorkspaceName"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I4"/>
                 <Column Name="result.id"	DataType="DT_I8"/>
-                <Column Name="result.name"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR" Length="312"/>
             </OutputColumns>
         </EndPoint>
         `<!-- Create Workspace -->
@@ -3034,49 +3032,48 @@
                 }]]>
             </Body>
             <Params>
-                 <Param Name="name" Required="true" Desc="Name for the new workspace" Value="New workspace"/>
+                 <Param Name="name" Label="Name" Required="true" Desc="Name for the new workspace" Value="New workspace"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
-                <Column Name="resultCode"	DataType="DT_I8"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
+                <Column Name="resultCode"	DataType="DT_I4"/>
                 <Column Name="result.id"	DataType="DT_I8"/>
-                <Column Name="result.name"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR" Length="312"/>
             </OutputColumns> 
         </EndPoint>
         
         <!-- Delete  Workspace -->
         <EndPoint Name="delete _workspace" Label="Deletes the specified workspace (and its contents)." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-workspace" Group="Workspaces" Url="/workspaces/[$workspacesId$]" Method="DELETE" Filter="">
             <Params>
-                <Param Name="workspacesId" Required="true" Desc="Id from the workspaces"/>
+                <Param Name="workspacesId" Label="Workspaces Id" Required="true" Desc="Id from the workspaces"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
             </OutputColumns>   
         </EndPoint>
         <!-- Get Workspace -->
         <EndPoint Name="get_workspace" Label="Gets the specified workspace (and lists its contents)." HelpLink="https://smartsheet-platform.github.io/api-docs/#get-workspace" Group="Workspaces" Url="/workspaces/[$workspacesId$]" Method="GET" Filter="">
             <Params>
-                <Param Name="workspacesId" Required="true" Desc="Id from the workspaces"/>
+                <Param Name="workspacesId" Label="Workspaces Id" Required="true" Desc="Id from the workspaces"/>
             </Params>
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="48"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="312"/>
+                <Column Name="folders"	DataType="DT_WSTR" Length="2128"/>
             </OutputColumns>   
         </EndPoint>
         <!-- List Workspaces-->
         <EndPoint Name="get_workspaces_list" Label="Gets a list of workspaces that the user has access to. The list contains an abbreviated Workspace object for each workspace" HelpLink="https://smartsheet-platform.github.io/api-docs/#list-workspaces" Group="Workspaces" Url="/workspaces" Method="GET" Filter="$.data[*]">
             <OutputColumns>
                 <Column Name="id"	DataType="DT_I8"/>
-                <Column Name="name"	DataType="DT_WSTR"/>
-                <Column Name="accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="permalink"	DataType="DT_WSTR"/>
+                <Column Name="name"	DataType="DT_WSTR" Length="64"/>
+                <Column Name="accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="permalink"	DataType="DT_WSTR" Length="312"/>
             </OutputColumns>    
         </EndPoint>
         <!-- Update Workspace -->
@@ -3091,12 +3088,12 @@
                 <Param Name="workspacesId" Required="true" Desc="Id from the workspaces"/>
             </Params>
             <OutputColumns>
-                <Column Name="message"	DataType="DT_WSTR"/>
+                <Column Name="message"	DataType="DT_WSTR" Length="28"/>
                 <Column Name="resultCode"	DataType="DT_I8"/>
                 <Column Name="result.id"	DataType="DT_I8"/>
-                <Column Name="result.name"	DataType="DT_WSTR"/>
-                <Column Name="result.accessLevel"	DataType="DT_WSTR"/>
-                <Column Name="result.permalink"	DataType="DT_WSTR"/>
+                <Column Name="result.name"	DataType="DT_WSTR" Length="68"/>
+                <Column Name="result.accessLevel"	DataType="DT_WSTR" Length="20"/>
+                <Column Name="result.permalink"	DataType="DT_WSTR" Length="312"/>
             </OutputColumns>   
         </EndPoint>
 
